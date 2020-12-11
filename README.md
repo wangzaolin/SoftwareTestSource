@@ -1,5 +1,7 @@
 # gitbook使用简介
 
+使用gitbook结合github提供的pages功能，可以让你非常方便的搭建起自己的知识管理平台，你可以把你日常的读书笔记、工作总结、方法论、以及任何有被记录价值的信息，记录在上面。然后，你可以随时随地通过网页来访问这些内容；
+
 ## 01 本地编辑md文档
 
 在本地通过typora新建md文档，并在SUMMARY.md文件下指定文件目录；
@@ -46,8 +48,9 @@ git commit -m "git ignore before"
 
 ## 05 配置github项目的github pages
 
-![](http://127.0.0.1:4000/mybook/img/githubPages.png)
+![](https://wangzaolin.github.io/SoftwareTest/mybook/img/githubPages.png)
 
 ## 06 浏览器访问线上文档
 
-在浏览器访问：https://wangzaolin.github.io/gitbookTest/  (https://github账号.github.io/项目名称)，即可访问添加的文档；
+在浏览器访问：https://wangzaolin.github.io/Software/  (https://github账号.github.io/项目名称)，即可访问添加的文档；
+
