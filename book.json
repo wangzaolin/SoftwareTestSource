@@ -1,0 +1,20 @@
+{
+		"links" : {
+    		"sidebar" : {
+        							"Home" : "https://www.baidu.com"
+    								}
+							},
+    "plugins": [
+         "back-to-top-button",
+      	 "copy-code-button",
+      	 "popup",
+      	 "splitter",
+	 			 "chapter-fold",
+				 "expandable-chapters"
+    ],            
+    "pluginsConfig": {
+      "code": {
+        "copyButtons": true
+      }      
+    }
+}
