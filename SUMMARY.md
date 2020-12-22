@@ -12,6 +12,7 @@
   - [2.1-LoadRunner](02-性能测试/2.1-LoadRunner.md)
   - [2.1.1-LoadRunner字符编码转换](02-性能测试/2.1.1-LoadRunner字符编码转换.md)
   - [2.1.2-LoadRunner录制-代理录制](02-性能测试/2.1.2-LoadRunner录制-代理录制.md)
+  - [2.1.3-LoadRunner文件操作](02-性能测试/2.1.3-LoadRunner文件操作.md)
   - [2.2-Jmeter](02-性能测试/2.2-Jmeter.md)
 - [03-自动化测试](03-自动化测试.md)
 - [04-Linux](04-Linux.md)
