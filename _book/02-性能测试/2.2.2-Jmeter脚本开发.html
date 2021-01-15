@@ -1,0 +1,1231 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.2.2-Jmeter脚本开发 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2.2.3-Jmeter监控.html" />
+    
+    
+    <link rel="prev" href="2.2.1-Jmeter环境安装配置.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.baidu.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    00-使用简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01-gitbook和git操作.html">
+            
+                <a href="../01-gitbook和git操作.html">
+            
+                    
+                    01-gitbook和git操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-gitbook和git操作/1.1-gitbook下载安装.html">
+            
+                <a href="../01-gitbook和git操作/1.1-gitbook下载安装.html">
+            
+                    
+                    1.1-gitbook下载安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-gitbook和git操作/1.2-SUMMARY目录操作.html">
+            
+                <a href="../01-gitbook和git操作/1.2-SUMMARY目录操作.html">
+            
+                    
+                    1.2-SUMMARY目录操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-gitbook和git操作/1.3-gitbook&github pages部署.html">
+            
+                <a href="../01-gitbook和git操作/1.3-gitbook&github pages部署.html">
+            
+                    
+                    1.3-gitbook&github pages操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-gitbook和git操作/1.4-gitbook常用命令.html">
+            
+                <a href="../01-gitbook和git操作/1.4-gitbook常用命令.html">
+            
+                    
+                    1.4-Gitbook常用命令操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01-gitbook和git操作/1.5-git常用命令.html">
+            
+                <a href="../01-gitbook和git操作/1.5-git常用命令.html">
+            
+                    
+                    1.5-Git常用命令操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01-gitbook和git操作/1.6-gitbook添加插件.html">
+            
+                <a href="../01-gitbook和git操作/1.6-gitbook添加插件.html">
+            
+                    
+                    1.6-Gitbook添加插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../02-性能测试.html">
+            
+                <a href="../02-性能测试.html">
+            
+                    
+                    02-性能测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="2.1-LoadRunner.html">
+            
+                <a href="2.1-LoadRunner.html">
+            
+                    
+                    2.1-LoadRunner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="2.1.1-LoadRunner字符编码转换.html">
+            
+                <a href="2.1.1-LoadRunner字符编码转换.html">
+            
+                    
+                    2.1.1-LoadRunner字符编码转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="2.1.2-LoadRunner录制-代理录制.html">
+            
+                <a href="2.1.2-LoadRunner录制-代理录制.html">
+            
+                    
+                    2.1.2-LoadRunner录制-代理录制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="2.1.3-LoadRunner文件操作.html">
+            
+                <a href="2.1.3-LoadRunner文件操作.html">
+            
+                    
+                    2.1.3-LoadRunner文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="2.2-Jmeter.html">
+            
+                <a href="2.2-Jmeter.html">
+            
+                    
+                    2.2-Jmeter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="2.2.1-Jmeter环境安装配置.html">
+            
+                <a href="2.2.1-Jmeter环境安装配置.html">
+            
+                    
+                    2.2.1-Jmeter环境安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.7" data-path="2.2.2-Jmeter脚本开发.html">
+            
+                <a href="2.2.2-Jmeter脚本开发.html">
+            
+                    
+                    2.2.2-Jmeter脚本开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="2.2.3-Jmeter监控.html">
+            
+                <a href="2.2.3-Jmeter监控.html">
+            
+                    
+                    2.2.3-Jmeter监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="2.3-性能测试分析.html">
+            
+                <a href="2.3-性能测试分析.html">
+            
+                    
+                    2.3-性能测试分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="2.3.1-性能测试问题分析.html">
+            
+                <a href="2.3.1-性能测试问题分析.html">
+            
+                    
+                    2.3.1-性能测试问题分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="2.3.2-常见性能测试问题.html">
+            
+                <a href="2.3.2-常见性能测试问题.html">
+            
+                    
+                    2.3.2-常见性能测试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="2.3.3-JVM垃圾回收原理及监控.html">
+            
+                <a href="2.3.3-JVM垃圾回收原理及监控.html">
+            
+                    
+                    2.3.3-JVM垃圾回收原理及监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="3-Redis.html">
+            
+                <a href="3-Redis.html">
+            
+                    
+                    3-Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03-自动化测试.html">
+            
+                <a href="../03-自动化测试.html">
+            
+                    
+                    03-自动化测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../04-Linux.html">
+            
+                <a href="../04-Linux.html">
+            
+                    
+                    04-Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../04-Linux/4.1-Vi文本处理.html">
+            
+                <a href="../04-Linux/4.1-Vi文本处理.html">
+            
+                    
+                    4.1-Vi文本处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../04-Linux/4.2-Linux常用文本处理.html">
+            
+                <a href="../04-Linux/4.2-Linux常用文本处理.html">
+            
+                    
+                    4.2-Linux常用文本处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../blank.html">
+            
+                <a href="../blank.html">
+            
+                    
+                    05-数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../blank.html">
+            
+                <a href="../blank.html">
+            
+                    
+                    5.1-mysql数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../05-数据库/5.1.1-mysql数据库下载安装.html">
+            
+                <a href="../05-数据库/5.1.1-mysql数据库下载安装.html">
+            
+                    
+                    5.1.1-mysql数据库下载安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.2.2-Jmeter脚本开发</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="jmeter&#x811A;&#x672C;&#x5F00;&#x53D1;">Jmeter&#x811A;&#x672C;&#x5F00;&#x53D1;</h1>
+<h1 id="&#x4E00;&#x3001;jmeter&#x5143;&#x4EF6;">&#x4E00;&#x3001;Jmeter&#x5143;&#x4EF6;</h1>
+<h2 id="11&#x6267;&#x884C;&#x8BA1;&#x5212;">1.1&#x6267;&#x884C;&#x8BA1;&#x5212;</h2>
+<p>&#x6267;&#x884C;&#x8BA1;&#x5212;&#x7528;&#x4E8E;&#x6DFB;&#x52A0;&#x5168;&#x5C40;&#x7684;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#xFF0C;&#x8BBE;&#x7F6E;&#x6D4B;&#x8BD5;&#x8BA1;&#x5212;&#x5185;&#x7EBF;&#x7A0B;&#x7EC4;&#x7684;&#x8FD0;&#x884C;&#x987A;&#x5E8F;&#xFF0C;&#x6DFB;&#x52A0;&#x6267;&#x884C;&#x8BA1;&#x5212;&#x7684;&#x4F9D;&#x8D56;jar&#x5305;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.1.jpg" alt="img"></p>
+<ul>
+<li>&#x72EC;&#x7ACB;&#x8FD0;&#x884C;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x7EC4;&#xFF1A;</li>
+</ul>
+<p>&#x52FE;&#x9009;&#xFF0C;&#x8BA1;&#x5212;&#x5185;&#x7684;&#x7EBF;&#x7A0B;&#x7EC4;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x6267;&#x884C;&#xFF1B;</p>
+<p>&#x4E0D;&#x52FE;&#x9009;&#xFF0C;&#x8BA1;&#x5212;&#x5185;&#x7684;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x7EC4;&#x540C;&#x65F6;&#x6267;&#x884C;&#xFF1B;&#x9ED8;&#x8BA4;&#x4E0D;&#x52FE;&#x9009;&#xFF1B;</p>
+<h2 id="12-&#x7EBF;&#x7A0B;&#x7EC4;&#x5143;&#x4EF6;">1.2 &#x7EBF;&#x7A0B;&#x7EC4;&#x5143;&#x4EF6;</h2>
+<p>&#x7EBF;&#x7A0B;&#x7EC4;&#x5143;&#x4EF6;&#xFF0C;&#x7528;&#x4E8E;&#x6A21;&#x62DF;&#x591A;&#x7528;&#x6237;&#xFF1B;&#x9ED8;&#x8BA4;&#x7EBF;&#x7A0B;&#x7EC4;&#x5143;&#x4EF6;&#x5305;&#x542B;setup&#x7EBF;&#x7A0B;&#x7EC4;&#xFF0C;&#x7EBF;&#x7A0B;&#x7EC4;&#x548C;tearDown&#x7EBF;&#x7A0B;&#x7EC4;&#xFF1B;</p>
+<ul>
+<li>setup&#x7EBF;&#x7A0B;&#x7EC4;&#x5185;&#x8BF7;&#x6C42;&#x6700;&#x5F00;&#x59CB;&#x6267;&#x884C;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;&#x767B;&#x5F55;&#x6216;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x64CD;&#x4F5C;&#xFF1B;</li>
+<li>tearDown&#x7EBF;&#x7A0B;&#x7EC4;&#x5728;&#x6700;&#x540E;&#x6267;&#x884C;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;&#x6267;&#x884C;&#x9000;&#x51FA;&#x767B;&#x5F55;&#xFF0C;&#x6570;&#x636E;&#x6062;&#x590D;&#x7B49;&#x64CD;&#x4F5C;&#xFF1B;</li>
+<li>&#x7EBF;&#x7A0B;&#x7EC4;&#x5185;&#x90E8;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x5F80;&#x4E0B;&#x6267;&#x884C;&#x8BF7;&#x6C42;&#xFF1B;</li>
+</ul>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.2.jpg" alt="img"></p>
+<ul>
+<li>&#x7EBF;&#x7A0B;&#x6570;&#xFF1A;&#x8BBE;&#x7F6E;&#x5E76;&#x53D1;&#x7528;&#x6237;&#x6570;&#xFF1B;</li>
+<li>ramp-up&#x65F6;&#x95F4;&#xFF1A;&#x5168;&#x90E8;&#x7EBF;&#x7A0B;&#x542F;&#x52A8;&#x65F6;&#x95F4;</li>
+<li>&#x5FAA;&#x73AF;&#x6B21;&#x6570;&#xFF1A;&#x52FE;&#x9009;&#x6C38;&#x8FDC;&#xFF0C;&#x6309;&#x7167;&#x8C03;&#x5EA6;&#x5668;&#x914D;&#x7F6E;&#x65F6;&#x95F4;&#x6267;&#x884C;&#xFF1B;&#x4E0D;&#x52FE;&#x9009;&#x6C38;&#x8FDC;&#xFF0C;&#x6309;&#x7167;&#x5FAA;&#x73AF;&#x6B21;&#x6570;&#x6267;&#x884C;&#xFF1B;</li>
+</ul>
+<p>&#x6269;&#x5C55;&#x7EBF;&#x7A0B;&#x7EC4;&#x5143;&#x4EF6;</p>
+<p>&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x9636;&#x68AF;&#x6027;&#x7528;&#x6237;&#x589E;&#x957F;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x901A;&#x8FC7;&#x63D2;&#x4EF6;JmeterPlugins-Standard.jar&#xFF0C;&#x65B0;&#x589E;&#x4E24;&#x4E2A;&#x7EBF;&#x7A0B;&#x7EC4;&#x5143;&#x4EF6;stepping thread group&#x548C;ultimate thread group&#xFF1B;</p>
+<p>JmeterPlugins-Standard.jar&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;</p>
+<p>&#x94FE;&#x63A5;&#xFF1A;<a href="https://pan.baidu.com/s/14KvtW8QaNCQJ4vffWwHeug" target="_blank">https://pan.baidu.com/s/14KvtW8QaNCQJ4vffWwHeug</a> 
+&#x63D0;&#x53D6;&#x7801;&#xFF1A;uie1 
+&#x4E0B;&#x8F7D;&#x540E;&#xFF0C;&#x5C06;&#x63D2;&#x4EF6;JmeterPlugins-Standard.jar&#x653E;&#x5728;jmeter&#x76EE;&#x5F55;&#x4E0B;&#x7684;lib\ext&#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x542F;jmeter&#xFF0C;&#x901A;&#x8FC7;&#x3010;&#x6DFB;&#x52A0;-&gt;&#x7EBF;&#x7A0B;&#xFF08;&#x7528;&#x6237;&#xFF09;&#x3011;&#x53EF;&#x770B;&#x5230;&#x65B0;&#x589E;&#x7684;&#x7EBF;&#x7A0B;&#x7EC4;&#x5143;&#x4EF6;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.3.jpg" alt="image-20201230170542720"></p>
+<ul>
+<li><p>Stepping Thread Group</p>
+<p>&#x7528;&#x6237;&#x9636;&#x68AF;&#x6027;&#x589E;&#x957F;&#xFF0C;&#x53EA;&#x80FD;&#x6309;&#x7167;&#x56FA;&#x5B9A;&#x4E00;&#x4E2A;&#x6B65;&#x957F;&#x589E;&#x957F;&#xFF1B;</p>
+</li>
+</ul>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.4.jpg" alt="image-20201230183837705"></p>
+<ul>
+<li><p>Ultimate Thread Group</p>
+<p>&#x7528;&#x6237;&#x9636;&#x68AF;&#x6027;&#x589E;&#x957F;&#xFF0C;&#x589E;&#x957F;&#x6B65;&#x957F;&#x53EF;&#x63A7;&#x5236;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.5.jpg" alt="image-20201231112705278"></p>
+<h2 id="13-&#x53D6;&#x6837;&#x5668;">1.3 &#x53D6;&#x6837;&#x5668;</h2>
+<p>&#x53D6;&#x6837;&#x5668;&#xFF0C;&#x7528;&#x4E8E;&#x6A21;&#x62DF;&#x4E0D;&#x540C;&#x534F;&#x8BAE;&#x7684;&#x8BF7;&#x6C42;&#xFF1B;&#x5E38;&#x7528;&#x7684;&#x53D6;&#x6837;&#x5668;&#x6709;&#xFF1A;http&#x8BF7;&#x6C42;&#x3001;jdbc&#x8BF7;&#x6C42;&#x3001;websocket sampler&#x3001;&#x8C03;&#x8BD5;&#x53D6;&#x6837;&#x5668;&#x7B49;&#xFF1B;</p>
+<p>1&#xFF09;http&#x8BF7;&#x6C42;</p>
+<p>&#x7528;&#x4E8E;&#x6A21;&#x62DF;http&#x8BF7;&#x6C42;&#xFF0C;webservice&#x8BF7;&#x6C42;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.6.png" alt="image-20201231151803570"></p>
+<p>2&#xFF09;jdbc&#x8BF7;&#x6C42;</p>
+<p>&#x7528;&#x4E8E;&#x6A21;&#x62DF;&#x53D1;&#x9001;jdbc&#x8BF7;&#x6C42;&#xFF0C;&#x6267;&#x884C;sql&#x8BED;&#x53E5;&#xFF0C;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF1B;&#x9700;&#x8981;&#x5148;&#x5BFC;&#x5165;&#x4E0D;&#x540C;&#x6570;&#x636E;&#x5E93;jdbc&#x7684;jar&#x5305;&#xFF0C;&#x5E76;&#x914D;&#x7F6E;jdbc&#x8FDE;&#x63A5;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.7.png" alt="image-20201231151937936">                               </p>
+<p>3&#xFF09;websocket sampler</p>
+<p>websocket sampler&#x7528;&#x4E8E;&#x6A21;&#x62DF;&#x804A;&#x5929;&#x5DE5;&#x5177;&#x7684;&#x8BF7;&#x6C42;&#xFF1B;&#x9700;&#x8981;&#x5BFC;&#x5165;&#x4F9D;&#x8D56;&#x5305;</p>
+<p>&#x94FE;&#x63A5;&#xFF1A;<a href="https://pan.baidu.com/s/1ZE-B6ryBS1qpj9UtbtLpBQ" target="_blank">https://pan.baidu.com/s/1ZE-B6ryBS1qpj9UtbtLpBQ</a> 
+&#x63D0;&#x53D6;&#x7801;&#xFF1A;6a5m </p>
+<p> <img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.8.png" alt="image-20201231152014636"></p>
+<p>4&#xFF09;&#x8C03;&#x8BD5;&#x53D6;&#x6837;&#x5668;</p>
+<p>&#x7528;&#x4E8E;&#x8C03;&#x8BD5;&#x811A;&#x672C;&#xFF0C;&#x8FD0;&#x884C;&#x811A;&#x672C;&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x5728;&#x3010;&#x5BDF;&#x770B;&#x7ED3;&#x679C;&#x6811;&#x3011;&#x4E2D;&#x5BDF;&#x770B;&#x5230;&#x76F8;&#x5E94;&#x7684;&#x53D8;&#x91CF;&#x503C;&#xFF1B;</p>
+<p> <img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.9.png" alt="image-20201231152304535"></p>
+<h2 id="14-&#x76D1;&#x63A7;&#x5143;&#x4EF6;">1.4 &#x76D1;&#x63A7;&#x5143;&#x4EF6;</h2>
+<p>&#x76D1;&#x63A7;&#x5143;&#x4EF6;&#x7528;&#x4E8E;&#x76D1;&#x63A7;&#x811A;&#x672C;&#x6267;&#x884C;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x5E38;&#x7528;&#x7684;&#x76D1;&#x63A7;&#x5143;&#x4EF6;&#x6709;&#x5BDF;&#x770B;&#x7ED3;&#x679C;&#x6811;&#x3001;&#x805A;&#x5408;&#x62A5;&#x544A;&#x3001;&#x8868;&#x683C;&#x5BDF;&#x770B;&#x7ED3;&#x679C;&#x7B49;&#xFF1B;</p>
+<p>1&#xFF09;&#x5BDF;&#x770B;&#x7ED3;&#x679C;&#x6811;</p>
+<p>&#x7528;&#x4E8E;&#x5355;&#x7528;&#x6237;&#x8C03;&#x8BD5;&#x811A;&#x672C;&#xFF1B;&#x53EF;&#x8FDB;&#x884C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x548C;json&#x63D0;&#x53D6;&#x54CD;&#x5E94;&#x7ED3;&#x679C;&#xFF1B;&#x573A;&#x666F;&#x6267;&#x884C;&#x65F6;&#x8981;&#x7981;&#x7528;&#x5BDF;&#x770B;&#x7ED3;&#x679C;&#x6811;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.10.png" alt="image-20201231152810605"></p>
+<p>2&#xFF09;&#x805A;&#x5408;&#x62A5;&#x544A;</p>
+<p>&#x805A;&#x5408;&#x62A5;&#x544A;&#x7528;&#x4E8E;&#x591A;&#x7528;&#x6237;&#x5E76;&#x53D1;&#x65F6;&#x7EDF;&#x8BA1;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#xFF1B;&#x67E5;&#x770B;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x3001;&#x5904;&#x7406;&#x80FD;&#x529B;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.11.png" alt="image-20201231152925495"></p>
+</li>
+</ul>
+<h2 id="15-&#x65AD;&#x8A00;&#x5143;&#x4EF6;">1.5 &#x65AD;&#x8A00;&#x5143;&#x4EF6;</h2>
+<p>&#x65AD;&#x8A00;&#x5143;&#x4EF6;&#x7528;&#x4E8E;&#x6821;&#x9A8C;&#x4EA4;&#x6613;&#x7ED3;&#x679C;&#x662F;&#x5426;&#x7B26;&#x5408;&#x9884;&#x671F;&#x7684;&#x8981;&#x6C42;&#xFF0C;&#x5224;&#x5B9A;&#x4EA4;&#x6613;&#x662F;&#x5426;&#x6210;&#x529F;&#xFF1B;&#x5E38;&#x7528;&#x7684;&#x65AD;&#x8A00;&#x5143;&#x4EF6;&#x6709;&#xFF1A;&#x54CD;&#x5E94;&#x65AD;&#x8A00;&#x3001;json&#x65AD;&#x8A00;&#x3001;&#x65AD;&#x8A00;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#xFF1B;</p>
+<p>1&#xFF09;&#x54CD;&#x5E94;&#x65AD;&#x8A00;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.12.png" alt="image-20201231153105429"></p>
+<p>2&#xFF09;json&#x65AD;&#x8A00;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.13.png" alt="image-20201231153150052"></p>
+<p>3&#xFF09;&#x65AD;&#x8A00;&#x6301;&#x7EED;&#x65F6;&#x95F4;</p>
+<p>&#x6821;&#x9A8C;&#x4EA4;&#x6613;&#x7684;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;&#x9A8C;&#x8BC1;&#x6027;&#x6D4B;&#x8BD5;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.14.jpg" alt="image-20201231153226198"></p>
+<h2 id="16-&#x5B9A;&#x65F6;&#x5668;&#x5143;&#x4EF6;">1.6 &#x5B9A;&#x65F6;&#x5668;&#x5143;&#x4EF6;</h2>
+<p>&#x5B9A;&#x65F6;&#x5668;&#x5143;&#x4EF6;&#x7528;&#x4E8E;&#x914D;&#x7F6E;&#x811A;&#x672C;&#x8FD0;&#x884C;&#x7684;&#x5F00;&#x59CB;&#x65F6;&#x95F4;&#xFF0C;&#x5EF6;&#x8FDF;&#x6267;&#x884C;&#x6216;&#x540C;&#x65F6;&#x6267;&#x884C;&#xFF1B;&#x5E38;&#x7528;&#x7684;&#x5B9A;&#x65F6;&#x5668;&#x5143;&#x4EF6;&#x6709;&#x56FA;&#x5B9A;&#x5B9A;&#x65F6;&#x5668;&#x3001;&#x540C;&#x6B65;&#x5B9A;&#x65F6;&#x5668;&#x3001;&#x7EDF;&#x4E00;&#x968F;&#x673A;&#x5B9A;&#x65F6;&#x5668;&#x7B49;&#xFF1B;</p>
+<p>1&#xFF09;&#x56FA;&#x5B9A;&#x5B9A;&#x65F6;&#x5668;</p>
+<p>&#x56FA;&#x5B9A;&#x5B9A;&#x65F6;&#x5668;&#x7F6E;&#x4E8E;&#x8BF7;&#x6C42;&#x7684;&#x4E0B;&#x4E00;&#x7EA7;&#xFF0C;&#x56FA;&#x5B9A;&#x5B9A;&#x65F6;&#x5668;&#x6240;&#x5728;&#x7684;&#x8BF7;&#x6C42;&#x5EF6;&#x8FDF;&#x6267;&#x884C;&#x56FA;&#x5B9A;&#x65F6;&#x95F4;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.15.png" alt="image-20201231153506121"></p>
+<p>2&#xFF09;&#x7EDF;&#x4E00;&#x968F;&#x673A;&#x5B9A;&#x65F6;&#x5668;</p>
+<p>&#x7F6E;&#x4E8E;&#x8BF7;&#x6C42;&#x4E4B;&#x540E;&#xFF0C;&#x968F;&#x673A;&#x5EF6;&#x8FDF;&#x6267;&#x884C;&#x7684;&#x65F6;&#x95F4;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.16.png" alt="image-20201231153539768"></p>
+<p>3&#xFF09;&#x540C;&#x6B65;&#x5B9A;&#x65F6;&#x5668;</p>
+<p>&#x7F6E;&#x4E8E;&#x8BF7;&#x6C42;&#x4E4B;&#x540E;&#xFF0C;&#x63A7;&#x5236;&#x8BF7;&#x6C42;&#x591A;&#x7528;&#x6237;&#x540C;&#x6B65;&#x6267;&#x884C;&#xFF1B;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x96C6;&#x5408;&#x70B9;&#x7684;&#x6D4B;&#x8BD5;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.17.png" alt="image-20201231153710469"></p>
+<h2 id="17-&#x914D;&#x7F6E;&#x5143;&#x4EF6;">1.7 &#x914D;&#x7F6E;&#x5143;&#x4EF6;</h2>
+<p>&#x914D;&#x7F6E;&#x5143;&#x4EF6;&#x7528;&#x4E8E;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x53CA;&#x8BF7;&#x6C42;&#x4FE1;&#x606F;&#xFF0C;&#x5E38;&#x7528;&#x7684;&#x914D;&#x7F6E;&#x5143;&#x4EF6;&#x6709;csv&#x6570;&#x636E;&#x6587;&#x4EF6;&#x3001;http&#x8BF7;&#x6C42;&#x9ED8;&#x8BA4;&#x503C;&#x3001;http&#x4FE1;&#x606F;&#x5934;&#x7BA1;&#x7406;&#x5668;&#x3001;http cookie&#x7BA1;&#x7406;&#x5668;&#xFF1B;</p>
+<p>1&#xFF09;csv&#x6570;&#x636E;&#x6587;&#x4EF6;</p>
+<p>csv&#x6570;&#x636E;&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x5316;&#x6587;&#x4EF6;&#xFF0C;&#x4F9B;&#x8BF7;&#x6C42;&#x4F7F;&#x7528;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.18.png" alt="image-20201231153812308"></p>
+<p>2&#xFF09;http&#x8BF7;&#x6C42;&#x9ED8;&#x8BA4;&#x503C;</p>
+<p>http&#x8BF7;&#x6C42;&#x9ED8;&#x8BA4;&#x503C;&#x914D;&#x7F6E;&#x7684;&#x503C;&#xFF0C;&#x5728;&#x540E;&#x9762;&#x7684;&#x8BF7;&#x6C42;&#x4E2D;&#x4E3A;&#x7A7A;&#x7684;&#x503C;&#xFF0C;&#x90FD;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x503C;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.19.png" alt="image-20201231153851263"></p>
+<p>3&#xFF09;http cookie&#x7BA1;&#x7406;&#x5668;</p>
+<p>&#x5F53;&#x8BF7;&#x6C42;&#x6709;cookie&#x503C;&#x65F6;&#xFF0C;&#x6DFB;&#x52A0;http cookie&#x7BA1;&#x7406;&#x5668;&#x540E;&#xFF0C;&#x811A;&#x672C;&#x8FD0;&#x884C;&#x4F1A;&#x81EA;&#x52A8;&#x83B7;&#x53D6;cookie&#x503C;&#xFF0C;&#x5E76;&#x62FC;&#x63A5;&#x5230;&#x4E4B;&#x540E;&#x7684;&#x8BF7;&#x6C42;&#x4E2D;&#xFF1B;&#x4E5F;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x7F16;&#x8F91;cookie&#x503C;&#xFF0C;&#x4F9B;&#x540E;&#x9762;&#x7684;&#x8BF7;&#x6C42;&#x4F7F;&#x7528;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.20.png" alt="image-20201231153927402"></p>
+<h2 id="18-&#x903B;&#x8F91;&#x63A7;&#x5236;&#x5143;&#x4EF6;">1.8 &#x903B;&#x8F91;&#x63A7;&#x5236;&#x5143;&#x4EF6;</h2>
+<p>&#x903B;&#x8F91;&#x63A7;&#x5236;&#x5143;&#x4EF6;&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x8BF7;&#x6C42;&#x7684;&#x6267;&#x884C;&#x903B;&#x8F91;&#x987A;&#x5E8F;&#xFF0C;&#x5E38;&#x7528;&#x7684;&#x903B;&#x8F91;&#x63A7;&#x5236;&#x5143;&#x4EF6;&#x6709;&#x4EC5;&#x4E00;&#x6B21;&#x63A7;&#x5236;&#x5668;&#x3001;&#x5FAA;&#x73AF;&#x63A7;&#x5236;&#x5668;&#x3001;&#x4E8B;&#x52A1;&#x63A7;&#x5236;&#x5668;&#x3001;if&#x63A7;&#x5236;&#x5668;&#xFF1B;</p>
+<p>1&#xFF09;&#x4EC5;&#x4E00;&#x6B21;&#x63A7;&#x5236;&#x5668;</p>
+<p>&#x4EC5;&#x4E00;&#x6B21;&#x63A7;&#x5236;&#x5668;&#x63A7;&#x5236;&#x63A7;&#x5236;&#x5668;&#x5185;&#x90E8;&#x7684;&#x8BF7;&#x6C42;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x53EA;&#x4F1A;&#x6267;&#x884C;1&#x6B21;&#xFF1B;&#xFF08;&#x5F53;&#x4EC5;&#x4E00;&#x6B21;&#x63A7;&#x5236;&#x5668;&#x4F4D;&#x4E8E;&#x541E;&#x5410;&#x91CF;&#x63A7;&#x5236;&#x5668;&#x5B50;&#x8282;&#x70B9;&#x65F6;&#xFF0C;&#x541E;&#x5410;&#x91CF;&#x63A7;&#x5236;&#x5668;&#x4E0D;&#x751F;&#x6548;&#xFF09;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.21.png" alt="image-20201231154022785"></p>
+<p>2&#xFF09;&#x5FAA;&#x73AF;&#x63A7;&#x5236;&#x5668;</p>
+<p>&#x63A7;&#x5236;&#x5FAA;&#x73AF;&#x63A7;&#x5236;&#x5668;&#x5185;&#x90E8;&#x7684;&#x8BF7;&#x6C42;&#x5FAA;&#x73AF;&#x6267;&#x884C;&#x591A;&#x6B21;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.22.png" alt="image-20201231154153410"></p>
+<p>3&#xFF09;if&#x63A7;&#x5236;&#x5668;</p>
+<p>&#x5F53;if&#x63A7;&#x5236;&#x5668;&#x6761;&#x4EF6;&#x6EE1;&#x8DB3;&#x65F6;&#xFF0C;&#x6267;&#x884C;&#x63A7;&#x5236;&#x5668;&#x5185;&#x90E8;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x573A;&#x666F;&#x7684;&#x6BD4;&#x4F8B;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.23.png" alt="image-20201231154228547"></p>
+<p>4&#xFF09;&#x4E8B;&#x52A1;&#x63A7;&#x5236;&#x5668;</p>
+<p>&#x628A;&#x591A;&#x4E2A;&#x8BF7;&#x6C42;&#x7F6E;&#x4E8E;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x4E2D;&#xFF0C;&#x7EDF;&#x8BA1;&#x4E8B;&#x52A1;&#x7684;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x548C;&#x5904;&#x7406;&#x80FD;&#x529B;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.24.png" alt="image-20201231154315725"></p>
+<ul>
+<li>generate parent sample:&#x52FE;&#x9009;&#x540E;&#xFF0C;&#x5C06;&#x4E8B;&#x52A1;&#x4E2D;&#x7684;&#x8BF7;&#x6C42;&#x7F6E;&#x4E8E;&#x4E8B;&#x52A1;&#x7684;&#x5B50;&#x8282;&#x70B9;&#x4E2D;&#xFF1B;</li>
+<li>Include duration of timer and pre-post processors in generated sample&#xFF1A;&#x52FE;&#x9009;&#xFF0C;&#x4E8B;&#x52A1;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x5305;&#x542B;&#x5B9A;&#x65F6;&#x5668;&#x7684;&#x65F6;&#x95F4;&#x548C;&#x524D;&#x7F6E;&#x5904;&#x7406;&#x5668;&#x7684;&#x5904;&#x7406;&#x65F6;&#x95F4;&#xFF1B;</li>
+</ul>
+<h2 id="19-&#x51FD;&#x6570;&#x52A9;&#x624B;">1.9 &#x51FD;&#x6570;&#x52A9;&#x624B;</h2>
+<p>&#x51FD;&#x6570;&#x52A9;&#x624B;&#x662F;jmeter&#x5C01;&#x88C5;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#xFF1B;&#x5E38;&#x7528;&#x7684;&#x51FD;&#x6570;&#x6709;&#xFF1A;&#x8BA1;&#x6570;&#x5668;&#x3001;&#x6D4B;&#x8BD5;&#x51FD;&#x6570;&#x3001;&#x52A0;&#x5BC6;&#x51FD;&#x6570;&#x3001;&#x751F;&#x6210;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x3001;&#x83B7;&#x53D6;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x3001;&#x751F;&#x6210;&#x968F;&#x673A;&#x6570;&#x7B49;&#xFF1B;</p>
+<p>1&#xFF09;&#x8BA1;&#x6570;&#x5668;&#x51FD;&#x6570;__counter</p>
+<p>&#x8BA1;&#x6570;&#x5668;&#x7528;&#x4E8E;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x7684;&#x8BA1;&#x6570;</p>
+<p>${__counter(TRUE,NUMBER)}</p>
+<ul>
+<li>TRUE&#xFF0C;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x8BA1;&#x6570;&#x5668;&#xFF1B;&#x4F8B;&#x5982;&#xFF1A;&#x7EBF;&#x7A0B;&#x6570;&#x4E3A;2&#xFF0C;&#x5FAA;&#x73AF;&#x6267;&#x884C;2&#x6B21;&#xFF1B;&#x7528;&#x6237;1&#x5FAA;&#x73AF;&#x7B2C;&#x4E00;&#x6B21;&#xFF0C;&#x8BA1;&#x6570;&#x5668;&#x503C;&#x4E3A;1&#xFF0C;&#x5FAA;&#x73AF;&#x7B2C;&#x4E8C;&#x6B21;&#xFF0C;&#x8BA1;&#x6570;&#x5668;&#x503C;&#x4E3A;2&#xFF1B;&#x7528;&#x6237;2&#x5FAA;&#x73AF;&#x6267;&#x884C;&#x7B2C;1&#x6B21;&#xFF0C;&#x8BA1;&#x6570;&#x5668;&#x503C;&#x4E3A;1&#xFF0C;&#x5FAA;&#x73AF;&#x6267;&#x884C;&#x7B2C;2&#x6B21;&#xFF0C;&#x8BA1;&#x6570;&#x5668;&#x503C;&#x4E3A;2&#xFF1B;</li>
+<li>FALSE&#xFF0C;&#x4F7F;&#x7528;&#x5168;&#x5C40;&#x8BA1;&#x6570;&#x5668;&#xFF0C;&#x6240;&#x6709;&#x7528;&#x6237;&#x5171;&#x7528;&#x4E00;&#x4E2A;&#x8BA1;&#x6570;&#x5668;&#xFF0C;&#x6309;&#x7167;&#x6267;&#x884C;&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x6267;&#x884C;&#x7B2C;&#x4E00;&#x6B21;&#xFF0C;&#x8BA1;&#x6570;&#x5668;&#x503C;&#x4E3A;1&#xFF0C;&#x6267;&#x884C;&#x7B2C;&#x4E8C;&#x6B21;&#xFF0C;&#x8BA1;&#x6570;&#x5668;&#x503C;&#x4E3A;2&#xFF1B;</li>
+<li>NUMBER&#xFF0C;&#x4FDD;&#x5B58;&#x8BA1;&#x6570;&#x5668;&#x7684;&#x503C;&#x5230;&#x53D8;&#x91CF;NUMBER&#x4E2D;&#xFF1B;</li>
+<li></li>
+</ul>
+<p>2&#xFF09;&#x6D4B;&#x8BD5;&#x51FD;&#x6570;__jexl3</p>
+<p>&#x7528;&#x4E8E;&#x5224;&#x5B9A;&#x6761;&#x4EF6;&#x662F;&#x5426;&#x6EE1;&#x8DB3;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;if&#x6761;&#x4EF6;&#x63A7;&#x5236;&#x5176;&#x4E2D;&#xFF0C;&#x548C;&#x8BA1;&#x6570;&#x5668;&#x7ED3;&#x5408;&#x4F7F;&#x7528;&#xFF0C;&#x8BBE;&#x8BA1;&#x573A;&#x666F;&#x7684;&#x6BD4;&#x4F8B;&#xFF1B;</p>
+<p>${<strong>jexl3(${</strong>counter(TRUE,)} % 4 ==0,)}</p>
+<p>&#x5F53;&#x8BA1;&#x6570;&#x5668;&#x7684;&#x503C;&#x5BF9;4&#x6C42;&#x4F59;=0&#x65F6;&#xFF0C;&#x6761;&#x4EF6;&#x6EE1;&#x8DB3;&#xFF0C;&#x6267;&#x884C;&#x8BE5;&#x6761;&#x4EF6;&#x63A7;&#x5236;&#x5668;&#x4E0B;&#x7684;&#x8BF7;&#x6C42;&#x4EA4;&#x6613;&#xFF1B;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<p>&#x5E76;&#x53D1;&#x7528;&#x6237;&#x6570;&#x4E3A;8&#xFF0C;http&#x8BF7;&#x6C42;1&#x548C;http&#x8BF7;&#x6C42;2&#xFF0C;&#x8981;&#x6C42;&#x6267;&#x884C;&#x7684;&#x4EA4;&#x6613;&#x6BD4;&#x4F8B;&#x4E3A;1:3&#xFF0C;&#x573A;&#x666F;&#x8BBE;&#x8BA1;&#x5982;&#x4E0B;</p>
+<p>&#x7EBF;&#x7A0B;&#x6570;8 &#x5FAA;&#x73AF;&#x6267;&#x884C;8&#x6B21;&#xFF0C;&#x7B26;&#x5408;if&#x63A7;&#x5236;&#x5668;1&#x6761;&#x4EF6;&#x7684;&#x6570;&#x91CF;&#x4E3A;16&#xFF0C;&#x7B26;&#x5408;if&#x63A7;&#x5236;&#x5668;2&#x7684;&#x6570;&#x91CF;&#x4E3A;48&#xFF0C;&#x6240;&#x4EE5;&#x8BF7;&#x6C42;1&#x548C;&#x8BF7;&#x6C42;2&#x7684;&#x6BD4;&#x4F8B;&#x4E3A;1:3&#xFF1B;</p>
+<p>if&#x63A7;&#x5236;&#x5668;1&#xFF1A;${<strong>jexl3(${</strong>counter(TRUE,)} % 4 == 0,)}</p>
+<p>http&#x8BF7;&#x6C42;1</p>
+<p>if&#x63A7;&#x5236;&#x5668;2&#xFF1A;${<strong>jexl3(${</strong>counter(TRUE,)} % 4 != 0,)}</p>
+<p>http&#x8BF7;&#x6C42;2</p>
+<p>3&#xFF09;&#x52A0;&#x5BC6;&#x51FD;&#x6570;__MD5</p>
+<p>MD5&#x52A0;&#x5BC6;&#x51FD;&#x6570;&#x7528;&#x4E8E;MD5&#x52A0;&#x5BC6;&#xFF1B;&#x5E38;&#x7528;&#x4E8E;&#x5BC6;&#x7801;&#x7684;&#x52A0;&#x5BC6;&#xFF1B;&#x6216;&#x8005;&#x751F;&#x6210;32&#x4F4D;&#x968F;&#x673A;&#x6570;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<p>&#x5BC6;&#x7801;MD5&#x52A0;&#x5BC6;&#xFF0C;&#x52A0;&#x5BC6;&#x89C4;&#x5219;&#x4E3A;zr+&#x5BC6;&#x7801;+hg</p>
+<p>password=${__MD5(zr111111hg,)}</p>
+<p>&#x52A0;&#x5BC6;&#x4E4B;&#x540E;&#x7684;&#x7ED3;&#x679C;&#xFF1A;5c4fcc5add5d087de1e8534189c687f7</p>
+<p>4&#xFF09;&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x53D8;&#x91CF;</p>
+<p>&#x5F53;&#x5173;&#x8054;&#x53D8;&#x91CF;&#x9700;&#x8981;&#x8DE8;&#x7EBF;&#x7A0B;&#x7EC4;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x3010;beanshell&#x540E;&#x7F6E;&#x5904;&#x7406;&#x5668;&#x3011;&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF1B;</p>
+<p>${__setProperty(static_token,${token},)}</p>
+<p>&#x5C06;&#x53D8;&#x91CF;token&#x503C;&#x8BBE;&#x7F6E;&#x4E3A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x4FDD;&#x5B58;&#x5230;static_token&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x8DE8;&#x7EBF;&#x7A0B;&#x7EC4;&#x8C03;&#x7528;&#xFF1B;</p>
+<p>&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x8C03;&#x7528;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x8C03;&#x7528;&#x51FD;&#x6570;${<strong>property(static_token)}&#x6216;${</strong>P(static_token)}</p>
+<p>5&#xFF09;&#x968F;&#x673A;&#x6570;&#x51FD;&#x6570;</p>
+<p>${__RandomDate(yyyyMMdd,20200101,20221231,,)}</p>
+<h1 id="&#x4E8C;&#x3001;jmeter&#x811A;&#x672C;&#x5F00;&#x53D1;">&#x4E8C;&#x3001;jmeter&#x811A;&#x672C;&#x5F00;&#x53D1;</h1>
+<h2 id="21-&#x811A;&#x672C;&#x5F00;&#x53D1;&#x65B9;&#x5F0F;">2.1 &#x811A;&#x672C;&#x5F00;&#x53D1;&#x65B9;&#x5F0F;</h2>
+<p>jmeter&#x811A;&#x672C;&#x5F00;&#x53D1;&#x65B9;&#x5F0F;&#x6709;3&#x79CD;&#xFF0C;&#x5206;&#x522B;&#x4E3A;&#xFF1A;</p>
+<p>1&#xFF09;&#x6839;&#x636E;&#x63A5;&#x53E3;&#x6587;&#x6863;&#xFF0C;&#x624B;&#x52A8;&#x7F16;&#x5199;&#x8BF7;&#x6C42;&#x811A;&#x672C;&#xFF1B;</p>
+<p>2&#xFF09;&#x6839;&#x636E;&#x6293;&#x5305;&#xFF0C;&#x624B;&#x52A8;&#x7F16;&#x5199;&#x811A;&#x672C;&#xFF1B;</p>
+<p>3&#xFF09;&#x4F7F;&#x7528;Jmeter&#x4EE3;&#x7406;&#x6D4F;&#x89C8;&#x5668;&#x5F55;&#x5236;&#x811A;&#x672C;&#xFF1B;</p>
+<h2 id="22-&#x4EE3;&#x7406;&#x6D4F;&#x89C8;&#x5668;&#x5F55;&#x5236;&#x811A;&#x672C;">2.2 &#x4EE3;&#x7406;&#x6D4F;&#x89C8;&#x5668;&#x5F55;&#x5236;&#x811A;&#x672C;</h2>
+<p>&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<p>1&#xFF09;&#x914D;&#x7F6E;&#x6D4F;&#x89C8;&#x5668;&#x4EE3;&#x7406;&#xFF1B;</p>
+<p>2&#xFF09;&#x6253;&#x5F00;jmeter&#xFF0C;&#x6DFB;&#x52A0;&quot;&#x7EBF;&#x7A0B;&#x7EC4;&quot;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x5F55;&#x5236;&#x7684;&#x811A;&#x672C;&#xFF1B;</p>
+<p>3&#xFF09;&#x5728;jmeter&#x4E2D;&#xFF0C;&#x6DFB;&#x52A0;&#x201C;&#x975E;&#x6D4B;&#x8BD5;&#x5143;&#x4EF6;-&gt;HTTP&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x201D;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.25.png" alt="image-20201231161006715"></p>
+<p>4&#xFF09;&#x70B9;&#x51FB;&#x3010;&#x542F;&#x52A8;&#x3011;&#xFF0C;&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x5F00;&#x59CB;&#x5F55;&#x5236;&#x811A;&#x672C;&#xFF1B;&#x64CD;&#x4F5C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x70B9;&#x51FB;&#x3010;&#x505C;&#x6B62;&#x3011;&#xFF0C;&#x5B8C;&#x6210;&#x5F55;&#x5236;&#xFF1B;&#x6253;&#x5F00;jmeter&#x4E4B;&#x524D;&#x6DFB;&#x52A0;&#x7684;&#x7EBF;&#x7A0B;&#x7EC4;&#xFF0C;&#x53EF;&#x67E5;&#x770B;&#x5F55;&#x5236;&#x5230;&#x7684;&#x811A;&#x672C;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.26.png" alt="image-20201231161051642"></p>
+<p>5&#xFF09;&#x6574;&#x7406;&#x811A;&#x672C;&#xFF0C;&#x628A;&#x65E0;&#x5173;&#x8054;&#x7684;&#x8BF7;&#x6C42;&#x5220;&#x9664;&#xFF0C;&#x4FDD;&#x7559;&#x9700;&#x8981;&#x6D4B;&#x8BD5;&#x7684;&#x8BF7;&#x6C42;&#x811A;&#x672C;&#xFF1B;</p>
+<h1 id="&#x4E09;&#x3001;&#x811A;&#x672C;&#x4F18;&#x5316;">&#x4E09;&#x3001;&#x811A;&#x672C;&#x4F18;&#x5316;</h1>
+<h2 id="31-&#x5173;&#x8054;">3.1 &#x5173;&#x8054;</h2>
+<p>1&#xFF09;&#x5173;&#x8054;&#x7684;&#x76EE;&#x7684;</p>
+<p>&#x200B;     &#x4E0D;&#x540C;&#x8BF7;&#x6C42;&#x4E4B;&#x95F4;&#xFF0C;&#x6709;&#x53C2;&#x6570;&#x503C;&#x4F20;&#x9012;&#xFF0C;&#x8BF7;&#x6C42;&#x7684;&#x53C2;&#x6570;&#x662F;&#x52A8;&#x6001;&#x503C;&#xFF0C;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x5176;&#x4ED6;&#x8BF7;&#x6C42;&#x7684;&#x54CD;&#x5E94;&#x751F;&#x6210;&#xFF1B;</p>
+<p>&#x200B;     &#x4F8B;&#x5982;&#xFF1A;token&#x503C;&#xFF0C;&#x7528;&#x6237;&#x767B;&#x5F55;&#x65F6;&#xFF0C;&#x751F;&#x6210;token&#x503C;&#xFF0C;&#x767B;&#x5F55;&#x4E4B;&#x540E;&#x7684;&#x64CD;&#x4F5C;&#x8BF7;&#x6C42;&#x90FD;&#x9700;&#x8981;&#x5E26;token&#x503C;&#x624D;&#x80FD;&#x64CD;&#x4F5C;&#x6210;&#x529F;&#xFF0C;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x8EAB;&#x4EFD;&#x7684;&#x6821;&#x9A8C;&#xFF1B;&#x51CF;&#x5C11;&#x7528;&#x6237;&#x64CD;&#x4F5C;&#x6821;&#x9A8C;&#x7684;&#x65F6;&#x95F4;&#xFF1B;</p>
+<p>2&#xFF09;&#x5173;&#x8054;&#x7684;&#x65B9;&#x6CD5;</p>
+<ul>
+<li>&#x901A;&#x8FC7;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x503C;</li>
+</ul>
+<p>&#x200B;     &#x5728;&#x4EA7;&#x751F;&#x52A8;&#x6001;&#x6570;&#x636E;&#x7684;&#x8BF7;&#x6C42;&#x4E4B;&#x540E;&#xFF0C;&#x6DFB;&#x52A0;&#x540E;&#x7F6E;&#x5904;&#x7406;&#x5668;&#x3010;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x63D0;&#x53D6;&#x5668;&#x3011;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.27.png" alt="image-20210104155531392"></p>
+<p>&#x200B;     &#x5F15;&#x7528;&#x540D;&#x79F0;&#xFF1A;&#x63D0;&#x53D6;&#x52A8;&#x6001;&#x503C;&#x540E;&#xFF0C;&#x4FDD;&#x5B58;&#x7684;&#x53D8;&#x91CF;&#x540D;&#x79F0;&#xFF1B;</p>
+<p>&#x200B;     &#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;&quot;data&quot;:&quot;(.<em>)&quot;&#xFF0C;</em>&#x8868;&#x793A;&#x52A8;&#x6001;&#x503C;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x4E3A;&#x52A8;&#x6001;&#x503C;&#x7684;&#x524D;&#x540E;&#x6587;&#xFF0C;&#x5C3D;&#x91CF;&#x53D6;&#x66F4;&#x591A;&#x7684;&#x524D;&#x540E;&#x6587;&#xFF0C;&#x4FDD;&#x8BC1;&#x5173;&#x8054;&#x7684;&#x52A8;&#x6001;&#x503C;&#x552F;&#x4E00;&#xFF1B;&#x53EF;&#x586B;&#x5199;&#x591A;&#x4E2A;&#x6A21;&#x677F;&#xFF1B;</p>
+<p>&#x200B;     &#x6A21;&#x677F;&#xFF1A;$1$&#xFF0C;&#x8868;&#x793A;&#x53D6;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x6A21;&#x677F;&#xFF1B;</p>
+<p>&#x200B;     &#x5339;&#x914D;&#x6570;&#x5B57;&#xFF1A;&#x5F53;&#x5339;&#x914D;&#x7684;&#x7ED3;&#x679C;&#x6709;&#x591A;&#x4E2A;&#x65F6;&#xFF0C;0&#x8868;&#x793A;&#xFF0C;&#x968F;&#x673A;&#x9009;&#x53D6;&#x5339;&#x914D;&#x503C;&#xFF1B;1&#x8868;&#x793A;&#x9009;&#x53D6;&#x5339;&#x914D;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;&#xFF1B;</p>
+<p>&#x200B;     &#x7F3A;&#x7701;&#x503C;&#xFF1A;&#x5F53;&#x6CA1;&#x6709;&#x5339;&#x914D;&#x5230;&#x5185;&#x5BB9;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;&#x7F3A;&#x7701;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x7A7A;&#xFF1B;</p>
+<p>&#x200B;     &#x6CE8;&#xFF1A;&#x53EF;&#x5728;&#x5BDF;&#x770B;&#x7ED3;&#x679C;&#x6811;-&#x54CD;&#x5E94;&#x6570;&#x636E;&#x4E2D;&#xFF0C;&#x6D4B;&#x8BD5;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x662F;&#x5426;&#x6B63;&#x786E;</p>
+<ul>
+<li>&#x901A;&#x8FC7;json&#x63D0;&#x53D6;&#x5668;&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x503C;</li>
+</ul>
+<p>&#x9002;&#x7528;&#x4E8E;&#x54CD;&#x5E94;&#x7ED3;&#x679C;&#x4E3A;json&#x683C;&#x5F0F;&#x7684;&#x8BF7;&#x6C42;&#xFF1B;</p>
+<p>&#x5728;&#x4EA7;&#x751F;&#x52A8;&#x6001;&#x6570;&#x636E;&#x7684;&#x8BF7;&#x6C42;&#x4E4B;&#x540E;&#xFF0C;&#x6DFB;&#x52A0;&#x540E;&#x7F6E;&#x5904;&#x7406;&#x5668;&#x3010;Json&#x63D0;&#x53D6;&#x5668;&#x3011;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.28.png" alt="image-20210104155713212"></p>
+<p>names:&#x53D8;&#x91CF;&#x540D;&#x79F0;</p>
+<p>json path expression:json&#x63D0;&#x53D6;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;$.data,&#x5176;&#x4E2D;data&#x4E3A;&#x952E;&#x540D;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x591A;&#x5C42;&#x5219;&#x901A;&#x8FC7;&#x591A;&#x4E2A;.&#x53F7;&#x9009;&#x53D6;&#xFF0C;&#x4F8B;&#x5982;$.data[0].goodsID;</p>
+<p>Match no:&#x5339;&#x914D;&#x7684;&#x503C;&#xFF0C;&#x5F53;&#x5339;&#x914D;&#x7ED3;&#x679C;&#x6709;&#x591A;&#x4E2A;&#x65F6;&#xFF0C;0&#xFF0C;&#x8868;&#x793A;&#x968F;&#x673A;&#x5339;&#x914D;&#xFF0C;1&#xFF0C;&#x8868;&#x793A;&#x5339;&#x914D;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;&#xFF1B;</p>
+<p>&#x6CE8;&#xFF1A;</p>
+<p>json&#x63D0;&#x53D6;&#x5668;&#x8868;&#x8FBE;&#x5F0F;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x5BDF;&#x770B;&#x7ED3;&#x679C;&#x6811;-&#x54CD;&#x5E94;&#x6570;&#x636E;&#x4E2D;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x54CD;&#x5E94;&#x6587;&#x672C;&#x5C55;&#x793A;&#x7C7B;&#x578B;&#x9009;&#x62E9;json path tester&#xFF1B;</p>
+<h2 id="32-&#x53C2;&#x6570;&#x5316;">3.2 &#x53C2;&#x6570;&#x5316;</h2>
+<p>1&#xFF09;&#x76EE;&#x7684;</p>
+<p>&#x53C2;&#x6570;&#x5316;&#x662F;&#x4E3A;&#x4E86;&#x6A21;&#x62DF;&#x771F;&#x5B9E;&#x7684;&#x591A;&#x7528;&#x6237;&#x64CD;&#x4F5C;&#xFF0C;&#x5BF9;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x53C2;&#x6570;&#x5316;&#xFF0C;&#x4F7F;&#x7528;&#x66F4;&#x591A;&#x7684;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x5BF9;&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x8BF7;&#x6C42;&#xFF1B;</p>
+<p>2&#xFF09;&#x5E38;&#x7528;&#x53C2;&#x6570;&#x5316;&#x65B9;&#x6CD5;</p>
+<ul>
+<li>l &#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;</li>
+<li>l &#x51FD;&#x6570;&#x52A9;&#x624B;&#xFF1A;&#x968F;&#x673A;&#x51FD;&#x6570;&#xFF08;random&#xFF09;&#x3001;&#x65F6;&#x95F4;&#x6233;&#x51FD;&#x6570;(time)&#x3001;&#x8BA1;&#x6570;&#x5668;&#x51FD;&#x6570;(counter)</li>
+<li>l csv&#x6570;&#x636E;&#x6587;&#x4EF6;&#xFF08;&#x5E38;&#x7528;&#xFF09;</li>
+<li>l beanshell</li>
+<li>l jdbc&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x83B7;&#x53D6;&#x6570;&#x636E;</li>
+</ul>
+<p>3&#xFF09;csv&#x6570;&#x636E;&#x6587;&#x4EF6;</p>
+<p>&#x6DFB;&#x52A0;&#x65B9;&#x6CD5;&#xFF1A;&#x6DFB;&#x52A0;--&#x914D;&#x7F6E;&#x5143;&#x4EF6;--csv&#x6570;&#x636E;&#x6587;&#x4EF6;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.29.png" alt="image-20210104160112412"></p>
+<ul>
+<li><p>&#x6587;&#x4EF6;&#x540D;&#xFF1A;&#x5206;&#x5E03;&#x5F0F;&#x6D4B;&#x8BD5;&#x65F6;&#x4F7F;&#x7528;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x5F00;&#x59CB;&#x6D4B;&#x8BD5;&#x4E4B;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x6587;&#x4EF6;&#x653E;&#x7F6E;&#x5230;&#x5404;&#x6267;&#x884C;&#x673A;&#x7684;&#x5BF9;&#x5E94;&#x8DEF;&#x5F84;&#x3002;&#x4F8B;&#x5982;&#xFF1A;.\data\user.csv&#xFF0C;&#x8BF4;&#x660E;&#x53C2;&#x6570;&#x5316;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x4E3A;jmeter_home\bin\data\user.csv;</p>
+</li>
+<li><p>&#x6587;&#x4EF6;&#x7F16;&#x7801;&#xFF1A;UTF-8&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;GB2312)</p>
+</li>
+<li><p>&#x53D8;&#x91CF;&#x540D;&#x79F0;&#xFF1A;&#x53C2;&#x6570;&#x5316;&#x6587;&#x4EF6;&#x4E2D;&#x53D8;&#x91CF;&#x540D;&#x79F0;&#xFF0C;&#x540E;&#x9762;&#x8BF7;&#x6C42;&#x4E2D;&#x8C03;&#x7528;&#x53D8;&#x91CF;&#xFF0C;&#x4F7F;&#x7528;&#x8BE5;&#x540D;&#x79F0;&#xFF0C;&#x7528;&#x9017;&#x53F7;&#x9694;&#x5F00;&#xFF1B;</p>
+</li>
+<li><p>&#x5FFD;&#x7565;&#x9996;&#x884C;&#xFF1A;&#x9009;&#x62E9;TRUE&#xFF0C;&#x8868;&#x793A;&#xFF0C;&#x5FFD;&#x7565;&#x53C2;&#x6570;&#x5316;&#x6587;&#x4EF6;&#x4E2D;&#x7B2C;&#x4E00;&#x884C;&#x7684;&#x503C;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x53C2;&#x6570;&#x5316;&#x6587;&#x4EF6;&#x9996;&#x884C;&#x4E3A;&#x53D8;&#x91CF;&#x540D;&#x79F0;&#x7684;&#x60C5;&#x51B5;&#xFF1B;&#x9009;&#x62E9;FALSE&#xFF0C;&#x4E0D;&#x5FFD;&#x7565;&#x53C2;&#x6570;&#x5316;&#x6587;&#x4EF6;&#x9996;&#x884C;&#xFF1B;</p>
+</li>
+<li><p>&#x5206;&#x9694;&#x7B26;&#xFF1A;&#x53C2;&#x6570;&#x5316;&#x6587;&#x4EF6;&#x4E2D;&#x53D8;&#x91CF;&#x7684;&#x5206;&#x9694;&#x7B26;&#xFF0C;&#x4E00;&#x822C;&#x4E3A;&#x9017;&#x53F7;&#xFF1B;</p>
+</li>
+<li><p>&#x662F;&#x5426;&#x5141;&#x8BB8;&#x5E26;&#x5F15;&#x53F7;&#xFF1A;&#x9009;&#x62E9;TRUE&#xFF0C;&#x8868;&#x793A;&#x5141;&#x8BB8;&#x53C2;&#x6570;&#x4E2D;&#x5E26;&#x5F15;&#x53F7;&#xFF0C;&#x4E0D;&#x4F5C;&#x4E3A;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;&#xFF1B;</p>
+</li>
+<li><p>&#x9047;&#x5230;&#x6587;&#x4EF6;&#x7ED3;&#x675F;&#x7B26;&#x518D;&#x6B21;&#x5FAA;&#x73AF;&#xFF1A;&#x9009;&#x62E9;TRUE&#x65F6;&#xFF0C;&#x5FAA;&#x73AF;&#x4F7F;&#x7528;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#xFF1B;</p>
+</li>
+<li><p>&#x9047;&#x5230;&#x6587;&#x4EF6;&#x7ED3;&#x675F;&#x7B26;&#x505C;&#x6B62;&#x7EBF;&#x7A0B;&#xFF1A;&#x9009;&#x62E9;TRUE&#x65F6;&#xFF0C;&#x5F53;&#x53D6;&#x5230;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x505C;&#x6B62;&#x7EBF;&#x7A0B;&#xFF1B;&#x5F53;&#x9009;&#x62E9;FALSE&#x65F6;&#xFF0C;&#x5224;&#x5B9A;&#x9047;&#x5230;&#x6587;&#x4EF6;&#x7ED3;&#x675F;&#x7B26;&#x518D;&#x6B21;&#x5FAA;&#x73AF;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x5F53;&#x914D;&#x7F6E;&#x4E3A;TRUE&#x65F6;&#xFF0C;&#x5FAA;&#x73AF;&#x6D4B;&#x8BD5;&#xFF0C;&#x5F53;&#x914D;&#x7F6E;&#x4E3A;FALSE&#x65F6;&#xFF0C;&#x505C;&#x6B62;&#x7EBF;&#x7A0B;&#xFF1B;</p>
+</li>
+<li><p>&#x7EBF;&#x7A0B;&#x5171;&#x4EAB;&#x6A21;&#x5F0F;&#xFF1A;</p>
+<p>&#x6240;&#x6709;&#x7EBF;&#x7A0B;---&#x8868;&#x793A;&#x6240;&#x6709;&#x7EBF;&#x7A0B;&#x7EC4;&#x5171;&#x4EAB;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#xFF0C;&#x6240;&#x6709;&#x7EBF;&#x7A0B;&#x7EC4;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x9009;&#x53D6;&#x6570;&#x636E;&#xFF1B;</p>
+<p>&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x7EC4;---&#x8868;&#x793A;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x7EC4;&#x5171;&#x4EAB;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#xFF0C;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x7EC4;&#x7684;&#x7528;&#x6237;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x9009;&#x53D6;&#x6570;&#x636E;&#xFF1B;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x7EC4;&#x90FD;&#x4ECE;&#x7B2C;1&#x4E2A;&#x6570;&#x636E;&#x5F00;&#x59CB;&#x9009;&#x53D6;&#xFF1B;</p>
+<p>&#x5F53;&#x524D;&#x7EBF;&#x7A0B;---&#x8868;&#x793A;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x72EC;&#x4EAB;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#xFF0C;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x90FD;&#x4ECE;&#x7B2C;1&#x4E2A;&#x6570;&#x636E;&#x5F00;&#x59CB;&#x9009;&#x62E9;&#x6570;&#x636E;&#xFF1B;</p>
+</li>
+</ul>
+<p>&#x6837;&#x4F8B;&#xFF1A;</p>
+<p>Jmter&#x811A;&#x672C;&#x4E2D;&#x5305;&#x542B;2&#x4E2A;&#x7EBF;&#x7A0B;&#x7EC4;&#xFF1A;&#x7EBF;&#x7A0B;&#x7EC4;A&#x548C;&#x7EBF;&#x7A0B;&#x7EC4;B&#xFF0C;&#x7EBF;&#x7A0B;&#x7EC4;A&#x4E0B;&#x6709;&#x8BF7;&#x6C42;A1&#xFF0C;&#x7EBF;&#x7A0B;&#x7EC4;B&#x4E0B;&#x6709;&#x8BF7;&#x6C42;B1&#xFF0C;&#x5728;&#x811A;&#x672C;&#x4E2D;&#x6709;&#x53C2;&#x6570;&#x5316;&#x6587;&#x4EF6;user.csv&#xFF0C;&#x53C2;&#x6570;&#x503C;&#x4E3A;user01&#x3001;user02&#x3001;user03&#x3001;user04&#xFF1B;AB&#x7EBF;&#x7A0B;&#x7EC4;&#x7EBF;&#x7A0B;&#x6570;&#x4E3A;2&#xFF0C;&#x5FAA;&#x73AF;2&#x6B21;&#xFF1B;</p>
+<p>&#x7EBF;&#x7A0B;&#x5171;&#x4EAB;&#x6A21;&#x5F0F;&#xFF1A;</p>
+<p>1&#xFF09;&#x6240;&#x6709;&#x7EBF;&#x7A0B;</p>
+<p>A1&#x53D6;&#x6570;&#x4E3A;&#xFF1A;user01&#x3001;user03&#x3001;user02&#x3001;user04</p>
+<p>B1&#x53D6;&#x6570;&#x4E3A;&#xFF1A;user02&#x3001;user04&#x3001;user01&#x3001;user03</p>
+<p>&#x6240;&#x6709;&#x7EBF;&#x7A0B;&#x7EC4;&#x7684;&#x6240;&#x6709;&#x7528;&#x6237;&#x5171;&#x4EAB;&#x53C2;&#x6570;&#x5316;&#x6587;&#x4EF6;&#xFF0C;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x9009;&#x53D6;&#x6570;&#x636E;&#xFF1B;</p>
+<p>2&#xFF09;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x7EC4;</p>
+<p>A1&#x53D6;&#x6570;&#x4E3A;&#xFF1A;user01&#x3001;user02&#x3001;user03&#x3001;user04</p>
+<p>B1&#x53D6;&#x6570;&#x4E3A;&#xFF1A;user01&#x3001;user02&#x3001;user03&#x3001;user04</p>
+<p>&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x7EC4;&#x7684;&#x6240;&#x6709;&#x7528;&#x6237;&#x5171;&#x4EAB;&#x53C2;&#x6570;&#x5316;&#x6587;&#x4EF6;&#xFF0C;&#x4E0D;&#x540C;&#x7EBF;&#x7A0B;&#x7EC4;&#x7684;&#x7EBF;&#x7A0B;&#x7EC4;&#x7528;&#x6237;&#x53D6;&#x6570;&#x72EC;&#x7ACB;&#xFF1B;</p>
+<p>3&#xFF09;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;</p>
+<p>A1&#x53D6;&#x6570;&#x4E3A;&#xFF1A;user01&#x3001;user02&#x3001;user01&#x3001;user02</p>
+<p>B1&#x53D6;&#x6570;&#x4E3A;&#xFF1A;user01&#x3001;user02&#x3001;user01&#x3001;user02</p>
+<p>&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x72EC;&#x4EAB;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x540C;&#x7528;&#x6237;&#x53D6;&#x6570;&#x72EC;&#x7ACB;&#xFF1B;</p>
+<h1 id="&#x56DB;&#x3001;&#x573A;&#x666F;&#x8BBE;&#x8BA1;">&#x56DB;&#x3001;&#x573A;&#x666F;&#x8BBE;&#x8BA1;</h1>
+<p>&#x7CFB;&#x7EDF;&#x5B9E;&#x9645;&#x64CD;&#x4F5C;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x901A;&#x5E38;&#x90FD;&#x4F1A;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x7528;&#x6237;&#x8FDB;&#x884C;&#x4E0D;&#x540C;&#x7684;&#x4EA4;&#x6613;&#x64CD;&#x4F5C;&#xFF1B;&#x4E3A;&#x4E86;&#x6A21;&#x62DF;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x9700;&#x8981;&#x8BBE;&#x8BA1;&#x573A;&#x666F;&#x6BD4;&#x4F8B;&#xFF0C;&#x63A7;&#x5236;&#x4EA4;&#x6613;&#x6309;&#x7167;&#x4E00;&#x5B9A;&#x7684;&#x6BD4;&#x4F8B;&#x5BF9;&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x8BF7;&#x6C42;&#x64CD;&#x4F5C;&#xFF1B;jmeter&#x5E38;&#x7528;&#x7684;&#x573A;&#x666F;&#x6BD4;&#x4F8B;&#x8BBE;&#x8BA1;&#x65B9;&#x6CD5;&#x6709;&#xFF1A;</p>
+<ul>
+<li>&#x591A;&#x7EBF;&#x7A0B;&#x7EC4;</li>
+<li>if&#x63A7;&#x5236;&#x5668;</li>
+<li>&#x541E;&#x5410;&#x91CF;&#x63A7;&#x5236;&#x5668;</li>
+</ul>
+<h2 id="41-&#x591A;&#x7EBF;&#x7A0B;&#x7EC4;">4.1 &#x591A;&#x7EBF;&#x7A0B;&#x7EC4;</h2>
+<p>&#x591A;&#x7EBF;&#x7A0B;&#x7EC4;&#xFF0C;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x7EC4;&#x4E0B;&#x653E;&#x7F6E;&#x4E0D;&#x540C;&#x7684;&#x4EA4;&#x6613;&#x8BF7;&#x6C42;&#xFF0C;&#x6267;&#x884C;&#x8BA1;&#x5212;&#x4E2D;&#x3010;&#x72EC;&#x7ACB;&#x8FD0;&#x884C;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x7EC4;&#x3011;&#x4E0D;&#x52FE;&#x9009;&#xFF0C;&#x591A;&#x4E2A;&#x8BF7;&#x6C42;&#x540C;&#x65F6;&#x8FD0;&#x884C;&#xFF0C;&#x63A7;&#x5236;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x7EC4;&#x7684;&#x7EBF;&#x7A0B;&#x6570;&#x91CF;&#xFF0C;&#x63A7;&#x5236;&#x4EA4;&#x6613;&#x7684;&#x6BD4;&#x4F8B;&#xFF1B;</p>
+<p>&#x591A;&#x7EBF;&#x7A0B;&#x7EC4;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x4EA4;&#x6613;&#x7684;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x4E0D;&#x540C;&#xFF0C;&#x4EA4;&#x6613;&#x7684;&#x6BD4;&#x4F8B;&#x4E5F;&#x4E0D;&#x540C;&#xFF0C;&#x4E0D;&#x80FD;&#x6839;&#x636E;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x7EC4;&#x7684;&#x7EBF;&#x7A0B;&#x6570;&#x51C6;&#x786E;&#x7684;&#x63A7;&#x5236;&#x4E0D;&#x540C;&#x4EA4;&#x6613;&#x7684;&#x6BD4;&#x4F8B;&#xFF1B;&#x6240;&#x4EE5;&#x4E0D;&#x5E38;&#x7528;&#xFF1B;</p>
+<h2 id="42-if&#x63A7;&#x5236;&#x5668;">4.2 if&#x63A7;&#x5236;&#x5668;</h2>
+<p>if&#x63A7;&#x5236;&#x5668;&#x4E00;&#x822C;&#x548C;&#x8BA1;&#x6570;&#x5668;&#x7ED3;&#x5408;&#x4F7F;&#x7528;&#xFF0C;&#x63A7;&#x5236;&#x540C;&#x4E00;&#x65F6;&#x523B;&#x4E0D;&#x540C;&#x4EA4;&#x6613;&#x7684;&#x6BD4;&#x4F8B;&#xFF0C;&#x80FD;&#x591F;&#x4E25;&#x683C;&#x63A7;&#x5236;&#x4EA4;&#x6613;&#x7684;&#x6BD4;&#x4F8B;&#xFF0C;&#x6BD4;&#x8F83;&#x5E38;&#x7528;&#xFF1B;&#x53EF;&#x901A;&#x8FC7;&#x805A;&#x5408;&#x62A5;&#x544A;&#xFF0C;&#x5BDF;&#x770B;&#x4E0D;&#x540C;&#x8BF7;&#x6C42;&#x7684;&#x4EA4;&#x6613;&#x6BD4;&#x4F8B;&#xFF1B;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<p>&#x5E76;&#x53D1;&#x7528;&#x6237;&#x6570;&#x4E3A;8&#xFF0C;http&#x8BF7;&#x6C42;1&#x548C;http&#x8BF7;&#x6C42;2&#xFF0C;&#x8981;&#x6C42;&#x6267;&#x884C;&#x7684;&#x4EA4;&#x6613;&#x6BD4;&#x4F8B;&#x4E3A;1:3&#xFF0C;&#x573A;&#x666F;&#x8BBE;&#x8BA1;&#x5982;&#x4E0B;</p>
+<p>&#x7EBF;&#x7A0B;&#x6570;8 &#x5FAA;&#x73AF;&#x6267;&#x884C;8&#x6B21;&#xFF0C;&#x7B26;&#x5408;if&#x63A7;&#x5236;&#x5668;1&#x6761;&#x4EF6;&#x7684;&#x6570;&#x91CF;&#x4E3A;16&#xFF0C;&#x7B26;&#x5408;if&#x63A7;&#x5236;&#x5668;2&#x7684;&#x6570;&#x91CF;&#x4E3A;48&#xFF0C;&#x6240;&#x4EE5;&#x8BF7;&#x6C42;1&#x548C;&#x8BF7;&#x6C42;2&#x7684;&#x6BD4;&#x4F8B;&#x4E3A;1:3&#xFF1B;</p>
+<p>if&#x63A7;&#x5236;&#x5668;1&#xFF1A;${<strong>jexl3(${</strong>counter(TRUE,)} % 4 == 0,)}</p>
+<p>http&#x8BF7;&#x6C42;1</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.30.png" alt="image-20210105165129847"></p>
+<p>if&#x63A7;&#x5236;&#x5668;2&#xFF1A;${<strong>jexl3(${</strong>counter(TRUE,)} % 4 != 0,)}</p>
+<p>http&#x8BF7;&#x6C42;2</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.31.png" alt="image-20210105165252716"></p>
+<p>&#x6267;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.32.png" alt="image-20210105165325626"></p>
+<h2 id="43-&#x541E;&#x5410;&#x91CF;&#x63A7;&#x5236;&#x5668;">4.3 &#x541E;&#x5410;&#x91CF;&#x63A7;&#x5236;&#x5668;</h2>
+<p>total Executions&#xFF0C;&#x901A;&#x8FC7;&#x6267;&#x884C;&#x6B21;&#x6570;&#x63A7;&#x5236;&#x4EA4;&#x6613;&#x5360;&#x6BD4;&#xFF1B;&#x5F53;&#x6267;&#x884C;&#x6B21;&#x6570;&#x5927;&#x4E8E;&#x7EBF;&#x7A0B;&#x7EC4;&#x6700;&#x5927;&#x6267;&#x884C;&#x6B21;&#x6570;&#xFF0C;&#x5219;&#x6309;&#x7167;&#x7EBF;&#x7A0B;&#x7EC4;&#x6700;&#x5927;&#x6B21;&#x6570;&#x6267;&#x884C;&#xFF1B;&#x4E0D;&#x5E38;&#x7528;&#xFF1B;</p>
+<p>percent Executions&#xFF0C;&#x901A;&#x8FC7;&#x6267;&#x884C;&#x6B21;&#x6570;&#x5360;&#x6BD4;&#x63A7;&#x5236;&#x4EA4;&#x6613;&#x5360;&#x6BD4;&#xFF1B;<strong>&#x5E38;&#x7528;&#xFF1B;</strong></p>
+<p>per user&#xFF0C;&#x53EA;&#x5728;&#x9009;&#x4E2D;total Executions&#x65F6;&#x751F;&#x6548;&#xFF1B;&#x4E0D;&#x52FE;&#x9009;&#xFF0C;&#x53EA;&#x5BF9;1&#x4E2A;&#x7528;&#x6237;&#x751F;&#x6548;&#xFF1B;&#x52FE;&#x9009;&#xFF0C;&#x5BF9;&#x6BCF;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x90FD;&#x751F;&#x6548;&#xFF1B;</p>
+<p>&#x901A;&#x8FC7;&#x541E;&#x5410;&#x91CF;&#x63A7;&#x5236;&#x4EA4;&#x6613;&#x7684;&#x6BD4;&#x4F8B;&#xFF0C;&#x80FD;&#x591F;&#x4E25;&#x683C;&#x63A7;&#x5236;&#x4EA4;&#x6613;&#x7684;&#x6BD4;&#x4F8B;&#x503C;&#xFF1B;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;&#x4EA4;&#x6613;C&#x548C;&#x4EA4;&#x6613;D&#xFF0C;&#x6267;&#x884C;&#x6BD4;&#x4F8B;&#x4E3A;1:3</p>
+<p>&#x4EA4;&#x6613;C&#x7F6E;&#x4E8E;&#x541E;&#x5410;&#x91CF;&#x63A7;&#x5236;&#x5668;C&#x4E0B;&#xFF0C;&#x9009;&#x62E9;percent executions&#xFF0C;&#x541E;&#x5410;&#x91CF;20.0&#xFF0C;&#x8868;&#x793A;&#x541E;&#x5410;&#x91CF;&#x5360;&#x603B;&#x6267;&#x884C;&#x6B21;&#x6570;20%&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.33.png" alt="image-20210105165614499"></p>
+<p>&#x4EA4;&#x6613;D&#x7F6E;&#x4E8E;&#x541E;&#x5410;&#x91CF;&#x63A7;&#x5236;&#x5668;D&#x8282;&#x70B9;&#x4E0B;&#xFF0C;&#x9009;&#x62E9;percent executions&#xFF0C;&#x541E;&#x5410;&#x91CF;60.0&#xFF0C;&#x8868;&#x793A;&#x541E;&#x5410;&#x91CF;&#x5360;60%&#xFF1B;</p>
+<p>8&#x4E2A;&#x7EBF;&#x7A0B;&#xFF0C;&#x6267;&#x884C;20&#x79D2;&#xFF0C;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p>C:D=1:3</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.34.png" alt="image-20210105165719625"></p>
+<h1 id="&#x4E94;&#x3001;beanshell">&#x4E94;&#x3001;beanshell</h1>
+<p>beanshell&#x662F;&#x4E00;&#x79CD;&#x5B8C;&#x5168;&#x7B26;&#x5408;java&#x8BED;&#x6CD5;&#x7684;&#x811A;&#x672C;&#x8BED;&#x8A00;&#xFF0C;&#x5E76;&#x4E14;&#x62E5;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x8BED;&#x6CD5;&#x548C;&#x65B9;&#x6CD5;&#xFF1B;&#x7528;&#x4E8E;&#x5B9A;&#x5236;&#x5316;jmeter&#x5143;&#x4EF6;&#xFF0C;&#x5305;&#x62EC;&#x53D6;&#x6837;&#x5668;&#x3001;&#x524D;&#x7F6E;&#x5904;&#x7406;&#x5668;&#x3001;&#x540E;&#x7F6E;&#x5904;&#x7406;&#x5668;&#x3001;&#x65AD;&#x8A00;&#x3001;&#x76D1;&#x542C;&#x5668;&#x5B9A;&#x65F6;&#x5668;&#x7B49;&#xFF0C;&#x5E94;&#x7528;&#x4E8E;&#x7279;&#x522B;&#x9700;&#x6C42;&#x7684;&#x573A;&#x666F;&#xFF1B;</p>
+<p>beanshell&#x5E38;&#x7528;&#x529F;&#x80FD;&#xFF1A;</p>
+<p>l &#x5B9A;&#x4E49;&#x53D8;&#x91CF;</p>
+<p>l &#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x8DE8;&#x7EBF;&#x7A0B;&#x4F7F;&#x7528;&#x53D8;&#x91CF;</p>
+<p>l &#x52A0;&#x5BC6;/&#x7B7E;&#x540D;&#x5904;&#x7406;</p>
+<p>l &#x5904;&#x7406;&#x6570;&#x636E;</p>
+<p>l &#x8C03;&#x7528;&#x5916;&#x90E8;java/jar&#x6587;&#x4EF6;</p>
+<h2 id="51-&#x5B9A;&#x4E49;&#x53D8;&#x91CF;">5.1 &#x5B9A;&#x4E49;&#x53D8;&#x91CF;</h2>
+<p>&#x6DFB;&#x52A0;&#x3010;beanshell&#x524D;&#x7F6E;&#x5904;&#x7406;&#x5668;&#x3011;</p>
+<pre><code>//&#x5B9A;&#x4E49;&#x53D8;&#x91CF;
+vars.put(&quot;username&quot;,&quot;${username}&quot;);
+
+//&#x83B7;&#x53D6;&#x53D8;&#x91CF;&#x503C;
+str=vars.get(&quot;username&quot;);
+log.info(&quot;==========================&gt;username:&quot;+str);
+</code></pre><h2 id="52-&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x53D8;&#x91CF;">5.2 &#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x53D8;&#x91CF;</h2>
+<p>&#x6DFB;&#x52A0;&#x3010;beanshell&#x540E;&#x7F6E;&#x5904;&#x7406;&#x5668;&#x3011;&#xFF0C;&#x5C06;&#x5C40;&#x90E8;&#x53D8;&#x91CF;token&#x503C;&#xFF0C;&#x4FDD;&#x5B58;&#x5230;&#x5168;&#x5C40;&#x53D8;&#x91CF;static_token&#x4E2D;&#xFF1B;</p>
+<pre><code>//&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x53D8;&#x91CF;
+${__setProperty(static_token,${token},)}
+
+//&#x8C03;&#x7528;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x503C;&#xFF0C;&#x5C06;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4FDD;&#x5B58;&#x5230;&#x53D8;&#x91CF;token02&#x4E2D;
+vars.put(&quot;token02&quot;,&quot;${__P(static_token)}&quot;);
+str2=vars.get(&quot;token02&quot;);
+log.error(&quot;==========================&gt;static_token:&quot;+str2);
+</code></pre><h2 id="53-&#x83B7;&#x53D6;&#x54CD;&#x5E94;&#x62A5;&#x6587;">5.3 &#x83B7;&#x53D6;&#x54CD;&#x5E94;&#x62A5;&#x6587;</h2>
+<p>&#x6DFB;&#x52A0;&#x3010;beanshell&#x540E;&#x7F6E;&#x5904;&#x7406;&#x5668;&#x3011;&#xFF0C;&#x901A;&#x8FC7;prev. getResponseDataAsString()&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x83B7;&#x53D6;&#x54CD;&#x5E94;&#x62A5;&#x6587;&#x7684;&#x5185;&#x5BB9;&#xFF1B;</p>
+<pre><code>//&#x83B7;&#x53D6;&#x54CD;&#x5E94;&#x62A5;&#x6587;
+response=prev.getResponseDataAsString();
+log.info(&quot;===================&gt;response:&quot;+response)
+</code></pre><h2 id="54-&#x5F15;&#x7528;&#x5916;&#x90E8;javajarclass&#x6587;&#x4EF6;">5.4 &#x5F15;&#x7528;&#x5916;&#x90E8;java\jar\class&#x6587;&#x4EF6;</h2>
+<p>&#x6D4B;&#x8BD5;&#x7528;java/jar/class&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#xFF1A;</p>
+<p>&#x94FE;&#x63A5;&#xFF1A;<a href="https://pan.baidu.com/s/16hKyNR6kqfCX063o-YmaxA" target="_blank">https://pan.baidu.com/s/16hKyNR6kqfCX063o-YmaxA</a> 
+&#x63D0;&#x53D6;&#x7801;&#xFF1A;44fe </p>
+<p>1&#xFF09;&#x5F15;&#x7528;&#x5916;&#x90E8;java&#x6587;&#x4EF6;</p>
+<p>l &#x5C06;java&#x6587;&#x4EF6;&#x7F6E;&#x4E8E;&#x6307;&#x5B9A;&#x76EE;&#x5F55;&#xFF1B;</p>
+<p>l &#x6DFB;&#x52A0;&#x3010;beanshell&#x524D;&#x7F6E;&#x5904;&#x7406;&#x5668;&#x3011;&#xFF0C;&#x7F16;&#x8F91;&#x5185;&#x5BB9;</p>
+<pre><code>//&#x5F15;&#x7528;java&#x6587;&#x4EF6;
+source(&quot;G:\\MD5Util.java&quot;);
+//&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;
+MD5Util test=new MD5Util();
+//&#x8C03;&#x7528;&#x65B9;&#x6CD5;
+String res = test.getMD5String(&quot;zr111111hg&quot;);
+//&#x4FDD;&#x5B58;&#x7ED3;&#x679C;&#x5230;&#x53D8;&#x91CF;
+vars.put(&quot;password01&quot;,res);
+</code></pre><p>2&#xFF09;&#x5F15;&#x7528;&#x5916;&#x90E8;jar&#x6587;&#x4EF6;</p>
+<p>jar&#x6587;&#x4EF6;&#xFF1A;</p>
+<p>l &#x5C06;jar&#x6587;&#x4EF6;&#x7F6E;&#x4E8E;%jmeter_home%\lib\ext&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x6216;&#x8005;&#x5728;&#x6267;&#x884C;&#x8BA1;&#x5212;&#x4E2D;&#x6DFB;&#x52A0;jar&#x6587;&#x4EF6;&#xFF1B;</p>
+<p>l &#x6DFB;&#x52A0;&#x3010;beanshell&#x524D;&#x7F6E;&#x5904;&#x7406;&#x5668;&#x3011;&#xFF0C;&#x7F16;&#x8F91;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>//&#x5BFC;&#x5165;jar&#x6587;&#x4EF6;
+import MD5Util.*;
+//&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;
+MD5Util test=new MD5Util();
+//&#x8C03;&#x7528;MD5&#x52A0;&#x5BC6;&#x65B9;&#x6CD5;
+String res = test.getMD5String(&quot;zr111111hg&quot;);
+//&#x4FDD;&#x5B58;&#x53D8;&#x91CF;
+vars.put(&quot;password01&quot;,res);
+</code></pre><p>3&#xFF09;&#x5F15;&#x7528;&#x5916;&#x90E8;class&#x6587;&#x4EF6;</p>
+<p>l &#x5C06;class&#x6587;&#x4EF6;&#x7F6E;&#x4E8E;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#xFF1B;</p>
+<p>l &#x6DFB;&#x52A0;&#x3010;beanshell&#x524D;&#x7F6E;&#x5904;&#x7406;&#x5668;&#x3011;&#xFF0C;&#x8C03;&#x7528;class&#x6587;&#x4EF6;&#x65B9;&#x6CD5;&#xFF1B;</p>
+<pre><code>//&#x5BFC;&#x5165;class&#x6587;&#x4EF6;
+addClassPath(&quot;G:\\MD5Util.class&quot;);
+import MD5Util;
+//&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;
+MD5Util test=new MD5Util();
+//&#x8C03;&#x7528;MD5&#x52A0;&#x5BC6;&#x65B9;&#x6CD5;
+String passwordStr = vars.get(&quot;password&quot;);
+String passwordStr02 = &quot;zr&quot; + passwordStr + &quot;hg&quot;;
+String res = test.getMD5String(passwordStr02);
+//&#x4FDD;&#x5B58;&#x53D8;&#x91CF;
+vars.put(&quot;password01&quot;,res);
+</code></pre><h1 id="&#x516D;&#x3001;&#x7EFC;&#x5408;&#x534F;&#x8BAE;&#x63A5;&#x53E3;">&#x516D;&#x3001;&#x7EFC;&#x5408;&#x534F;&#x8BAE;&#x63A5;&#x53E3;</h1>
+<h2 id="61-webservice&#x63A5;&#x53E3;">6.1 webservice&#x63A5;&#x53E3;</h2>
+<p>webservice&#x63A5;&#x53E3;&#x4E3A;&#x4F7F;&#x7528;&#x57FA;&#x4E8E;xml&#x8BED;&#x8A00;&#x7684;&#x534F;&#x8BAE;&#x6765;&#x63CF;&#x8FF0;&#x8981;&#x6267;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;soapUI&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#xFF1B;webservice&#x63A5;&#x53E3;&#x5728;Jmeter3.2&#x4E4B;&#x540E;&#x901A;&#x8FC7;http&#x91C7;&#x6837;&#x5668;&#x5B9E;&#x73B0;&#xFF0C;&#x533A;&#x522B;&#x4E8E;&#x666E;&#x901A;&#x7684;http&#x534F;&#x8BAE;&#xFF0C;&#x6D88;&#x606F;&#x5934;&#x548C;&#x6D88;&#x606F;&#x4F53;&#x4E0D;&#x540C;&#xFF1B;</p>
+<p>webservice&#x63A5;&#x53E3;&#x6D88;&#x606F;&#x5934;&#x4E3A;&#xFF1A;Content-Type:text/xml&#xFF0C;&#x901A;&#x8FC7;http&#x4FE1;&#x606F;&#x5934;&#x7BA1;&#x7406;&#x5668;&#x8FDB;&#x884C;&#x6DFB;&#x52A0;&#xFF0C;&#x7F6E;&#x4E8E;&#x8BF7;&#x6C42;&#x7684;&#x4E0B;&#x4E00;&#x8282;&#x70B9;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.35.png" alt="image-20210106100520454"></p>
+<p>webservice&#x63A5;&#x53E3;&#x6D88;&#x606F;&#x4F53;&#xFF0C;&#x4EE5;xml&#x683C;&#x5F0F;&#x7F6E;&#x4E8E;&#x6D88;&#x606F;&#x4F53;&#x6570;&#x636E;&#x4E2D;&#xFF0C;&#x5F15;&#x53F7;&#x4E0D;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x8F6C;&#x4E49;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.36.png" alt="image-20210106100603813"></p>
+<h2 id="62-&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x63A5;&#x53E3;">6.2 &#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x63A5;&#x53E3;</h2>
+<p>&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#xFF0C;&#x901A;&#x8FC7;http&#x53D6;&#x6837;&#x5668;&#x5B9E;&#x73B0;&#xFF0C;&#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x9875;&#x7B7E;&#xFF0C;&#x914D;&#x7F6E;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#x53C2;&#x6570;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;</p>
+<p>&#x6587;&#x4EF6;&#x8DEF;&#x5F84;:&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7684;&#x672C;&#x5730;&#x8DEF;&#x5F84;</p>
+<p>&#x53C2;&#x6570;&#x540D;&#x79F0;&#xFF1A;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x53EF;&#x6293;&#x5305;&#x83B7;&#x53D6;</p>
+<p>MIME&#xFF1A;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x6293;&#x5305;&#x83B7;&#x53D6;</p>
+<p>&#x6837;&#x4F8B;&#xFF1A;</p>
+<p>&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#xFF1A;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.37.png" alt="image-20210106100650486"></p>
+<h2 id="63-websocket&#x63A5;&#x53E3;">6.3 websocket&#x63A5;&#x53E3;</h2>
+<p>websocket&#x63A5;&#x53E3;&#x662F;web&#x5BA2;&#x6237;&#x7AEF;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x901A;&#x8BAF;&#x7684;&#x63A5;&#x53E3;&#xFF0C;jmeter&#x9ED8;&#x8BA4;&#x4E0D;&#x5E26;websocket&#x53D6;&#x6837;&#x5668;&#xFF0C;&#x9700;&#x8981;&#x5BFC;&#x5165;jar&#xFF0C;&#x6DFB;&#x52A0;websocket&#x53D6;&#x6837;&#x5668;&#xFF1B;</p>
+<p>&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;jar&#x5305;</p>
+<p>&#x4F9D;&#x8D56;jar&#x5305;&#x4E0B;&#x8F7D;</p>
+<p>&#x94FE;&#x63A5;&#xFF1A;<a href="https://pan.baidu.com/s/1qz3YvPLJzt2WD7iiZgg-UQ" target="_blank">https://pan.baidu.com/s/1qz3YvPLJzt2WD7iiZgg-UQ</a> 
+&#x63D0;&#x53D6;&#x7801;&#xFF1A;pimu </p>
+<p>&#x5C06;&#x4F9D;&#x8D56;jar&#x7F6E;&#x4E8E;%JMETER_HOME%\lib\ext&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x6DFB;&#x52A0;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x6DFB;&#x52A0;&#x53D6;&#x6837;&#x5668;&#x4E2D;&#xFF0C;&#x4F1A;&#x589E;&#x52A0;websocket sampler&#x53D6;&#x6837;&#x5668;&#xFF1B;</p>
+<p>&#x6837;&#x4F8B;&#xFF1A;</p>
+<p>&#x677E;&#x52E4;&#x7F51;&#x9875;&#x804A;&#x5929;&#xFF1A;&#x53D1;&#x9001;&#x6D88;&#x606F;&#xFF0C;&#x56DE;&#x590D;&#x6D88;&#x606F;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.38.png" alt="image-20210106101114550"></p>
+<p>&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.39.png" alt="image-20210106101155207"></p>
+<h2 id="64-jdbc&#x534F;&#x8BAE;&#x63A5;&#x53E3;">6.4 JDBC&#x534F;&#x8BAE;&#x63A5;&#x53E3;</h2>
+<p>jmeter&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x9700;&#x8981;&#x901A;&#x8FC7;jdbc&#x534F;&#x8BAE;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#xFF0C;&#x4E0D;&#x540C;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x9700;&#x8981;&#x5BFC;&#x5165;&#x4E0D;&#x540C;&#x7684;&#x63D2;&#x4EF6;&#xFF1B;jdbc&#x534F;&#x8BAE;&#x7528;&#x4E8E;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x8FDB;&#x884C;sql&#x64CD;&#x4F5C;&#xFF0C;&#x83B7;&#x53D6;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x6216;&#x6D4B;&#x8BD5;sql&#x7684;&#x64CD;&#x4F5C;&#x65F6;&#x95F4;&#xFF1B;</p>
+<p>JDBC&#x534F;&#x8BAE;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<p>1&#xFF09;&#x4E0B;&#x8F7D;&#x6570;&#x636E;&#x5E93;&#x4F9D;&#x8D56;&#x7684;jar</p>
+<p>&#x6839;&#x636E;&#x6570;&#x636E;&#x5E93;&#x7684;&#x79CD;&#x7C7B;&#x548C;&#x7248;&#x672C;&#x4E0D;&#x540C;&#xFF0C;jar&#x5305;&#x4E5F;&#x4E0D;&#x540C;&#xFF0C;&#x4E0B;&#x9762;&#x4EE5;mysql&#x4E3A;&#x4F8B;&#xFF1B;&#x4E0B;&#x8F7D;mysql-connector-java-5.1.7-bin.jar&#xFF0C;&#x7F6E;&#x4E8E;%jmeter_home%\lib\ext&#x76EE;&#x5F55;&#x4E0B;&#xFF1B;</p>
+<p>mysql-connector-java-5.1.7-bin.jar&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;</p>
+<p>&#x94FE;&#x63A5;&#xFF1A;<a href="https://pan.baidu.com/s/1-5ky_eDKljpdPrRUPhe_8g" target="_blank">https://pan.baidu.com/s/1-5ky_eDKljpdPrRUPhe_8g</a> 
+&#x63D0;&#x53D6;&#x7801;&#xFF1A;4mf8 </p>
+<p>2&#xFF09;&#x6DFB;&#x52A0;JDBC Connection Configuration</p>
+<p>&#x6DFB;&#x52A0;-&gt;&#x914D;&#x7F6E;&#x5143;&#x4EF6;-&gt;JDBC Connection Configuration</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.40.png" alt="image-20210106101302984"></p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.41.png" alt="image-20210106101323958"></p>
+<p>3&#xFF09;&#x6DFB;&#x52A0;JDBC&#x8BF7;&#x6C42;</p>
+<p>&#x6DFB;&#x52A0;-&gt;&#x53D6;&#x6837;&#x5668;-&gt;JDBC Request</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.42.png" alt="image-20210106101654174"></p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.43.png" alt="image-20210106101719278"></p>
+<p>&#x67E5;&#x8BE2;&#x7C7B;&#x522B;&#xFF1A;&#x5F53;sql&#x8BED;&#x53E5;&#x4E2D;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x4E3A;&#x5177;&#x4F53;&#x7684;&#x503C;&#x65F6;&#xFF0C;&#x67E5;&#x8BE2;&#x7C7B;&#x522B;&#x9009;&#x62E9;select statement;</p>
+<p>&#x5F53;sql&#x8BED;&#x53E5;&#x4E2D;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x4E3A;?&#xFF0C;&#x8C03;&#x7528;&#x4E0B;&#x9762;parameter value&#x4E2D;&#x7684;&#x503C;&#x65F6;&#xFF0C;&#x7C7B;&#x522B;&#x9009;&#x62E9;&#xFF1A;prepare select statement;</p>
+<p>4&#xFF09;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.44.png" alt="image-20210106102030732"></p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.45.png" alt="image-20210106102105323"></p>
+<h1 id="&#x4E03;&#x3001;&#x5206;&#x5E03;&#x5F0F;">&#x4E03;&#x3001;&#x5206;&#x5E03;&#x5F0F;</h1>
+<p>&#x538B;&#x6D4B;&#x65F6;&#xFF0C;&#x5E76;&#x53D1;&#x6570;&#x8F83;&#x5927;&#xFF0C;&#x5355;&#x53F0;&#x6267;&#x884C;&#x673A;&#x7684;&#x914D;&#x7F6E;&#x65E0;&#x6CD5;&#x6EE1;&#x8DB3;&#x8981;&#x6C42;&#xFF0C;&#x5BF9;&#x88AB;&#x6D4B;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x4E0D;&#x4E86;&#x8DB3;&#x591F;&#x7684;&#x538B;&#x529B;&#xFF1B;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x591A;&#x53F0;&#x6267;&#x884C;&#x673A;&#xFF0C;&#x901A;&#x8FC7;&#x5206;&#x5E03;&#x5F0F;&#xFF0C;&#x5BF9;&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x538B;&#x6D4B;&#xFF1B;</p>
+<h2 id="71-&#x6267;&#x884C;&#x673A;&#x914D;&#x7F6E;">7.1 &#x6267;&#x884C;&#x673A;&#x914D;&#x7F6E;</h2>
+<p>&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<p>1&#xFF09;&#x5C06;jmeter&#x8F6F;&#x4EF6;&#x590D;&#x5236;&#x5230;&#x6267;&#x884C;&#x673A;&#xFF1B;</p>
+<p>2&#xFF09;&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;jmeter.properties</p>
+<p>l &#x914D;&#x7F6E;&#x8FDC;&#x7A0B;&#x6267;&#x884C;&#x673A;&#x7684;IP&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;&#xFF1A;&#x914D;&#x7F6E;&#x6267;&#x884C;&#x673A;jemter.properties&#x6587;&#x4EF6;&#x4E2D;remote_host=&#x6267;&#x884C;&#x673A;IP:1099;&#x591A;&#x53F0;&#x6267;&#x884C;&#x673A;&#x4F7F;&#x7528;&#x9017;&#x53F7;&#x9694;&#x5F00;&#xFF1B;</p>
+<p>l &#x4FEE;&#x6539;server.rmi.ssl.disable=true&#xFF1B;</p>
+<p>l &#x5982;&#x679C;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;1099&#x88AB;&#x5360;&#x7528;&#xFF0C;&#x4FEE;&#x6539;server_port&#xFF0C;&#x628A;&#x6CE8;&#x91CA;&#x5220;&#x9664;&#xFF0C;&#x7136;&#x540E;&#x914D;&#x7F6E;&#x6210;&#x672A;&#x88AB;&#x5360;&#x7528;&#x7684;&#x7AEF;&#x53E3;&#xFF0C;&#x548C;remote_hosts&#x4E2D;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#xFF1B;</p>
+<p>3&#xFF09;&#x914D;&#x7F6E;jmeter-server&#x6587;&#x4EF6;</p>
+<p>&#x53D6;&#x6D88;RMI_HOST_DEF&#x7684;&#x6CE8;&#x91CA;&#x9879;&#xFF0C;&#x56FA;&#x5B9A;&#x8BBE;&#x7F6E;&#x4E3A;&#x5F53;&#x524D;&#x6267;&#x884C;&#x673A;&#x67E5;&#x8BE2;&#x5230;&#x7684;IP&#xFF0C;</p>
+<p>RMI_HOST_DEF=-Djava.rmi.server.hostname=xxx.xxx.xxx.xxx&#xFF1B;</p>
+<p>4&#xFF09;&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;</p>
+<p>centos7:systemctl stop firewalld</p>
+<p>&#x5176;&#x4ED6;&#xFF1A;service iptables stop</p>
+<p>&#x67E5;&#x770B;&#x9632;&#x706B;&#x5899;&#x72B6;&#x6001;&#xFF1A;systemctl status firewalld</p>
+<p>&#x5F00;&#x542F;&#x9632;&#x706B;&#x5899;:systemctl start firewalld</p>
+<p>&#x6C38;&#x4E45;&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;:systemctl disable firewalld</p>
+<p>5&#xFF09;&#x542F;&#x52A8;jmeter-server&#x670D;&#x52A1;</p>
+<p>./jmeter-server&#xFF0C;&#x6210;&#x529F;&#x542F;&#x52A8;&#x754C;&#x9762;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.46.png" alt="image-20210106104933691"></p>
+<h2 id="72-&#x63A7;&#x5236;&#x673A;&#x914D;&#x7F6E;">7.2 &#x63A7;&#x5236;&#x673A;&#x914D;&#x7F6E;</h2>
+<p>&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<p>1&#xFF09;&#x6DFB;&#x52A0;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+<p>JMETER_HOME:jmeter&#x7684;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#xFF1B;</p>
+<p>path:%JMETER_HOME%\bin;%JMETER_HOME%\lib</p>
+<p>2&#xFF09;&#x7F16;&#x8F91;&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;jmeter.properties</p>
+<p>l &#x914D;&#x7F6E;&#x8FDC;&#x7A0B;&#x6267;&#x884C;&#x673A;&#x7684;IP&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;&#xFF1A;&#x5C06;&#x6267;&#x884C;&#x673A;jemter.properties&#x6587;&#x4EF6;&#x4E2D;remote_host=&#x6267;&#x884C;&#x673A;IP:1099;&#x591A;&#x53F0;&#x6267;&#x884C;&#x673A;&#x4F7F;&#x7528;&#x9017;&#x53F7;&#x9694;&#x5F00;&#xFF1B;</p>
+<p>l &#x4FEE;&#x6539;server.rmi.ssl.disable=true&#xFF1B;</p>
+<p>l &#x5982;&#x679C;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;1099&#x88AB;&#x5360;&#x7528;&#xFF0C;&#x4FEE;&#x6539;server_port&#xFF0C;&#x628A;&#x6CE8;&#x91CA;&#x5220;&#x9664;&#xFF0C;&#x7136;&#x540E;&#x914D;&#x7F6E;&#x6210;&#x672A;&#x88AB;&#x5360;&#x7528;&#x7684;&#x7AEF;&#x53E3;&#xFF0C;&#x548C;remote_hosts&#x4E2D;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#xFF1B;</p>
+<p>3&#xFF09;&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;</p>
+<p>centos7:systemctl stop firewalld</p>
+<p>&#x5176;&#x4ED6;&#xFF1A;service iptables stop</p>
+<h2 id="73-&#x5206;&#x5E03;&#x5F0F;&#x8FD0;&#x884C;">7.3 &#x5206;&#x5E03;&#x5F0F;&#x8FD0;&#x884C;</h2>
+<p>1&#xFF09;&#x754C;&#x9762;GUI&#x8FD0;&#x884C;&#xFF1A;</p>
+<p>&#x8FD0;&#x884C;-&gt;&#x8FDC;&#x7A0B;&#x542F;&#x52A8;&#xFF0C;&#x9009;&#x62E9;&#x67D0;&#x53F0;&#x6267;&#x884C;&#x673A;&#x8FDB;&#x884C;&#x6267;&#x884C;&#x811A;&#x672C;</p>
+<p>&#x8FD0;&#x884C;-&gt;&#x8FDC;&#x7A0B;&#x542F;&#x52A8;&#x6240;&#x6709;&#xFF0C;&#x9009;&#x62E9;&#x6240;&#x6709;&#x7684;&#x6267;&#x884C;&#x6267;&#x884C;&#x811A;&#x672C;&#xFF1B;</p>
+<p>2&#xFF09;&#x547D;&#x4EE4;&#x884C;&#x8FD0;&#x884C;</p>
+<ul>
+<li>&#x4F7F;&#x7528;&#x67D0;&#x53F0;&#x6267;&#x884C;&#x673A;&#x6267;&#x884C;&#xFF1A;</li>
+</ul>
+<p>jmeter -n -t D:\JmeterScript\&#x677E;&#x52E4;&#x6D4B;&#x8BD5;.jmx -R 192.168.245.128:1099 -l D:\JmeterScript\test.log -j D:\JmeterScript\test.jtl -e -o D:\JmeterScript\html</p>
+<p>n---&#x8868;&#x793A;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x6267;&#x884C;&#xFF1B;</p>
+<p>t---&#x6307;&#x5B9A;&#x811A;&#x672C;&#x8DEF;&#x5F84;</p>
+<p>R---&#x6307;&#x5B9A;&#x6267;&#x884C;&#x673A;</p>
+<p>l---&#x6307;&#x5B9A;&#x65E5;&#x5FD7;&#x8DEF;&#x5F84;</p>
+<p>j---&#x6307;&#x5B9A;jtl&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</p>
+<ul>
+<li>&#x4F7F;&#x7528;&#x5168;&#x90E8;&#x6267;&#x884C;&#x673A;&#x6267;&#x884C;&#xFF1A;</li>
+</ul>
+<p>jmeter -n -t D:\JmeterScript\&#x677E;&#x52E4;&#x6D4B;&#x8BD5;.jmx -r -l D:\JmeterScript\test.log -j D:\JmeterScript\test.jtl -e -o D:\JmeterScript\html</p>
+<p>&#x6210;&#x529F;&#x6267;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.47.png" alt="image-20210106105233477"></p>
+<p>&#x6CE8;:</p>
+<p>&#x547D;&#x4EE4;&#x884C;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x786E;&#x4FDD;&#x8F93;&#x51FA;&#x62A5;&#x544A;&#x7684;&#x683C;&#x5F0F;&#x4E3A;csv&#xFF0C;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<p># jmeter.save.saveservice.output_format=xml</p>
+<p>3&#xFF09;&#x547D;&#x4EE4;&#x884C;&#x8FD0;&#x884C;&#x52A8;&#x6001;&#x914D;&#x7F6E;&#x5E76;&#x53D1;&#x7528;&#x6237;&#x6570;&#x548C;&#x6301;&#x7EED;&#x65F6;&#x95F4;</p>
+<p>&#x4F7F;&#x7528;<strong>__P()</strong> <strong>&#x51FD;&#x6570;</strong>&#x914D;&#x7F6E;&#x7EBF;&#x7A0B;&#x7684;&#x5E76;&#x53D1;&#x7528;&#x6237;&#x6570;&#x548C;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#xFF0C;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x53EF;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;&#x4F20;&#x8F93;&#x5B9E;&#x73B0;&#xFF1B;</p>
+<p>&#x7EBF;&#x7A0B;&#x7EC4;&#x914D;&#x7F6E;&#xFF1A;</p>
+<p>l &#x5E76;&#x53D1;&#x6570;&#x8BBE;&#x7F6E;&#x4E3A;<strong>${__P(concurrent_number,1)}**</strong>&#xFF1B;&#x9ED8;&#x8BA4;1<strong>**&#x4E2A;&#x7528;&#x6237;&#x5E76;&#x53D1;&#xFF1B;</strong></p>
+<p>l &#x5FAA;&#x73AF;&#x6B21;&#x6570;&#x53D6;&#x6D88;&#x52FE;&#x9009;Forever&#xFF0C;&#x8BBE;&#x7F6E;&#x4E3A;<strong>${__P(cycles,1)}</strong>&#xFF0C;&#x5176;&#x4E2D;&#x540E;&#x9762;&#x7684;1&#x662F;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x9ED8;&#x8BA4;&#x6267;&#x884C;1&#x6B21;&#xFF0C;&#x5982;&#x679C;&#x914D;&#x7F6E;&#x4E3A;-1&#xFF0C;&#x8868;&#x793A;&#x6839;&#x636E;&#x6267;&#x884C;&#x65F6;&#x957F;&#xFF0C;&#x6301;&#x7EED;&#x6267;&#x884C;&#xFF1B;</p>
+<p>l &#x6267;&#x884C;&#x65F6;&#x957F;&#x8BBE;&#x7F6E;&#x4E3A;<strong>${__P(duration,60)}</strong>&#xFF0C;&#x9ED8;&#x8BA4;1&#x5206;&#x949F;&#xFF08;60s&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x4E86;&#x5FAA;&#x73AF;&#x6B21;&#x6570;&#x548C;&#x6267;&#x884C;&#x65F6;&#x957F;&#xFF0C;&#x90A3;&#x4E48;&#x6EE1;&#x8DB3;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;&#x811A;&#x672C;&#x5C31;&#x4F1A;&#x505C;&#x6B62;&#x3002;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.48.png" alt="image-20210106105641075"></p>
+<p>&#x547D;&#x4EE4;&#x884C;&#xFF1A;</p>
+<p>jmeter -n -t D:\JmeterScript\&#x677E;&#x52E4;&#x6D4B;&#x8BD5;.jmx -Jconcurrent_number=5 -Jduration=120 -Jcycles=-1 -l D:\JmeterScript\test.log -j D:\JmeterScript\test.jtl -e -o D:\JmeterScript\report </p>
+<ul>
+<li>-Jconcurrent_number=5 #&#x914D;&#x7F6E;&#x5E76;&#x53D1;&#x7528;&#x6237;&#x6570;</li>
+<li>-Jduration=120 #&#x914D;&#x7F6E;&#x6301;&#x7EED;&#x65F6;&#x95F4;</li>
+<li>-Jcycles=-1 #&#x914D;&#x7F6E;&#x6267;&#x884C;&#x6B21;&#x6570;&#xFF0C;-1&#x8868;&#x793A;&#x6C38;&#x4E45;&#x6267;&#x884C;</li>
+</ul>
+<h1 id="&#x516B;&#x3001;jenkins&#x6301;&#x7EED;&#x6027;&#x96C6;&#x6210;">&#x516B;&#x3001;jenkins&#x6301;&#x7EED;&#x6027;&#x96C6;&#x6210;</h1>
+<h2 id="81-&#x57FA;&#x4E8E;jenkinsantjmeters&#x5B9E;&#x73B0;">8.1 &#x57FA;&#x4E8E;jenkins+ant+jmeters&#x5B9E;&#x73B0;</h2>
+<p>1&#xFF09;&#x901A;&#x8FC7;ant&#x7F16;&#x8BD1;&#x6267;&#x884C;&#x811A;&#x672C;</p>
+<p>ant&#x662F;&#x4E00;&#x4E2A;&#x5C06;&#x8F6F;&#x4EF6;&#x7F16;&#x8BD1;&#x3001;&#x6D4B;&#x8BD5;&#x3001;&#x90E8;&#x7F72;&#x7B49;&#x6B65;&#x9AA4;&#x8054;&#x7CFB;&#x5728;&#x4E00;&#x8D77;&#x52A0;&#x4EE5;&#x81EA;&#x52A8;&#x5316;&#x7684;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#xFF0C;&#x5927;&#x591A;&#x7528;&#x4E8E; Java &#x73AF;&#x5883;&#x4E2D;&#x7684;&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x3002;</p>
+<p>l ant&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;</p>
+<p>&#x4E0B;&#x8F7D;&#xFF1A;</p>
+<p>&#x94FE;&#x63A5;&#xFF1A;<a href="https://pan.baidu.com/s/1HZfrrzrnxBscFjTVpgevsA" target="_blank">https://pan.baidu.com/s/1HZfrrzrnxBscFjTVpgevsA</a> 
+&#x63D0;&#x53D6;&#x7801;&#xFF1A;00vi 
+&#x5B89;&#x88C5;&#xFF1A;</p>
+<p>ant&#x4E3A;&#x7EFF;&#x8272;&#x7248;&#x8F6F;&#x4EF6;&#xFF0C;&#x89E3;&#x538B;&#x7F29;&#x540E;&#x5373;&#x53EF;&#x4F7F;&#x7528;&#xFF1B;</p>
+<p>l ant&#x914D;&#x7F6E;</p>
+<p>&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x914D;&#x7F6E;&#xFF1A;</p>
+<p>ant_home---ant&#x5B89;&#x88C5;&#x5305;&#x5730;&#x5740;&#xFF1B;</p>
+<p>path---%ant_home%\bin;%ant_home%\lib</p>
+<p>jmeter.properties&#x914D;&#x7F6E;&#xFF1A;</p>
+<p>jmeter.save.saveservice.output_format=xml</p>
+<p>ant&#x4F9D;&#x8D56;&#x5305;&#x914D;&#x7F6E;&#xFF1A;</p>
+<p>&#x628A;jmeter_home\extras&#x4E2D;ant-jmeter-1.1.1.jar&#x653E;&#x7F6E;&#x5230;ant_home\lib&#x76EE;&#x5F55;&#x4E0B;</p>
+<p>ant&#x914D;&#x7F6E;&#x9A8C;&#x8BC1;&#xFF1A;</p>
+<p>&#x5728;cmd&#x7A97;&#x53E3;&#x8F93;&#x5165;&#x547D;&#x4EE4;ant&#xFF0C;&#x63D0;&#x793A;&#x5982;&#x4E0B;,&#x5373;&#x914D;&#x7F6E;&#x6210;&#x529F;&#xFF1A;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.49.png" alt="image-20210106110303628"></p>
+<p>l ant&#x6267;&#x884C;</p>
+<p>ant&#x901A;&#x8FC7;build.xml&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x9879;&#x76EE;&#x7684;&#x6784;&#x5EFA;&#x548C;&#x6267;&#x884C;&#xFF0C;&#x7F16;&#x8F91;&#x6267;&#x884C;&#x6587;&#x4EF6;build.xml&#xFF0C;&#x8BBE;&#x7F6E;jmeter&#x62A5;&#x544A;&#x7684;&#x5185;&#x5BB9;&#x4EE5;&#x53CA;&#x5185;&#x5BB9;&#x5B58;&#x653E;&#x8DEF;&#x5F84;&#xFF0C;&#x653E;&#x7F6E;&#x5230;%ant_home%\bin&#x76EE;&#x5F55;&#x4E0B;&#xFF1B;</p>
+<p>build.xml&#x6A21;&#x677F;&#x6587;&#x4EF6;&#xFF1A;</p>
+<p>&#x94FE;&#x63A5;&#xFF1A;<a href="https://pan.baidu.com/s/1eISVENdpbJ6taTEMH8mqmQ" target="_blank">https://pan.baidu.com/s/1eISVENdpbJ6taTEMH8mqmQ</a> 
+&#x63D0;&#x53D6;&#x7801;&#xFF1A;7o6g </p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.50.png" alt="image-20210106111122174"></p>
+<p>ant&#x6267;&#x884C;&#xFF1A;</p>
+<p>&#x5728;cmd&#x7A97;&#x53E3;&#xFF0C;&#x6267;&#x884C;&#x547D;&#x4EE4;ant -buildfile D:\apache-ant-1.10.7\bin\build.xml</p>
+<p>2&#xFF09;&#x901A;&#x8FC7;jenkins+ant+jmeter&#x7F16;&#x8BD1;&#x6267;&#x884C;&#x811A;&#x672C;</p>
+<p>l Jenkins&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;</p>
+<p>&#x4E0B;&#x8F7D;&#xFF1A;</p>
+<p>&#x94FE;&#x63A5;&#xFF1A;<a href="https://pan.baidu.com/s/112TeIpn9WJC5iraUqVqm8Q" target="_blank">https://pan.baidu.com/s/112TeIpn9WJC5iraUqVqm8Q</a> 
+&#x63D0;&#x53D6;&#x7801;&#xFF1A;6vwv </p>
+<p>&#x5B89;&#x88C5;&#xFF1A;</p>
+<p>&#x200B;     &#x9ED8;&#x8BA4;&#x5B89;&#x88C5;&#x5373;&#x53EF;&#xFF1B;</p>
+<p>&#x200B;     &#x8BBF;&#x95EE;&#x5730;&#x5740;&#xFF1A;<a href="http://127.0.0.1:8080,&#x7528;&#x6237;&#x540D;&#xFF1A;wzl&#xFF0C;&#x5BC6;&#x7801;&#xFF1A;123456" target="_blank">http://127.0.0.1:8080,&#x7528;&#x6237;&#x540D;&#xFF1A;wzl&#xFF0C;&#x5BC6;&#x7801;&#xFF1A;123456</a></p>
+<p>l &#x63D2;&#x4EF6;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;</p>
+<p>&#x200B;     &#x4E0B;&#x8F7D;ant&#x3001;HTML publisher&#x63D2;&#x4EF6;&#xFF0C;&#x5E76;&#x8FDB;&#x884C;&#x5B89;&#x88C5;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;jenkis&#x81EA;&#x52A8;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#xFF0C;&#x4E5F;&#x53EF;&#x624B;&#x52A8;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#xFF1B;</p>
+<p>&#x200B;    &#x81EA;&#x52A8;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#xFF1A;</p>
+<p>&#x200B;     jenkins&#x9996;&#x9875;/&#x63D2;&#x4EF6;&#x7BA1;&#x7406;---avaliable&#xFF0C;&#x641C;&#x7D22;&#x9700;&#x8981;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x5373;&#x53EF;&#xFF1B;&#xFF08;&#x6BD4;&#x8F83;&#x6162;&#xFF09;</p>
+<p>&#x200B;     &#x624B;&#x52A8;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#xFF1A;</p>
+<p>&#x200B;     &#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;<a href="http://mirrors.jenkins-ci.org/plugins/" target="_blank">http://mirrors.jenkins-ci.org/plugins/</a></p>
+<p>&#x200B;     &#x5B89;&#x88C5;&#xFF1A;jenkins&#x9996;&#x9875;---&#x63D2;&#x4EF6;&#x7BA1;&#x7406;---&#x9AD8;&#x7EA7;&#xFF0C;&#x66F4;&#x65B0;&#x63D2;&#x4EF6;</p>
+<p>l &#x7CFB;&#x7EDF;&#x914D;&#x7F6E;</p>
+<p>&#x200B;     jenkins&#x9996;&#x9875;---Manage jenkins---global tool configuration&#xFF0C;&#x914D;&#x7F6E;ant&#x548C;jdk&#x7684;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.51.png" alt="image-20210106111852294"></p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.52.png" alt="image-20210106111912421"></p>
+<p>l &#x65B0;&#x5EFA;&#x9879;&#x76EE;item</p>
+<p>&#x9879;&#x76EE;&#x98CE;&#x683C;&#xFF1A;free</p>
+<p>l &#x6784;&#x5EFA;</p>
+<p>&#x70B9;&#x51FB;&#x3010;&#x9879;&#x76EE;-&#x6784;&#x5EFA;&#x3011;&#xFF0C;&#x65B0;&#x589E;&#x6B65;&#x9AA4;&#xFF0C;&#x9009;&#x62E9;&#xFF1A;invoke ant</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.53.png" alt="image-20210106111944896"></p>
+<p>&#x914D;&#x7F6E;ant&#x4FE1;&#x606F;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.54.png" alt="image-20210106112013636"></p>
+<p>targets&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x5BF9;&#x5E94;build.xml&#x4E2D;targets&#x7684;&#x540D;&#x79F0;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.55.png" alt="image-20210106112107818"></p>
+<p>l &#x6784;&#x5EFA;&#x540E;&#x64CD;&#x4F5C;&#xFF1A;&#x65B0;&#x589E;html report</p>
+<p>&#x9009;&#x62E9;&#x3010;&#x9879;&#x76EE;--&#x914D;&#x7F6E;---&#x6784;&#x5EFA;&#x540E;&#x64CD;&#x4F5C;&#x3011;&#xFF0C;&#x65B0;&#x589E;&#x6784;&#x5EFA;&#x540E;&#x64CD;&#x4F5C;&#xFF1A;publish html reports</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.56.png" alt="image-20210106112140980"></p>
+<p>&#x914D;&#x7F6E;&#x62A5;&#x544A;&#x4FE1;&#x606F;&#xFF1A;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.57.png" alt="image-20210106112218758"></p>
+<p>l &#x4FDD;&#x5B58;&#xFF1B;</p>
+<p>l &#x6267;&#x884C;&#x6784;&#x5EFA;</p>
+<p>&#x9009;&#x62E9;&#x9879;&#x76EE;&#xFF0C;&#x70B9;&#x51FB;&#x3010;build now&#x3011;&#xFF0C;&#x8FDB;&#x884C;&#x6267;&#x884C;&#x6784;&#x5EFA;&#xFF1B;</p>
+<p>l &#x7ED3;&#x679C;&#x5BDF;&#x770B;</p>
+<p>build history&#x5C55;&#x793A;&#x6267;&#x884C;&#x6784;&#x5EFA;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x7EA2;&#x8272;&#x8868;&#x793A;&#x6784;&#x5EFA;&#x5931;&#x8D25;&#xFF0C;&#x84DD;&#x8272;&#x8868;&#x793A;&#x6784;&#x5EFA;&#x6210;&#x529F;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.58.png" alt="image-20210106112319013"></p>
+<p>&#x70B9;&#x51FB;&#x3010;build history&#x3011;&#x4E2D;&#x7684;&#x6784;&#x5EFA;&#x8BB0;&#x5F55;&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB;&#x3010;console output&#x3011;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x6784;&#x5EFA;&#x65E5;&#x5FD7;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.59.png" alt="image-20210106112358555"></p>
+<p>&#x70B9;&#x51FB;&#x3010;&#x9879;&#x76EE;-html report&#x3011;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x6267;&#x884C;&#x62A5;&#x544A;&#xFF1B;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.60.png" alt="image-20210106112438018"></p>
+<p>&#x6267;&#x884C;&#x62A5;&#x544A;&#xFF1A;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.61.png" alt="image-20210106112708781"></p>
+<h2 id="82-&#x57FA;&#x4E8E;jenkins&#x6267;&#x884C;&#x5668;jmeter&#x5B9E;&#x73B0;">8.2 &#x57FA;&#x4E8E;jenkins+&#x6267;&#x884C;&#x5668;+jmeter&#x5B9E;&#x73B0;</h2>
+<p>1&#xFF09;&#x914D;&#x7F6E;jmeter.properties</p>
+<p>&#x5220;&#x9664;jmeter.save.saveservice.output_format=xml&#x914D;&#x7F6E;&#xFF0C;&#x4FDD;&#x7559;&#x9ED8;&#x8BA4;&#x683C;&#x5F0F;&#xFF08;csv&#xFF09;&#x5373;&#x53EF;&#xFF1B;</p>
+<p>2&#xFF09;&#x65B0;&#x5EFA;&#x9879;&#x76EE;item</p>
+<p>&#x9879;&#x76EE;&#x98CE;&#x683C;&#xFF1A;freestyle project</p>
+<p>l &#x6784;&#x5EFA;</p>
+<p>&#x70B9;&#x51FB;&#x3010;&#x9879;&#x76EE;-&#x6784;&#x5EFA;&#x3011;&#xFF0C;&#x65B0;&#x589E;&#x6B65;&#x9AA4;&#xFF0C;&#x9009;&#x62E9;&#xFF1A;execute windows batch command</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.62.png" alt="image-20210106112916603"></p>
+<p>&#x914D;&#x7F6E;windown command</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.63.png" alt="image-20210106112949319"></p>
+<p>&#x547D;&#x4EE4;:</p>
+<p>del /f /s /q D:\&#x57F9;&#x8BAD;\Jmeter&#x57F9;&#x8BAD;\&#x6D4B;&#x8BD5;&#x811A;&#x672C;\test.log</p>
+<p>del /f /s /q D:\&#x57F9;&#x8BAD;\Jmeter&#x57F9;&#x8BAD;\&#x6D4B;&#x8BD5;&#x811A;&#x672C;\test.jtl</p>
+<p>rd /s /q D:\&#x57F9;&#x8BAD;\Jmeter&#x57F9;&#x8BAD;\&#x6D4B;&#x8BD5;&#x811A;&#x672C;\html</p>
+<p>jmeter -n -t D:\&#x57F9;&#x8BAD;\Jmeter&#x57F9;&#x8BAD;\&#x6D4B;&#x8BD5;&#x811A;&#x672C;\&#x83B7;&#x53D6;&#x5546;&#x54C1;&#x5217;&#x8868;.jmx -l D:\&#x57F9;&#x8BAD;\Jmeter&#x57F9;&#x8BAD;\&#x6D4B;&#x8BD5;&#x811A;&#x672C;\test.log -j D:\&#x57F9;&#x8BAD;\Jmeter&#x57F9;&#x8BAD;\&#x6D4B;&#x8BD5;&#x811A;&#x672C;\test.jtl -e -o D:\&#x57F9;&#x8BAD;\Jmeter&#x57F9;&#x8BAD;\&#x6D4B;&#x8BD5;&#x811A;&#x672C;\html</p>
+<p>l &#x6784;&#x5EFA;&#x540E;&#x64CD;&#x4F5C;&#xFF1A;&#x65B0;&#x589E;html report</p>
+<p>&#x9009;&#x62E9;&#x3010;&#x9879;&#x76EE;--&#x914D;&#x7F6E;---&#x6784;&#x5EFA;&#x540E;&#x64CD;&#x4F5C;&#x3011;&#xFF0C;&#x65B0;&#x589E;&#x6784;&#x5EFA;&#x540E;&#x64CD;&#x4F5C;&#xFF1A;publish html reports</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.64.png" alt="image-20210106113116123"></p>
+<p>&#x914D;&#x7F6E;&#x62A5;&#x544A;&#x4FE1;&#x606F;&#xFF1A;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/2.2.2.65.png" alt="image-20210106113151800"></p>
+<p>&#x4FDD;&#x5B58;&#xFF1B;</p>
+<p>l &#x6267;&#x884C;&#x6784;&#x5EFA;</p>
+<p>&#x9009;&#x62E9;&#x9879;&#x76EE;&#xFF0C;&#x70B9;&#x51FB;&#x3010;build now&#x3011;&#xFF0C;&#x8FDB;&#x884C;&#x6267;&#x884C;&#x6784;&#x5EFA;&#xFF1B;</p>
+<p>l &#x7ED3;&#x679C;&#x5BDF;&#x770B;</p>
+<p>build history&#x5C55;&#x793A;&#x6267;&#x884C;&#x6784;&#x5EFA;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x7EA2;&#x8272;&#x8868;&#x793A;&#x6784;&#x5EFA;&#x5931;&#x8D25;&#xFF0C;&#x84DD;&#x8272;&#x8868;&#x793A;&#x6784;&#x5EFA;&#x6210;&#x529F;&#xFF1B;</p>
+
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2.2.1-Jmeter环境安装配置.html" class="navigation navigation-prev " aria-label="Previous page: 2.2.1-Jmeter环境安装配置">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2.2.3-Jmeter监控.html" class="navigation navigation-next " aria-label="Next page: 2.2.3-Jmeter监控">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.2.2-Jmeter脚本开发","level":"1.3.7","depth":2,"next":{"title":"2.2.3-Jmeter监控","level":"1.3.8","depth":2,"path":"02-性能测试/2.2.3-Jmeter监控.md","ref":"02-性能测试/2.2.3-Jmeter监控.md","articles":[]},"previous":{"title":"2.2.1-Jmeter环境安装配置","level":"1.3.6","depth":2,"path":"02-性能测试/2.2.1-Jmeter环境安装配置.md","ref":"02-性能测试/2.2.1-Jmeter环境安装配置.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","copy-code-button","popup","splitter","chapter-fold","expandable-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"https://www.baidu.com"}},"gitbook":"*"},"file":{"path":"02-性能测试/2.2.2-Jmeter脚本开发.md","mtime":"2021-01-06T03:33:47.001Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-11T07:56:11.064Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
