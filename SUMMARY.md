@@ -24,10 +24,12 @@
   - [2.4-Redis](02-性能测试/2.4-Redis.md)
   - [2.5-常用默认端口](02-性能测试/1.5-常用默认端口.md)
 - [03-自动化测试](03-自动化测试.md)
+  - [3.1-Python Web自动化测试](03-自动化测试/3.1-基于python的自动化测试.md)
+  - [3.1.1-环境搭建（Web自动化）](03-自动化测试/3.1.1-环境搭建（WebUI自动化）.md) 
+  - [3.1.2-Selenium WebDriver](03-自动化测试/3.1.2-Selenium WebDriver.md) 
 - [04-Linux](04-Linux.md)
   - [4.1-Vi文本处理](04-Linux/4.1-Vi文本处理.md)
   - [4.2-Linux常用文本处理](04-Linux/4.2-Linux常用文本处理.md)
-
 - [05-数据库](blank.md)
   - [5.1-mysql数据库](blank.md)
   - [5.1.1-mysql数据库下载安装](05-数据库/5.1.1-mysql数据库下载安装.md)
