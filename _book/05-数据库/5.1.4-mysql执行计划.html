@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>5.1.2-mysql查询语法和执行顺序 · GitBook</title>
+        <title>5.1.4-mysql执行计划 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -73,10 +73,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="5.1.3-mysql索引.html" />
     
-    
-    <link rel="prev" href="5.1.1-mysql数据库下载安装.html" />
+    <link rel="prev" href="5.1.3-mysql索引.html" />
     
 
     </head>
@@ -659,7 +657,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6.3" data-path="5.1.2-mysql查询语法和执行顺序.html">
+        <li class="chapter " data-level="1.6.3" data-path="5.1.2-mysql查询语法和执行顺序.html">
             
                 <a href="5.1.2-mysql查询语法和执行顺序.html">
             
@@ -685,7 +683,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.5" data-path="5.1.4-mysql执行计划.html">
+        <li class="chapter active" data-level="1.6.5" data-path="5.1.4-mysql执行计划.html">
             
                 <a href="5.1.4-mysql执行计划.html">
             
@@ -733,7 +731,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >5.1.2-mysql查询语法和执行顺序</a>
+        <a href=".." >5.1.4-mysql执行计划</a>
     </h1>
 </div>
 
@@ -748,31 +746,195 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="mysql&#x67E5;&#x8BE2;&#x8BED;&#x6CD5;&#x548C;&#x6267;&#x884C;&#x987A;&#x5E8F;">Mysql&#x67E5;&#x8BE2;&#x8BED;&#x6CD5;&#x548C;&#x6267;&#x884C;&#x987A;&#x5E8F;</h1>
-<h1 id="1&#x3001;mysql&#x67E5;&#x8BE2;&#x8BED;&#x6CD5;">1&#x3001;mysql&#x67E5;&#x8BE2;&#x8BED;&#x6CD5;</h1>
-<pre><code>SELECT
-FROM
-LEFT JOIN
-ON
-WHERE
-GROUP BY
-HAVING
-ORDER BY
-LIMIT  --mysql&#x4E13;&#x7528;
-</code></pre><h1 id="2&#x3001;mysql&#x67E5;&#x8BE2;&#x6267;&#x884C;&#x987A;&#x5E8F;">2&#x3001;mysql&#x67E5;&#x8BE2;&#x6267;&#x884C;&#x987A;&#x5E8F;</h1>
-<p>mysql&#x6BCF;&#x8FDB;&#x884C;&#x4E00;&#x6B21;&#x64CD;&#x4F5C;&#xFF0C;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x7ED3;&#x679C;&#x96C6;&#xFF08;&#x865A;&#x62DF;&#x8868;VT&#xFF09;&#xFF0C;mysql&#x67E5;&#x8BE2;&#x6267;&#x884C;&#x987A;&#x5E8F;&#xFF1A;</p>
-<p>1&#xFF09;FROM&#xFF1A;&#x5C06;&#x67E5;&#x8BE2;&#x8868;&#x8FDB;&#x884C;&#x7B1B;&#x5361;&#x5C14;&#x79EF;&#xFF0C;&#x751F;&#x6210;VT1</p>
-<p>2&#xFF09;ON&#xFF1A;&#x5C06;VT1&#x6309;&#x7167;&#x6761;&#x4EF6;&#x8FDB;&#x884C;&#x7B5B;&#x9009;&#xFF0C;&#x751F;&#x6210;VT2</p>
-<p>3&#xFF09;LEFT JOIN&#xFF1A;&#x8FDB;&#x884C;&#x5DE6;&#x8FDE;&#x63A5;&#xFF0C;&#x53BB;&#x9664;&#x91CD;&#x590D;&#x6570;&#x636E;&#xFF0C;&#x751F;&#x6210;VT3</p>
-<p>4&#xFF09;WHERE&#xFF1A;&#x8FC7;&#x6EE4;VT3&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x751F;&#x6210;VT4</p>
-<p>5&#xFF09;GROUP BY:&#x5BF9;VT4&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#xFF0C;&#x751F;&#x6210;VT5</p>
-<p>6&#xFF09;HAVING&#xFF1A;&#x5BF9;&#x5206;&#x7EC4;&#x540E;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7B5B;&#x9009;&#xFF08;&#x7B5B;&#x9009;&#x5B57;&#x6BB5;&#x5FC5;&#x987B;&#x662F;&#x5206;&#x7EC4;&#x5B57;&#x6BB5;&#x6216;&#x8005;&#x5206;&#x7EC4;&#x5B57;&#x6BB5;&#x7684;&#x805A;&#x5408;&#x51FD;&#x6570;&#xFF09;&#xFF0C;&#x751F;&#x6210;VT6&#xFF1B;</p>
-<p>7&#xFF09;SELECT&#xFF1A;&#x5BF9;VT6&#x7ED3;&#x679C;&#xFF0C;&#x7B5B;&#x9009;&#x663E;&#x793A;&#x6307;&#x5B9A;&#x5217;&#xFF08;&#x5206;&#x7EC4;&#x5B57;&#x6BB5;&#x6216;&#x5206;&#x7EC4;&#x5B57;&#x6BB5;&#x7684;&#x805A;&#x5408;&#x51FD;&#x6570;&#xFF09;&#xFF0C;&#x751F;&#x6210;VT7&#xFF1B;</p>
-<p>8&#xFF09;ORDER BY&#xFF1A;&#x5BF9;VT7&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x751F;&#x6210;VT8</p>
-<p>9&#xFF09;LIMIT&#xFF1A;&#x5BF9;&#x6392;&#x5E8F;&#x4E4B;&#x540E;&#x7684;&#x503C;&#x8FDB;&#x884C;&#x5206;&#x9875;&#x5C55;&#x793A;&#xFF0C;&#x751F;&#x6210;VT9</p>
-<h1 id="3&#x3001;where&#x67E5;&#x8BE2;&#x987A;&#x5E8F;">3&#x3001;WHERE&#x67E5;&#x8BE2;&#x987A;&#x5E8F;</h1>
-<p>1&#xFF09;&#x6709;&#x7D22;&#x5F15;&#x7B49;&#x67E5;&#x8BE2;&#x4F18;&#x5316;&#x5668;&#xFF0C;&#x6309;&#x7167;&#x7D22;&#x5F15;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#xFF1B;</p>
-<p>2&#xFF09;&#x6CA1;&#x6709;&#x7D22;&#x5F15;&#x7B49;&#x67E5;&#x8BE2;&#x4F18;&#x5316;&#x5668;&#xFF0C;MYSQL&#x9ED8;&#x8BA4;&#x4ECE;&#x5DE6;&#x5F80;&#x53F3;&#x6267;&#x884C;&#xFF0C;ORACLE&#x9ED8;&#x8BA4;&#x4ECE;&#x53F3;&#x5F80;&#x5DE6;&#x6267;&#x884C;&#xFF1B;WHERE&#x6761;&#x4EF6;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x7684;&#x90E8;&#x5206;&#x5E94;&#x5C3D;&#x91CF;&#x7F16;&#x5199;&#x8FC7;&#x6EE4;&#x66F4;&#x591A;&#x6570;&#x636E;&#x7684;&#x6761;&#x4EF6;&#xFF1B;</p>
+                                <h1 id="mysql&#x6267;&#x884C;&#x8BA1;&#x5212;">mysql&#x6267;&#x884C;&#x8BA1;&#x5212;</h1>
+<p>mysql&#x6267;&#x884C;&#x8BA1;&#x5212;&#x7528;&#x4E8E;&#x67E5;&#x770B;sql&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x548C;&#x6267;&#x884C;&#x6548;&#x7387;&#xFF1B;</p>
+<h1 id="1&#x3001;mysql&#x67E5;&#x770B;&#x6267;&#x884C;&#x8BA1;&#x5212;&#x547D;&#x4EE4;">1&#x3001;mysql&#x67E5;&#x770B;&#x6267;&#x884C;&#x8BA1;&#x5212;&#x547D;&#x4EE4;</h1>
+<p>explain sql&#x8BED;&#x53E5;&#xFF1B;</p>
+<pre><code>EXPLAIN SELECT * FROM USER_test,user_ex WHERE user_test.id=user_ex.id;
+</code></pre><p>&#x6267;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/image-20210207145117378.png" alt="image-20210207145117378"></p>
+<h1 id="2&#x3001;mysql&#x6267;&#x884C;&#x8BA1;&#x5212;&#x8BE6;&#x89E3;">2&#x3001;mysql&#x6267;&#x884C;&#x8BA1;&#x5212;&#x8BE6;&#x89E3;</h1>
+<p><strong>1&#xFF09;id</strong></p>
+<p>&#x6267;&#x884C;&#x8BA1;&#x5212;id&#xFF0C;&#x5BF9;&#x4E8E;&#x590D;&#x6742;&#x7684;sql&#x8BED;&#x53E5;mysql&#x4F1A;&#x8FDB;&#x884C;&#x591A;&#x6B21;&#x67E5;&#x8BE2;&#xFF0C;&#x6BCF;&#x6B21;&#x67E5;&#x8BE2;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x8BA1;&#x5212;&#xFF0C;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x7B26;&#xFF0C;&#x8868;&#x793A;&#x67E5;&#x8BE2;&#x4E2D;&#x64CD;&#x4F5C;&#x6807;&#x7684;&#x987A;&#x5E8F;&#xFF1B;</p>
+<p>id&#x76F8;&#x540C;&#xFF0C;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x4ECE;&#x4E0A;&#x5F80;&#x4E0B;&#xFF1B;</p>
+<p>id&#x4E0D;&#x540C;&#xFF0C;id&#x8D8A;&#x5927;&#xFF0C;&#x4F18;&#x5148;&#x7EA7;&#x8D8A;&#x9AD8;&#xFF1B;</p>
+<p>id&#x4E3A;NULL&#xFF0C;&#x8868;&#x793A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7ED3;&#x679C;&#x96C6;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5B83;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#xFF1B;</p>
+<p><strong>2&#xFF09;select_type</strong></p>
+<p>&#x67E5;&#x8BE2;&#x7C7B;&#x578B;&#xFF0C;&#x5305;&#x542B;&#x666E;&#x901A;&#x67E5;&#x8BE2;&#x3001;&#x8054;&#x5408;&#x67E5;&#x8BE2;&#x548C;&#x5B50;&#x67E5;&#x8BE2;&#xFF1B;</p>
+<p>simple&#xFF1A;&#x666E;&#x901A;&#x67E5;&#x8BE2;&#xFF0C;&#x6700;&#x7B80;&#x5355;&#x7684;select&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#xFF0C;&#x4E0D;&#x5305;&#x542B;&#x5B50;&#x67E5;&#x8BE2;&#x548C;union&#x67E5;&#x8BE2;&#xFF1B;</p>
+<p>primary&#xFF1A;&#x67E5;&#x8BE2;&#x4E2D;&#x5305;&#x542B;&#x5B50;&#x90E8;&#x5206;&#xFF0C;&#x6700;&#x5916;&#x5C42;&#x67E5;&#x8BE2;&#x5219;&#x88AB;&#x6807;&#x8BB0;&#x4E3A; primary&#xFF1B;</p>
+<p>union&#xFF1A;&#x8868;&#x793A; union &#x4E2D;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x6216;&#x540E;&#x9762;&#x7684; select &#x8BED;&#x53E5;&#xFF1B;</p>
+<p>UNION RESULT&#xFF1A;union &#x7684;&#x7ED3;&#x679C;&#xFF1B;</p>
+<p>subquery&#xFF1A;SUBQUERY &#x8868;&#x793A;&#x5728; select &#x6216; where &#x5217;&#x8868;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x7B49;&#x503C;&#x5B50;&#x67E5;&#x8BE2;;&#x5982;&#x679C;&#x5B50;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x4E3A;IN&#x7B49;&#x975E;&#x7B49;&#x503C;&#x67E5;&#x8BE2;&#xFF0C;select_type&#x4E3A;simple&#xFF1B;</p>
+<p>&#x6837;&#x4F8B;&#xFF1A;</p>
+<p>&#x6570;&#x636E;&#x51C6;&#x5907;</p>
+<pre><code>CREATE TABLE `user_ex` (
+  `id` int(11) NOT NULL,
+  `age` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into user_ex values(1,18);
+insert into user_ex values(2,20);
+insert into user_ex values(3,30);
+insert into user_ex values(4,40);
+insert into user_ex values(5,50);
+</code></pre><p>&#x6267;&#x884C;&#x8BA1;&#x5212;</p>
+<pre><code>explain 
+select * from user_ex where id in(1,2)
+UNION
+select * from user_ex where id in(3,4);
+</code></pre><p>&#x6267;&#x884C;&#x7ED3;&#x679C;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/image-20210207150322139.png" alt="image-20210207150322139"></p>
+<p><strong>3&#xFF09;table</strong></p>
+<p>&#x67E5;&#x8BE2;&#x8868;&#x540D;</p>
+<p>&#x5982;&#x679C;&#x67E5;&#x8BE2;&#x4F7F;&#x7528;&#x4E86;&#x522B;&#x540D;&#xFF0C;&#x663E;&#x793A;&#x522B;&#x540D;&#xFF1B;</p>
+<p>&#x5982;&#x679C;&#x4E0D;&#x6D89;&#x53CA;&#x6570;&#x636E;&#x8868;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x663E;&#x793A;&#x4E3A;NULL&#xFF1B;</p>
+<p>&#x5982;&#x679C;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#x6765;&#x6E90;&#x4E3A;&#x4E34;&#x65F6;&#x8868;&#xFF0C;&#x663E;&#x793A;&#x4E3A;&#x5C16;&#x62EC;&#x53F7;&#xFF1B;<union m,n="">&#xFF0C;&#x8868;&#x793A;&#x7ED3;&#x679C;&#x6765;&#x81EA;&#x4E8E;union&#x67E5;&#x8BE2;id&#x4E3A;M&#x548C;N&#x7684;&#x7ED3;&#x679C;&#x96C6;&#xFF1B;</union></p>
+<p><strong>4&#xFF09;type</strong></p>
+<p>&#x8BBF;&#x95EE;&#x7C7B;&#x578B;</p>
+<p>SQL &#x67E5;&#x8BE2;&#x4F18;&#x5316;&#x4E2D;&#x4E00;&#x4E2A;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x6307;&#x6807;&#xFF0C;&#x6267;&#x884C;&#x6548;&#x7387;&#x4ECE;&#x597D;&#x5230;&#x574F;&#x4F9D;&#x6B21;&#x662F;&#xFF1A;system &gt; const &gt; eq_ref &gt; ref &gt; range &gt; index &gt; ALL&#x3002;</p>
+<ul>
+<li><p>system</p>
+<p>&#x8BBF;&#x95EE;&#x7CFB;&#x7EDF;&#x8868;&#x6216;&#x4E34;&#x65F6;&#x8868;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x78C1;&#x76D8;IO&#xFF0C;&#x4ECE;&#x5185;&#x5B58;&#x4E2D;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#xFF1B;</p>
+</li>
+<li><p>const</p>
+<p>&#x67E5;&#x8BE2;&#x5B57;&#x6BB5;&#x4F7F;&#x7528;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x6216;&#x8005;&#x4E3B;&#x952E;&#xFF0C;&#x8FD4;&#x56DE;&#x8BB0;&#x5F55;&#x662F;1&#x884C;&#x8BB0;&#x5F55;&#x7684;&#x7B49;&#x503C;where&#x6761;&#x4EF6;&#xFF1B;</p>
+<p>&#x6570;&#x636E;&#x51C6;&#x5907;</p>
+<pre><code>CREATE TABLE `user_test` (
+  `id` int(11) NOT NULL,
+  `NAME` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into user_test values(1,&apos;shenjian&apos;);
+insert into user_test values(2,&apos;zhangsan&apos;);
+insert into user_test values(3,&apos;lisi&apos;);
+</code></pre><p>&#x6267;&#x884C;&#x8BA1;&#x5212;</p>
+<pre><code>EXPLAIN SELECT * FROM USER_TEST WHERE ID = 1;
+</code></pre><p>&#x6267;&#x884C;&#x7ED3;&#x679C;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/image-20210207152837393.png" alt="image-20210207152837393"></p>
+</li>
+<li><p>eq_ref</p>
+<p>&#x591A;&#x8868;&#x8FDE;&#x63A5;&#x67E5;&#x8BE2;&#xFF0C;&#x5173;&#x8054;&#x5B57;&#x6BB5;&#x4E3A;&#x4E3B;&#x952E;&#x6216;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#xFF0C;&#x7B49;&#x503C;&#x8FDE;&#x63A5;&#xFF1B;</p>
+<p>&#x6570;&#x636E;&#x51C6;&#x5907;</p>
+<pre><code>CREATE TABLE `user_test` (
+  `id` int(11) NOT NULL,
+  `NAME` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into user_test values(1,&apos;shenjian&apos;);
+insert into user_test values(2,&apos;zhangsan&apos;);
+insert into user_test values(3,&apos;lisi&apos;);
+
+CREATE TABLE `user_ex` (
+  `id` int(11) NOT NULL,
+  `age` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into user_ex values(1,18);
+insert into user_ex values(2,20);
+insert into user_ex values(3,30);
+insert into user_ex values(4,40);
+insert into user_ex values(5,50);
+</code></pre><p>&#x6267;&#x884C;&#x8BA1;&#x5212;</p>
+<pre><code>EXPLAIN SELECT * FROM USER_test,user_ex WHERE user_test.id=user_ex.id;
+</code></pre><p>&#x6267;&#x884C;&#x7ED3;&#x679C;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/image-20210207153523970.png" alt="image-20210207153523970"></p>
+</li>
+<li><p>ref</p>
+<p>&#x591A;&#x8868;&#x8FDE;&#x63A5;&#x67E5;&#x8BE2;&#xFF0C;&#x5173;&#x8054;&#x5B57;&#x6BB5;&#x4E3A;&#x666E;&#x901A;&#x7D22;&#x5F15;&#xFF08;&#x975E;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#xFF09;&#xFF1B;</p>
+<p>&#x6570;&#x636E;&#x51C6;&#x5907;&#xFF1A;</p>
+<pre><code>CREATE TABLE `user_test` (
+  `id` int(11) DEFAULT NULL,
+  `name` varchar(20) DEFAULT NULL,
+  KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into user_test values(1,&apos;shenjian&apos;);
+insert into user_test values(2,&apos;zhangsan&apos;);
+insert into user_test values(3,&apos;lisi&apos;);
+
+CREATE TABLE `user_ex` (
+  `id` int(11) DEFAULT NULL,
+  `age` int(11) DEFAULT NULL,
+  KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into user_ex values(1,18);
+insert into user_ex values(2,20);
+insert into user_ex values(3,30);
+insert into user_ex values(4,40);
+insert into user_ex values(5,50);
+</code></pre><p>&#x6267;&#x884C;&#x8BA1;&#x5212;</p>
+<pre><code>EXPLAIN SELECT * FROM USER_test,user_ex WHERE user_test.id=user_ex.id;
+</code></pre><p>&#x6267;&#x884C;&#x7ED3;&#x679C;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/image-20210207160917471.png" alt="image-20210207160917471"></p>
+</li>
+<li><p>range</p>
+</li>
+</ul>
+<p>&#x67E5;&#x8BE2;&#x5B57;&#x6BB5;&#x4E3A;&#x7D22;&#x5F15;&#x8303;&#x56F4;&#x67E5;&#x8BE2;&#xFF0C;&#x5E38;&#x7528;&#x4E8E;&#x4F7F;&#x7528;&#xFF1E;&#x3001;&#xFF1C;&#x3001;in&#x3001;between&#x3001;like&#x7B49;&#x8303;&#x56F4;&#x8FD0;&#x7B97;&#x7B26;&#x67E5;&#x8BE2;&#xFF1B;</p>
+<p>&#x6570;&#x636E;&#x51C6;&#x5907;</p>
+<pre><code>CREATE TABLE `user_test` (
+  `id` int(11) NOT NULL,
+  `NAME` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into user_test values(1,&apos;shenjian&apos;);
+insert into user_test values(2,&apos;zhangsan&apos;);
+insert into user_test values(3,&apos;lisi&apos;);
+</code></pre><p>&#x6267;&#x884C;&#x8BA1;&#x5212;</p>
+<pre><code>EXPLAIN SELECT * FROM USER_TEST WHERE ID in(1,2);
+</code></pre><p>&#x6267;&#x884C;&#x7ED3;&#x679C;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/image-20210207161744052.png" alt="image-20210207161744052"></p>
+<ul>
+<li>index</li>
+</ul>
+<p>&#x7D22;&#x5F15;&#x5168;&#x8868;&#x626B;&#x63CF;&#xFF0C;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x6216;&#x8005;&#x5206;&#x7EC4;&#x67E5;&#x8BE2;&#xFF1B;</p>
+<p>&#x6570;&#x636E;&#x51C6;&#x5907;</p>
+<pre><code>CREATE TABLE `user_test` (
+  `id` int(11) NOT NULL,
+  `NAME` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into user_test values(1,&apos;shenjian&apos;);
+insert into user_test values(2,&apos;zhangsan&apos;);
+insert into user_test values(3,&apos;lisi&apos;);
+</code></pre><p>&#x6267;&#x884C;&#x8BA1;&#x5212;</p>
+<pre><code>EXPLAIN SELECT count(*) FROM USER_TEST;
+</code></pre><p>&#x6267;&#x884C;&#x7ED3;&#x679C;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/image-20210207162306864.png" alt="image-20210207162306864"></p>
+<ul>
+<li><p>ALL</p>
+<p>&#x5168;&#x8868;&#x626B;&#x63CF;&#x67E5;&#x8BE2;&#xFF1B;</p>
+</li>
+</ul>
+<p><strong>5&#xFF09;possible_keys</strong></p>
+<p>&#x67E5;&#x8BE2;&#x4E2D;&#x53EF;&#x80FD;&#x7528;&#x5230;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#xFF1B;</p>
+<p><strong>6&#xFF09;key</strong></p>
+<p>&#x67E5;&#x8BE2;&#x4E2D;&#x771F;&#x6B63;&#x4F7F;&#x7528;&#x7684;&#x7D22;&#x5F15;&#xFF1B;&#x672A;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#xFF0C;&#x5219;&#x663E;&#x793A;&#x4E3A;NULL&#xFF1B;</p>
+<p><strong>7&#xFF09;key_len</strong></p>
+<p>&#x7528;&#x4E8E;&#x5904;&#x7406;&#x67E5;&#x8BE2;&#x7684;&#x7D22;&#x5F15;&#x957F;&#x5EA6;&#xFF1B;</p>
+<p>key_len&#x53EA;&#x8BA1;&#x7B97;where&#x6761;&#x4EF6;&#x7528;&#x5230;&#x7684;&#x7D22;&#x5F15;&#x957F;&#x5EA6;&#xFF0C;&#x6392;&#x5E8F;&#x548C;&#x5206;&#x7EC4;&#x7528;&#x5230;&#x7684;&#x7D22;&#x5F15;&#x957F;&#x5EA6;&#x4E0D;&#x4F1A;&#x8BA1;&#x7B97;&#xFF1B;</p>
+<p><strong>8&#xFF09;ref</strong></p>
+<p>&#x5982;&#x679C;&#x4F7F;&#x7528;&#x5E38;&#x6570;&#x7B49;&#x503C;&#x67E5;&#x8BE2;&#xFF0C;&#x663E;&#x793A;&#x4E3A;const&#xFF1B;</p>
+<p>&#x5982;&#x679C;&#x662F;&#x8FDE;&#x63A5;&#x67E5;&#x8BE2;&#xFF0C;&#x88AB;&#x9A71;&#x52A8;&#x8868;&#x7684;&#x6267;&#x884C;&#x8BA1;&#x5212;&#x4E2D;&#x4F1A;&#x663E;&#x793A;&#x9A71;&#x52A8;&#x8868;&#x7684;&#x5173;&#x8054;&#x5B57;&#x6BB5;&#xFF1B;</p>
+<p>&#x5982;&#x679C;&#x662F;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x4F7F;&#x7528;&#x4E86;&#x8868;&#x8FBE;&#x5F0F;&#x6216;&#x8005;&#x51FD;&#x6570;&#xFF0C;&#x663E;&#x793A;&#x4E3A;func&#xFF1B;</p>
+<p>&#x6CA1;&#x6709;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#xFF0C;&#x663E;&#x793A;&#x4E3A;NULL&#xFF1B;</p>
+<p><strong>9&#xFF09;rows</strong></p>
+<p>&#x6267;&#x884C;&#x8BA1;&#x5212;&#x4F30;&#x7B97;&#x7684;&#x626B;&#x63CF;&#x884C;&#x6570;&#xFF1B;</p>
+<p><strong>10&#xFF09;filtered</strong></p>
+<p>&#x8868;&#x793A;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x5728;server&#x5C42;&#x8FC7;&#x6EE4;&#x540E;&#xFF0C;&#x5269;&#x4E0B;&#x591A;&#x5C11;&#x6EE1;&#x8DB3;&#x67E5;&#x8BE2;&#x7684;&#x8BB0;&#x5F55;&#x6570;&#x91CF;&#x7684;&#x6BD4;&#x4F8B;&#xFF0C;&#x5355;&#x4F4D;&#x662F;&#x767E;&#x5206;&#x6BD4;&#xFF1B;&#x8D8A;&#x63A5;&#x8FD1;100%&#xFF0C;&#x8868;&#x793A;server&#x5904;&#x7406;&#x7684;&#x8D8A;&#x5C11;&#xFF0C;&#x67E5;&#x8BE2;&#x80FD;&#x66F4;&#x591A;&#x5229;&#x7528;&#x5B58;&#x50A8;&#x5C42;&#x7684;&#x8FC7;&#x6EE4;&#xFF0C;&#x6548;&#x7387;&#x8D8A;&#x9AD8;&#xFF1B;</p>
+<p><strong>mysql&#x67B6;&#x6784;&#x5206;&#x4E3A;3&#x5C42;&#xFF1A;&#x63A5;&#x5165;&#x901A;&#x8BAF;&#x5C42;&#xFF08;&#x8D1F;&#x8D23;&#x8FDE;&#x63A5;&#x6C60;&#x7BA1;&#x7406;&#x7B49;&#xFF09;&#x3001;&#x4E2D;&#x95F4;server&#x5C42;&#xFF08;sql&#x8BED;&#x53E5;&#x89E3;&#x6790;&#x3001;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x3001;&#x4F18;&#x5316;&#x7F13;&#x5B58;&#x7B49;&#xFF09;&#x548C;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x5C42;&#xFF1B;sql&#x7684;&#x64CD;&#x4F5C;&#x4E00;&#x90E8;&#x5206;&#x5728;server&#x5C42;&#x5904;&#x7406;&#xFF0C;&#x4E00;&#x90E8;&#x5206;&#x5728;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x5C42;&#x5904;&#x7406;&#xFF1B;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x5C42;&#x5904;&#x7406;&#x6240;&#x5360;&#x7684;&#x6BD4;&#x4F8B;&#x8D8A;&#x9AD8;&#xFF0C;&#x6267;&#x884C;&#x6548;&#x7387;&#x8D8A;&#x5FEB;&#xFF1B;</strong></p>
+<p><strong>11&#xFF09;extra</strong></p>
+<p>&#x663E;&#x793A;&#x989D;&#x5916;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;distinct&#x3001;using index&#x3001;using where&#x7B49;&#xFF1B;</p>
+<p>&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A;</p>
+<p><a href="https://www.cnblogs.com/yinjw/p/11864477.html" target="_blank">https://www.cnblogs.com/yinjw/p/11864477.html</a></p>
 
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -801,14 +963,10 @@ LIMIT  --mysql&#x4E13;&#x7528;
 
             
                 
-                <a href="5.1.1-mysql数据库下载安装.html" class="navigation navigation-prev " aria-label="Previous page: 5.1.1-mysql数据库下载安装">
+                <a href="5.1.3-mysql索引.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 5.1.3-mysql索引">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="5.1.3-mysql索引.html" class="navigation navigation-next " aria-label="Next page: 5.1.3-mysql索引">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -817,7 +975,7 @@ LIMIT  --mysql&#x4E13;&#x7528;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5.1.2-mysql查询语法和执行顺序","level":"1.6.3","depth":2,"next":{"title":"5.1.3-mysql索引","level":"1.6.4","depth":2,"path":"05-数据库/5.1.3-mysql索引.md","ref":"05-数据库/5.1.3-mysql索引.md","articles":[]},"previous":{"title":"5.1.1-mysql数据库下载安装","level":"1.6.2","depth":2,"path":"05-数据库/5.1.1-mysql数据库下载安装.md","ref":"05-数据库/5.1.1-mysql数据库下载安装.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","copy-code-button","popup","splitter","chapter-fold","expandable-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"https://www.baidu.com"}},"gitbook":"*"},"file":{"path":"05-数据库/5.1.2-mysql查询语法和执行顺序.md","mtime":"2021-02-05T08:43:49.698Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-07T09:03:32.861Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5.1.4-mysql执行计划","level":"1.6.5","depth":2,"previous":{"title":"5.1.3-mysql索引","level":"1.6.4","depth":2,"path":"05-数据库/5.1.3-mysql索引.md","ref":"05-数据库/5.1.3-mysql索引.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","copy-code-button","popup","splitter","chapter-fold","expandable-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"https://www.baidu.com"}},"gitbook":"*"},"file":{"path":"05-数据库/5.1.4-mysql执行计划.md","mtime":"2021-02-07T08:53:19.095Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-07T09:03:32.861Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

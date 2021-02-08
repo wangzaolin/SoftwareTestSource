@@ -43,4 +43,6 @@
   - [5.1.2-mysql查询语法和执行顺序](05-数据库/5.1.2-mysql查询语法和执行顺序.md)
   - [5.1.3-mysql索引](05-数据库/5.1.3-mysql索引.md)
   - [5.1.4-mysql执行计划](05-数据库/5.1.4-mysql执行计划.md)
+  - [5.1.5-Mysql慢查询](05-数据库/5.1.5-Mysql慢查询.md)
+  - [5.1.6-mysql性能分析工具QueryProfile](05-数据库/5.1.6-mysql性能分析工具QueryProfile.md)
 
