@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>5.1.2-mysql查询语法和执行顺序 · GitBook</title>
+        <title>5.1.5-Mysql慢查询 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -73,10 +73,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="5.1.3-mysql索引.html" />
+    <link rel="next" href="5.1.6-mysql性能分析工具QueryProfile.html" />
     
     
-    <link rel="prev" href="5.1.1-mysql数据库下载安装.html" />
+    <link rel="prev" href="5.1.4-mysql执行计划.html" />
     
 
     </head>
@@ -659,7 +659,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6.3" data-path="5.1.2-mysql查询语法和执行顺序.html">
+        <li class="chapter " data-level="1.6.3" data-path="5.1.2-mysql查询语法和执行顺序.html">
             
                 <a href="5.1.2-mysql查询语法和执行顺序.html">
             
@@ -698,7 +698,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.6" data-path="5.1.5-Mysql慢查询.html">
+        <li class="chapter active" data-level="1.6.6" data-path="5.1.5-Mysql慢查询.html">
             
                 <a href="5.1.5-Mysql慢查询.html">
             
@@ -759,7 +759,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >5.1.2-mysql查询语法和执行顺序</a>
+        <a href=".." >5.1.5-Mysql慢查询</a>
     </h1>
 </div>
 
@@ -774,32 +774,30 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="mysql&#x67E5;&#x8BE2;&#x8BED;&#x6CD5;&#x548C;&#x6267;&#x884C;&#x987A;&#x5E8F;">Mysql&#x67E5;&#x8BE2;&#x8BED;&#x6CD5;&#x548C;&#x6267;&#x884C;&#x987A;&#x5E8F;</h1>
-<h1 id="1&#x3001;mysql&#x67E5;&#x8BE2;&#x8BED;&#x6CD5;">1&#x3001;mysql&#x67E5;&#x8BE2;&#x8BED;&#x6CD5;</h1>
-<pre><code>SELECT
-FROM
-LEFT JOIN
-ON
-WHERE
-GROUP BY
-HAVING
-ORDER BY
-LIMIT  --mysql&#x4E13;&#x7528;
-</code></pre><h1 id="2&#x3001;mysql&#x67E5;&#x8BE2;&#x6267;&#x884C;&#x987A;&#x5E8F;">2&#x3001;mysql&#x67E5;&#x8BE2;&#x6267;&#x884C;&#x987A;&#x5E8F;</h1>
-<p>mysql&#x6BCF;&#x8FDB;&#x884C;&#x4E00;&#x6B21;&#x64CD;&#x4F5C;&#xFF0C;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x7ED3;&#x679C;&#x96C6;&#xFF08;&#x865A;&#x62DF;&#x8868;VT&#xFF09;&#xFF0C;mysql&#x67E5;&#x8BE2;&#x6267;&#x884C;&#x987A;&#x5E8F;&#xFF1A;</p>
-<p>1&#xFF09;FROM&#xFF1A;&#x5C06;&#x67E5;&#x8BE2;&#x8868;&#x8FDB;&#x884C;&#x7B1B;&#x5361;&#x5C14;&#x79EF;&#xFF0C;&#x751F;&#x6210;VT1</p>
-<p>2&#xFF09;ON&#xFF1A;&#x5C06;VT1&#x6309;&#x7167;&#x6761;&#x4EF6;&#x8FDB;&#x884C;&#x7B5B;&#x9009;&#xFF0C;&#x751F;&#x6210;VT2</p>
-<p>3&#xFF09;LEFT JOIN&#xFF1A;&#x8FDB;&#x884C;&#x5DE6;&#x8FDE;&#x63A5;&#xFF0C;&#x53BB;&#x9664;&#x91CD;&#x590D;&#x6570;&#x636E;&#xFF0C;&#x751F;&#x6210;VT3</p>
-<p>4&#xFF09;WHERE&#xFF1A;&#x8FC7;&#x6EE4;VT3&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x751F;&#x6210;VT4</p>
-<p>5&#xFF09;GROUP BY:&#x5BF9;VT4&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#xFF0C;&#x751F;&#x6210;VT5</p>
-<p>6&#xFF09;HAVING&#xFF1A;&#x5BF9;&#x5206;&#x7EC4;&#x540E;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7B5B;&#x9009;&#xFF08;&#x7B5B;&#x9009;&#x5B57;&#x6BB5;&#x5FC5;&#x987B;&#x662F;&#x5206;&#x7EC4;&#x5B57;&#x6BB5;&#x6216;&#x8005;&#x5206;&#x7EC4;&#x5B57;&#x6BB5;&#x7684;&#x805A;&#x5408;&#x51FD;&#x6570;&#xFF09;&#xFF0C;&#x751F;&#x6210;VT6&#xFF1B;</p>
-<p>7&#xFF09;SELECT&#xFF1A;&#x5BF9;VT6&#x7ED3;&#x679C;&#xFF0C;&#x7B5B;&#x9009;&#x663E;&#x793A;&#x6307;&#x5B9A;&#x5217;&#xFF08;&#x5206;&#x7EC4;&#x5B57;&#x6BB5;&#x6216;&#x5206;&#x7EC4;&#x5B57;&#x6BB5;&#x7684;&#x805A;&#x5408;&#x51FD;&#x6570;&#xFF09;&#xFF0C;&#x751F;&#x6210;VT7&#xFF1B;</p>
-<p>8&#xFF09;ORDER BY&#xFF1A;&#x5BF9;VT7&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x751F;&#x6210;VT8</p>
-<p>9&#xFF09;LIMIT&#xFF1A;&#x5BF9;&#x6392;&#x5E8F;&#x4E4B;&#x540E;&#x7684;&#x503C;&#x8FDB;&#x884C;&#x5206;&#x9875;&#x5C55;&#x793A;&#xFF0C;&#x751F;&#x6210;VT9</p>
-<h1 id="3&#x3001;where&#x67E5;&#x8BE2;&#x987A;&#x5E8F;">3&#x3001;WHERE&#x67E5;&#x8BE2;&#x987A;&#x5E8F;</h1>
-<p>1&#xFF09;&#x6709;&#x7D22;&#x5F15;&#x7B49;&#x67E5;&#x8BE2;&#x4F18;&#x5316;&#x5668;&#xFF0C;&#x6309;&#x7167;&#x7D22;&#x5F15;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#xFF1B;</p>
-<p>2&#xFF09;&#x6CA1;&#x6709;&#x7D22;&#x5F15;&#x7B49;&#x67E5;&#x8BE2;&#x4F18;&#x5316;&#x5668;&#xFF0C;MYSQL&#x9ED8;&#x8BA4;&#x4ECE;&#x5DE6;&#x5F80;&#x53F3;&#x6267;&#x884C;&#xFF0C;ORACLE&#x9ED8;&#x8BA4;&#x4ECE;&#x53F3;&#x5F80;&#x5DE6;&#x6267;&#x884C;&#xFF1B;WHERE&#x6761;&#x4EF6;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x7684;&#x90E8;&#x5206;&#x5E94;&#x5C3D;&#x91CF;&#x7F16;&#x5199;&#x8FC7;&#x6EE4;&#x66F4;&#x591A;&#x6570;&#x636E;&#x7684;&#x6761;&#x4EF6;&#xFF1B;</p>
-
+                                <h1 id="mysql&#x6162;&#x67E5;&#x8BE2;">mysql&#x6162;&#x67E5;&#x8BE2;</h1>
+<p>mysql&#x6162;&#x67E5;&#x8BE2;&#xFF0C;&#x7528;&#x4E8E;&#x8BB0;&#x5F55;sql&#x6267;&#x884C;&#x65F6;&#x95F4;&#x8D85;&#x8FC7;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x7684;sql&#x8BED;&#x53E5;&#xFF0C;&#x4FBF;&#x4E8E;&#x5F00;&#x53D1;&#x8FDB;&#x884C;&#x53C2;&#x8003;&#x8C03;&#x4F18;&#xFF1B;&#x4E0B;&#x9762;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;mysql&#x6162;&#x67E5;&#x8BE2;&#x7684;&#x67E5;&#x8BE2;&#x548C;&#x914D;&#x7F6E;&#xFF1B;</p>
+<h1 id="1&#x3001;mysql&#x6162;&#x67E5;&#x8BE2;&#x72B6;&#x6001;&#x67E5;&#x770B;">1&#x3001;mysql&#x6162;&#x67E5;&#x8BE2;&#x72B6;&#x6001;&#x67E5;&#x770B;</h1>
+<p>1&#xFF09;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#x5F00;&#x542F;&#x72B6;&#x6001;&#x67E5;&#x770B;</p>
+<pre><code>show variables like &apos;%slow_query%&apos;;
+</code></pre><p>&#x6267;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/image-20210208165127206.png" alt="image-20210208165127206"></p>
+<p>slow_query_log&#xFF1A;&#x65E5;&#x5FD7;&#x5F00;&#x542F;&#x72B6;&#x6001;&#xFF0C;ON&#x4E3A;&#x5F00;&#x542F;&#xFF0C;OFF&#x4E3A;&#x5173;&#x95ED;&#xFF1B;</p>
+<p>slow_query_log_file:&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</p>
+<p>2&#xFF09;&#x6162;&#x67E5;&#x8BE2;&#x9608;&#x503C;&#x67E5;&#x770B;</p>
+<pre><code>show variables like &apos;long_query_time&apos;;
+</code></pre><p>long_query_time&#xFF1A;&#x6162;&#x67E5;&#x8BE2;&#x9608;&#x503C;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x79D2;&#xFF0C;sql&#x6267;&#x884C;&#x65F6;&#x95F4;&#x5927;&#x4E8E;&#x9608;&#x503C;&#x4F1A;&#x8BB0;&#x5F55;&#x5728;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#x4E2D;&#xFF1B;</p>
+<h1 id="2&#x3001;mysql&#x6162;&#x67E5;&#x8BE2;&#x914D;&#x7F6E;">2&#x3001;mysql&#x6162;&#x67E5;&#x8BE2;&#x914D;&#x7F6E;</h1>
+<p>1&#xFF09;&#x4E34;&#x65F6;&#x5F00;&#x542F;</p>
+<p>&#x4E34;&#x65F6;&#x914D;&#x7F6E;&#xFF0C;&#x91CD;&#x542F;Mysql&#x670D;&#x52A1;&#x540E;&#xFF0C;&#x914D;&#x7F6E;&#x6062;&#x590D;&#x4E3A;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;slow_query_log&#x4E3A;&#x5173;&#x95ED;&#xFF1B;</p>
+<pre><code>set global slow_query_log = ON;
+set global long_query_time = 3;
+</code></pre><p>2&#xFF09;&#x6C38;&#x4E45;&#x5F00;&#x542F;</p>
+<p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;/etc/mysql/my.cnf&#xFF0C;&#x91CD;&#x542F;mysql&#xFF0C;&#x6C38;&#x4E45;&#x751F;&#x6548;&#xFF1B;</p>
+<pre><code>log_output=file,table
+slow_query_log=on
+slow_query_log_file = /tmp/mysql-slow.log
+long_query_time = 1
+</code></pre>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
@@ -827,12 +825,12 @@ LIMIT  --mysql&#x4E13;&#x7528;
 
             
                 
-                <a href="5.1.1-mysql数据库下载安装.html" class="navigation navigation-prev " aria-label="Previous page: 5.1.1-mysql数据库下载安装">
+                <a href="5.1.4-mysql执行计划.html" class="navigation navigation-prev " aria-label="Previous page: 5.1.4-mysql执行计划">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="5.1.3-mysql索引.html" class="navigation navigation-next " aria-label="Next page: 5.1.3-mysql索引">
+                <a href="5.1.6-mysql性能分析工具QueryProfile.html" class="navigation navigation-next " aria-label="Next page: 5.1.6-mysql性能分析工具QueryProfile">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -843,7 +841,7 @@ LIMIT  --mysql&#x4E13;&#x7528;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5.1.2-mysql查询语法和执行顺序","level":"1.6.3","depth":2,"next":{"title":"5.1.3-mysql索引","level":"1.6.4","depth":2,"path":"05-数据库/5.1.3-mysql索引.md","ref":"05-数据库/5.1.3-mysql索引.md","articles":[]},"previous":{"title":"5.1.1-mysql数据库下载安装","level":"1.6.2","depth":2,"path":"05-数据库/5.1.1-mysql数据库下载安装.md","ref":"05-数据库/5.1.1-mysql数据库下载安装.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","copy-code-button","popup","splitter","chapter-fold","expandable-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"https://www.baidu.com"}},"gitbook":"*"},"file":{"path":"05-数据库/5.1.2-mysql查询语法和执行顺序.md","mtime":"2021-02-05T08:43:49.698Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-08T09:27:32.226Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5.1.5-Mysql慢查询","level":"1.6.6","depth":2,"next":{"title":"5.1.6-mysql性能分析工具QueryProfile","level":"1.6.7","depth":2,"path":"05-数据库/5.1.6-mysql性能分析工具QueryProfile.md","ref":"05-数据库/5.1.6-mysql性能分析工具QueryProfile.md","articles":[]},"previous":{"title":"5.1.4-mysql执行计划","level":"1.6.5","depth":2,"path":"05-数据库/5.1.4-mysql执行计划.md","ref":"05-数据库/5.1.4-mysql执行计划.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","copy-code-button","popup","splitter","chapter-fold","expandable-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"https://www.baidu.com"}},"gitbook":"*"},"file":{"path":"05-数据库/5.1.5-Mysql慢查询.md","mtime":"2021-02-08T09:25:09.705Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-08T09:27:32.226Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
