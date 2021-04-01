@@ -1,0 +1,1162 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4.3-Linux常用监控 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../blank.html" />
+    
+    
+    <link rel="prev" href="4.2-Linux常用文本处理.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.baidu.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    00-使用简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01-gitbook和git操作.html">
+            
+                <a href="../01-gitbook和git操作.html">
+            
+                    
+                    01-gitbook和git操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-gitbook和git操作/1.1-gitbook下载安装.html">
+            
+                <a href="../01-gitbook和git操作/1.1-gitbook下载安装.html">
+            
+                    
+                    1.1-gitbook下载安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-gitbook和git操作/1.2-SUMMARY目录操作.html">
+            
+                <a href="../01-gitbook和git操作/1.2-SUMMARY目录操作.html">
+            
+                    
+                    1.2-SUMMARY目录操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-gitbook和git操作/1.3-gitbook&github pages部署.html">
+            
+                <a href="../01-gitbook和git操作/1.3-gitbook&github pages部署.html">
+            
+                    
+                    1.3-gitbook&github pages操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-gitbook和git操作/1.4-gitbook常用命令.html">
+            
+                <a href="../01-gitbook和git操作/1.4-gitbook常用命令.html">
+            
+                    
+                    1.4-Gitbook常用命令操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01-gitbook和git操作/1.5-git常用命令.html">
+            
+                <a href="../01-gitbook和git操作/1.5-git常用命令.html">
+            
+                    
+                    1.5-Git常用命令操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01-gitbook和git操作/1.6-gitbook添加插件.html">
+            
+                <a href="../01-gitbook和git操作/1.6-gitbook添加插件.html">
+            
+                    
+                    1.6-Gitbook添加插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../02-性能测试.html">
+            
+                <a href="../02-性能测试.html">
+            
+                    
+                    02-性能测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02-性能测试/2.1-LoadRunner.html">
+            
+                <a href="../02-性能测试/2.1-LoadRunner.html">
+            
+                    
+                    2.1-LoadRunner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02-性能测试/2.1.1-LoadRunner字符编码转换.html">
+            
+                <a href="../02-性能测试/2.1.1-LoadRunner字符编码转换.html">
+            
+                    
+                    2.1.1-LoadRunner字符编码转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02-性能测试/2.1.2-LoadRunner录制-代理录制.html">
+            
+                <a href="../02-性能测试/2.1.2-LoadRunner录制-代理录制.html">
+            
+                    
+                    2.1.2-LoadRunner录制-代理录制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../02-性能测试/2.1.3-LoadRunner文件操作.html">
+            
+                <a href="../02-性能测试/2.1.3-LoadRunner文件操作.html">
+            
+                    
+                    2.1.3-LoadRunner文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../02-性能测试/2.2-Jmeter.html">
+            
+                <a href="../02-性能测试/2.2-Jmeter.html">
+            
+                    
+                    2.2-Jmeter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../02-性能测试/2.2.1-Jmeter环境安装配置.html">
+            
+                <a href="../02-性能测试/2.2.1-Jmeter环境安装配置.html">
+            
+                    
+                    2.2.1-Jmeter环境安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../02-性能测试/2.2.2-Jmeter脚本开发.html">
+            
+                <a href="../02-性能测试/2.2.2-Jmeter脚本开发.html">
+            
+                    
+                    2.2.2-Jmeter脚本开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../02-性能测试/2.2.3-Jmeter监控.html">
+            
+                <a href="../02-性能测试/2.2.3-Jmeter监控.html">
+            
+                    
+                    2.2.3-Jmeter监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../02-性能测试/2.2.4-Jmeter dubbo测试.html">
+            
+                <a href="../02-性能测试/2.2.4-Jmeter dubbo测试.html">
+            
+                    
+                    2.2.4-Jmeter dubbo测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../02-性能测试/2.2.5-Jmeter生成唯一值.html">
+            
+                <a href="../02-性能测试/2.2.5-Jmeter生成唯一值.html">
+            
+                    
+                    2.2.5-Jmeter生成唯一值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../02-性能测试/2.2.6-Jmeter常用BeanShell脚本.html">
+            
+                <a href="../02-性能测试/2.2.6-Jmeter常用BeanShell脚本.html">
+            
+                    
+                    2.2.6-Jmeter常用BeanShell脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../02-性能测试/2.3-性能测试分析.html">
+            
+                <a href="../02-性能测试/2.3-性能测试分析.html">
+            
+                    
+                    2.3-性能测试分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../02-性能测试/2.3.1-性能测试问题分析.html">
+            
+                <a href="../02-性能测试/2.3.1-性能测试问题分析.html">
+            
+                    
+                    2.3.1-性能测试问题分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../02-性能测试/2.3.2-常见性能测试问题.html">
+            
+                <a href="../02-性能测试/2.3.2-常见性能测试问题.html">
+            
+                    
+                    2.3.2-常见性能测试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../02-性能测试/2.3.3-JVM垃圾回收原理及监控.html">
+            
+                <a href="../02-性能测试/2.3.3-JVM垃圾回收原理及监控.html">
+            
+                    
+                    2.3.3-JVM垃圾回收原理及监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../02-性能测试/2.3.4-Redis.html">
+            
+                <a href="../02-性能测试/2.3.4-Redis.html">
+            
+                    
+                    2.3.4-Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../02-性能测试/2.3.5-nginx.html">
+            
+                <a href="../02-性能测试/2.3.5-nginx.html">
+            
+                    
+                    2.3.5-nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="../02-性能测试/2.3.6-F5负载均衡.html">
+            
+                <a href="../02-性能测试/2.3.6-F5负载均衡.html">
+            
+                    
+                    2.3.6-F5负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="../02-性能测试/2.3.7-CDN内容分发网络.html">
+            
+                <a href="../02-性能测试/2.3.7-CDN内容分发网络.html">
+            
+                    
+                    2.3.7-CDN内容分发网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="../02-性能测试/2.3.8-消息队列kafka.html">
+            
+                <a href="../02-性能测试/2.3.8-消息队列kafka.html">
+            
+                    
+                    2.3.8-消息队列kafka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="../02-性能测试/2.3.9-分布式框架dubbo.html">
+            
+                <a href="../02-性能测试/2.3.9-分布式框架dubbo.html">
+            
+                    
+                    2.3.9-分布式框架dubbo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="../02-性能测试/2.4-性能测试监控.html">
+            
+                <a href="../02-性能测试/2.4-性能测试监控.html">
+            
+                    
+                    2.4-性能测试监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.23" data-path="../02-性能测试/2.4.1-jvisualm监控.html">
+            
+                <a href="../02-性能测试/2.4.1-jvisualm监控.html">
+            
+                    
+                    2.4.1-jvisualm监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.24" data-path="../02-性能测试/2.4.2-pinpoint监控.html">
+            
+                <a href="../02-性能测试/2.4.2-pinpoint监控.html">
+            
+                    
+                    2.4.2-pinpoint监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.25" data-path="../02-性能测试/2.4.3-Linux常用监控.html">
+            
+                <a href="../02-性能测试/2.4.3-Linux常用监控.html">
+            
+                    
+                    2.4.3-Linux常用监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.26" data-path="../02-性能测试/2.5-常用默认端口.html">
+            
+                <a href="../02-性能测试/2.5-常用默认端口.html">
+            
+                    
+                    2.5-常用默认端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03-自动化测试.html">
+            
+                <a href="../03-自动化测试.html">
+            
+                    
+                    03-自动化测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03-自动化测试/3.1-基于python的Web自动化测试.html">
+            
+                <a href="../03-自动化测试/3.1-基于python的Web自动化测试.html">
+            
+                    
+                    3.1-PythonWeb自动化测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03-自动化测试/3.1.1-环境搭建（Web自动化）.html">
+            
+                <a href="../03-自动化测试/3.1.1-环境搭建（Web自动化）.html">
+            
+                    
+                    3.1.1-环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03-自动化测试/3.1.2-Selenium WebDriver.html">
+            
+                <a href="../03-自动化测试/3.1.2-Selenium WebDriver.html">
+            
+                    
+                    3.1.2-Selenium WebDriver
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../04-Linux.html">
+            
+                <a href="../04-Linux.html">
+            
+                    
+                    04-Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="4.1-Vi文本处理.html">
+            
+                <a href="4.1-Vi文本处理.html">
+            
+                    
+                    4.1-Vi文本处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="4.2-Linux常用文本处理.html">
+            
+                <a href="4.2-Linux常用文本处理.html">
+            
+                    
+                    4.2-Linux常用文本处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="4.3-Linux常用监控.html">
+            
+                <a href="4.3-Linux常用监控.html">
+            
+                    
+                    4.3-Linux常用监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../blank.html">
+            
+                <a href="../blank.html">
+            
+                    
+                    05-数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../blank.html">
+            
+                <a href="../blank.html">
+            
+                    
+                    5.1-mysql数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../05-数据库/5.1.1-mysql数据库下载安装.html">
+            
+                <a href="../05-数据库/5.1.1-mysql数据库下载安装.html">
+            
+                    
+                    5.1.1-mysql数据库下载安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../05-数据库/5.1.2-mysql查询语法和执行顺序.html">
+            
+                <a href="../05-数据库/5.1.2-mysql查询语法和执行顺序.html">
+            
+                    
+                    5.1.2-mysql查询语法和执行顺序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../05-数据库/5.1.3-mysql索引.html">
+            
+                <a href="../05-数据库/5.1.3-mysql索引.html">
+            
+                    
+                    5.1.3-mysql索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../05-数据库/5.1.4-mysql执行计划.html">
+            
+                <a href="../05-数据库/5.1.4-mysql执行计划.html">
+            
+                    
+                    5.1.4-mysql执行计划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../05-数据库/5.1.5-Mysql慢查询.html">
+            
+                <a href="../05-数据库/5.1.5-Mysql慢查询.html">
+            
+                    
+                    5.1.5-Mysql慢查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../05-数据库/5.1.6-mysql性能分析工具QueryProfile.html">
+            
+                <a href="../05-数据库/5.1.6-mysql性能分析工具QueryProfile.html">
+            
+                    
+                    5.1.6-mysql性能分析工具QueryProfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../05-数据库/5.2-DB2数据库.html">
+            
+                <a href="../05-数据库/5.2-DB2数据库.html">
+            
+                    
+                    5.2-DB2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../05-数据库/5.2.2-DB2数据库监控.html">
+            
+                <a href="../05-数据库/5.2.2-DB2数据库监控.html">
+            
+                    
+                    5.2.2-DB2数据库监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >4.3-Linux常用监控</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="linux&#x5E38;&#x7528;&#x76D1;&#x63A7;">Linux&#x5E38;&#x7528;&#x76D1;&#x63A7;</h1>
+<h1 id="1&#x3001;cpu&#x76D1;&#x63A7;">1&#x3001;CPU&#x76D1;&#x63A7;</h1>
+<h2 id="11-lscpu&#x547D;&#x4EE4;">1.1 lscpu&#x547D;&#x4EE4;</h2>
+<p>lscpu&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x67E5;&#x770B;linux&#x670D;&#x52A1;&#x5668;CPU&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;CPU&#x6838;&#x6570;&#x3001;&#x578B;&#x53F7;&#x7B49;&#xFF1B;&#x4E5F;&#x53EF;&#x901A;&#x8FC7;cat /proc/cpuinfo&#x547D;&#x4EE4;&#x67E5;&#x770B;&#xFF1B;</p>
+<p>1&#xFF09;&#x6267;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/image-20210330103223478.png" alt="image-20210330103223478"></p>
+<p>2&#xFF09;&#x53C2;&#x6570;&#x8BF4;&#x660E;</p>
+<ul>
+<li>CPU(s)&#xFF1A;CPU&#x6838;&#x6570;</li>
+<li>Model name&#xFF1A;CPU&#x578B;&#x53F7;</li>
+</ul>
+<h2 id="12-top&#x547D;&#x4EE4;">1.2 top&#x547D;&#x4EE4;</h2>
+<p>top&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5B9E;&#x65F6;&#x67E5;&#x770B;linux&#x670D;&#x52A1;&#x5668;&#x7684;&#x7CFB;&#x7EDF;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;CPU&#x3001;&#x5185;&#x5B58;&#x7B49;&#xFF1B;</p>
+<p>1&#xFF09;&#x5E38;&#x7528;&#x547D;&#x4EE4;&#xFF1A;</p>
+<p>top&#xFF1A;&#x67E5;&#x770B;linux&#x6240;&#x6709;&#x7684;&#x8FDB;&#x7A0B;&#x4FE1;&#x606F;&#xFF1B;</p>
+<p>top -p pid(&#x8FDB;&#x7A0B;&#x7F16;&#x53F7;)&#xFF1A;&#x67E5;&#x770B;&#x6307;&#x5B9A;&#x8FDB;&#x7A0B;&#x7684;&#x4FE1;&#x606F;</p>
+<p>top&#x8FDB;&#x7A0B;&#x5185;&#x53C2;&#x6570;&#xFF1A;</p>
+<p>top + 1&#xFF1A;&#x8F93;&#x51FA;&#x591A;&#x6838;CPU&#x4F7F;&#x7528;&#x4FE1;&#x606F;&#xFF1B;&#x9ED8;&#x8BA4;&#x9690;&#x85CF;&#x8F93;&#x51FA;&#x603B;&#x7684;CPU&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF1B;</p>
+<p>top +H&#xFF1A;&#x901A;&#x8FC7;&#x7EBF;&#x7A0B;&#x7EF4;&#x5EA6;&#x8F93;&#x51FA;linux&#x7EBF;&#x7A0B;&#x4FE1;&#x606F;&#xFF1B;</p>
+<p>top + N&#xFF1A;&#x6309;pid&#x7F16;&#x53F7;&#x964D;&#x5E8F;&#x6392;&#x5217;&#x5C55;&#x793A;</p>
+<p>top + P&#xFF1A;&#x6309;CPU&#x964D;&#x5E8F;&#x6392;&#x5217;&#x5C55;&#x793A;</p>
+<p>top + M&#xFF1A;&#x6309;&#x7167;&#x5185;&#x5B58;&#x964D;&#x5E8F;&#x6392;&#x5217;&#x5C55;&#x793A;</p>
+<p>2&#xFF09;&#x6267;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/image-20210330104709131.png" alt="image-20210330104709131"></p>
+<p>3&#xFF09;&#x53C2;&#x6570;&#x8BF4;&#x660E;</p>
+<ul>
+<li><p>load average&#xFF1A;&#x7CFB;&#x7EDF;&#x8D1F;&#x8F7D;&#xFF0C;&#x5373;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x7684;&#x5E73;&#x5747;&#x957F;&#x5EA6;&#x3002; &#x4E09;&#x4E2A;&#x6570;&#x503C;&#x5206;&#x522B;&#x4E3A; 1&#x5206;&#x949F;&#x3001;5&#x5206;&#x949F;&#x3001;15&#x5206;&#x949F;&#x524D;&#x5230;&#x73B0;&#x5728;&#x7684;&#x5E73;&#x5747;&#x503C;&#x3002;<strong>&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x6570;&#x9664;&#x4EE5;&#x903B;&#x8F91;CPU&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x7ED3;&#x679C;&#x9AD8;&#x4E8E;5&#x7684;&#x65F6;&#x5019;&#x5C31;&#x8868;&#x660E;&#x7CFB;&#x7EDF;&#x5728;&#x8D85;&#x8D1F;&#x8377;&#x8FD0;&#x8F6C;&#x4E86;</strong>&#xFF1B;</p>
+</li>
+<li><p>ni&#xFF1A;&#x4FEE;&#x6539;&#x8FC7;&#x4F18;&#x5148;&#x7EA7;&#x7684;&#x8FDB;&#x7A0B;&#x5360;&#x7528;CPU&#x7684;&#x767E;&#x5206;&#x6BD4;</p>
+</li>
+<li><p>hi&#xFF1A;&#x786C;&#x4E2D;&#x65AD;&#xFF08;&#x7531;&#x7CFB;&#x7EDF;&#x76F8;&#x8FDE;&#x7684;&#x5916;&#x8BBE;&#x5F15;&#x8D77;&#x7684;&#x4E2D;&#x65AD;&#xFF0C;&#x786C;&#x4E2D;&#x65AD;&#x53EF;&#x4EE5;&#x5C4F;&#x853D;&#xFF09;&#x5360;&#x7528;CPU&#x7684;&#x767E;&#x5206;&#x6BD4;</p>
+</li>
+<li><p>si&#xFF1A;&#x8F6F;&#x4E2D;&#x65AD;&#xFF08;&#x7531;&#x6267;&#x884C;&#x4E2D;&#x65AD;&#x6307;&#x4EE4;&#x4EA7;&#x751F;&#x7684;&#x4E2D;&#x65AD;&#xFF0C;&#x8F6F;&#x4E2D;&#x65AD;&#x4E0D;&#x53EF;&#x5C4F;&#x853D;&#xFF09;&#x5360;&#x7528;CPU&#x7684;&#x767E;&#x5206;&#x6BD4;</p>
+</li>
+<li><p>st&#xFF1A;steal time&#xFF0C;&#x5206;&#x914D;&#x7ED9;&#x8FD0;&#x884C;&#x5728;&#x5176;&#x5B83;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#x7684;&#x4EFB;&#x52A1;&#x5360;&#x7528;<em>CPU</em>&#x7684;&#x767E;&#x5206;&#x6BD4;</p>
+<p>&#x8FDB;&#x7A0B;&#x4FE1;&#x606F;</p>
+</li>
+<li><p>PR&#xFF1A;&#x8FDB;&#x7A0B;&#x52A8;&#x6001;&#x4F18;&#x5148;&#x7EA7;</p>
+</li>
+<li><p>NI&#xFF1A;&#x8FDB;&#x7A0B;&#x9759;&#x6001;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x8D1F;&#x503C;&#x8868;&#x793A;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x6B63;&#x503C;&#x8868;&#x793A;&#x4F4E;&#x4F18;&#x5148;&#x7EA7;&#xFF1B;</p>
+</li>
+<li><p>VIRT&#xFF1A;&#x8FDB;&#x7A0B;&#x4F7F;&#x7528;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x603B;&#x91CF;&#xFF0C;&#x5355;&#x4F4D;kb&#x3002;VIRT=SWAP+RES</p>
+</li>
+<li><p>RES&#xFF1A;&#x8FDB;&#x7A0B;&#x4F7F;&#x7528;&#x7684;&#x3001;&#x672A;&#x88AB;&#x6362;&#x51FA;&#x7684;&#x7269;&#x7406;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#xFF0C;&#x5355;&#x4F4D;kb&#x3002;</p>
+</li>
+<li><p>SHR&#xFF1A;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#xFF0C;&#x5355;&#x4F4D;kb</p>
+</li>
+<li><p>S&#xFF1A;&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#x3002;D=&#x4E0D;&#x53EF;&#x4E2D;&#x65AD;&#x7684;&#x7761;&#x7720;&#x72B6;&#x6001; R=&#x8FD0;&#x884C; S=&#x7761;&#x7720; T=&#x8DDF;&#x8E2A;/&#x505C;&#x6B62; Z=&#x50F5;&#x5C38;&#x8FDB;&#x7A0B;</p>
+</li>
+<li><p>TIME+&#xFF1A;&#x8FDB;&#x7A0B;&#x4F7F;&#x7528;&#x7684;CPU&#x7D2F;&#x79EF;&#x65F6;&#x957F;&#xFF1B;</p>
+</li>
+</ul>
+<h1 id="2&#x3001;&#x5185;&#x5B58;&#x76D1;&#x63A7;">2&#x3001;&#x5185;&#x5B58;&#x76D1;&#x63A7;</h1>
+<h2 id="21-vmstat&#x547D;&#x4EE4;">2.1 vmstat&#x547D;&#x4EE4;</h2>
+<p>vmstat&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x76D1;&#x63A7;linux&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x5305;&#x62EC;CPU&#x3001;&#x5185;&#x5B58;&#x3001;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x4EA4;&#x6362;&#x4EE5;&#x53CA;I/O&#x8BFB;&#x5199;&#x7684;&#x60C5;&#x51B5;&#xFF1B;</p>
+<p>1&#xFF09;&#x547D;&#x4EE4;</p>
+<p>vmstat &#x91C7;&#x6837;&#x8F93;&#x51FA;&#x4E00;&#x6B21;</p>
+<p>vmstat &#x91C7;&#x6837;&#x95F4;&#x9694;&#x65F6;&#x95F4;&#xFF08;&#x79D2;&#xFF09;   &#xFF0C;&#x6309;&#x7167;&#x91C7;&#x6837;&#x65F6;&#x95F4;&#x6301;&#x7EED;&#x91C7;&#x6837;&#x8F93;&#x51FA;&#xFF0C;ctrl+c&#x7ED3;&#x675F;&#xFF1B;</p>
+<p>vmstat &#x91C7;&#x6837;&#x95F4;&#x9694; &#x91C7;&#x6837;&#x6B21;&#x6570;  &#xFF0C;&#x91C7;&#x6837;&#x6307;&#x5B9A;&#x6B21;&#x6570;</p>
+<p>2&#xFF09;&#x6267;&#x884C;&#x7ED3;&#x679C;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/image-20210330142644268.png" alt="image-20210330142644268"></p>
+<p>3&#xFF09;&#x53C2;&#x6570;&#x8BF4;&#x660E;</p>
+<ul>
+<li>r&#xFF1A;&#x8FD0;&#x884C;&#x961F;&#x5217;</li>
+<li>b&#xFF1A;&#x963B;&#x585E;&#x961F;&#x5217;</li>
+<li>swpd&#xFF1A;&#x6B63;&#x5728;&#x4F7F;&#x7528;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x7684;&#x5927;&#x5C0F;&#xFF0C;swpd&#x5927;&#x4E8E;0&#xFF0C;&#x8868;&#x793A;&#x7269;&#x7406;&#x5185;&#x5B58;&#x4E0D;&#x8DB3;&#xFF1B;</li>
+<li>free&#xFF1A;&#x7A7A;&#x95F2;&#x7269;&#x7406;&#x5185;&#x5B58;&#x7684;&#x5927;&#x5C0F;</li>
+<li>buff&#xFF1A;&#x5DF2;&#x4F7F;&#x7528;&#x7684;buff&#x5927;&#x5C0F;&#xFF0C;&#x5BF9;&#x5757;&#x8BBE;&#x5907;&#x7684;&#x8BFB;&#x5199;&#x7F13;&#x51B2;</li>
+<li>cache&#xFF1A;&#x5DF2;&#x4F7F;&#x7528;&#x7684;cache&#x5927;&#x5C0F;&#xFF0C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x7F13;&#x5B58;</li>
+<li>si&#xFF1A;&#x6BCF;&#x79D2;&#x4ECE;&#x4EA4;&#x6362;&#x533A;&#x5199;&#x5165;&#x5185;&#x5B58;&#x7684;&#x5927;&#x5C0F;</li>
+<li>so&#xFF1A;&#x6BCF;&#x79D2;&#x4ECE;&#x5185;&#x5B58;&#x5199;&#x5230;&#x4EA4;&#x6362;&#x533A;&#x7684;&#x5927;&#x5C0F;</li>
+<li>bi&#xFF1A;&#x5757;&#x8BBE;&#x5907;&#x6BCF;&#x79D2;&#x63A5;&#x6536;&#x7684;&#x5757;&#x6570;&#x91CF;</li>
+<li>bo&#xFF1A;&#x5757;&#x8BBE;&#x5907;&#x6BCF;&#x79D2;&#x53D1;&#x51FA;&#x7684;&#x5757;&#x6570;&#x91CF;</li>
+<li>in&#xFF1A;&#x6BCF;&#x79D2;CPU&#x7684;&#x4E2D;&#x65AD;&#x6B21;&#x6570;</li>
+<li>cs&#xFF1A;&#x6BCF;&#x79D2;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x5207;&#x6362;&#x6B21;&#x6570;&#xFF0C;&#x503C;&#x8D8A;&#x5C0F;&#x8D8A;&#x597D;&#xFF1B;&#x5982;&#x679C;&#x592A;&#x5927;&#xFF0C;&#x9700;&#x8981;&#x51CF;&#x5C11;&#x8FDB;&#x7A0B;&#x6216;&#x7EBF;&#x7A0B;&#x7684;&#x6570;&#x91CF;&#xFF1B;</li>
+</ul>
+<h2 id="22-free&#x547D;&#x4EE4;">2.2 free&#x547D;&#x4EE4;</h2>
+<p>free&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x76D1;&#x63A7;linux&#x670D;&#x52A1;&#x5668;&#x7684;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#xFF1B;</p>
+<p>1&#xFF09;&#x547D;&#x4EE4;</p>
+<p>free -help  &#x67E5;&#x770B;&#x5E2E;&#x52A9;</p>
+<p>free &#x8F93;&#x51FA;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#xFF0C;&#x9ED8;&#x8BA4;&#x5355;&#x4F4D;&#x4E3A;kb&#xFF0C;&#x4E5F;&#x53EF;&#x901A;&#x8FC7;cat /proc/meminfo&#x67E5;&#x770B;linux&#x670D;&#x52A1;&#x5668;&#x5185;&#x5B58;&#xFF1B;</p>
+<p>free -k  &#x8F93;&#x51FA;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;kb</p>
+<p>free -m &#x8F93;&#x51FA;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;Mb</p>
+<p>free -g &#x8F93;&#x51FA;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;Gb</p>
+<p>free -h &#x6309;&#x7167;&#x6700;&#x4F73;&#x53EF;&#x8BFB;&#x65B9;&#x5F0F;&#x8F93;&#x51FA;&#x5185;&#x5B58;&#x5927;&#x5C0F;</p>
+<p>free -t &#x8F93;&#x51FA;&#x603B;&#x5185;&#x5B58;&#x5927;&#x5C0F;</p>
+<p>free -s &#x95F4;&#x9694;&#x65F6;&#x95F4;&#xFF08;&#x79D2;&#xFF09;  &#x6309;&#x7167;&#x95F4;&#x9694;&#x65F6;&#x95F4;&#x91C7;&#x6837;&#x591A;&#x6B21;&#xFF0C;ctrl+c&#x7ED3;&#x675F;&#x91C7;&#x6837;</p>
+<p>free -c &#x91C7;&#x6837;&#x6B21;&#x6570;  &#x6309;&#x7167;&#x95F4;&#x9694;&#x65F6;&#x95F4;1&#x79D2;&#x91C7;&#x6837;&#x591A;&#x6B21;</p>
+<p>2&#xFF09;&#x6267;&#x884C;&#x7ED3;&#x679C;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/image-20210330150421388.png" alt="image-20210330150421388"></p>
+<p>3&#xFF09;&#x53C2;&#x6570;&#x8BF4;&#x660E;</p>
+<p>Mem &#x7269;&#x7406;&#x5185;&#x5B58;&#x7A7A;&#x95F4;</p>
+<ul>
+<li>total&#xFF1A;&#x603B;&#x7269;&#x7406;&#x5185;&#x5B58;&#x5927;&#x5C0F;</li>
+<li>used&#xFF1A;&#x5DF2;&#x4F7F;&#x7528;&#x7684;&#x7269;&#x7406;&#x5185;&#x5B58;&#x5927;&#x5C0F;</li>
+<li>free&#xFF1A;&#x7A7A;&#x95F2;&#x7269;&#x7406;&#x5185;&#x5B58;&#x5927;&#x5C0F;</li>
+<li>shared&#xFF1A;&#x5171;&#x4EAB;&#x7269;&#x7406;&#x5185;&#x5B58;&#x5927;&#x5C0F;</li>
+<li>buff/cache&#xFF1A;&#x7F13;&#x51B2;&#x5185;&#x5B58;&#x5927;&#x5C0F;</li>
+<li>available&#xFF1A;&#x8FD8;&#x53EF;&#x88AB;&#x8FDB;&#x7A0B;&#x4F7F;&#x7528;&#x7684;&#x7269;&#x7406;&#x5185;&#x5B58;&#x5927;&#x5C0F;</li>
+</ul>
+<p>total = used + buff/cache + free</p>
+<p>available = free + buff/cache&#x4E2D;&#x53EF;&#x4EE5;&#x88AB;&#x4F7F;&#x7528;&#x7684;&#x90E8;&#x5206;</p>
+<p>Swap &#x4EA4;&#x6362;&#x5185;&#x5B58;&#x7A7A;&#x95F4;</p>
+<p>swap space &#x662F;&#x78C1;&#x76D8;&#x4E0A;&#x7684;&#x4E00;&#x5757;&#x533A;&#x57DF;&#xFF0C;&#x5F53;&#x7CFB;&#x7EDF;&#x7269;&#x7406;&#x5185;&#x5B58;&#x5403;&#x7D27;&#x65F6;&#xFF0C;Linux &#x4F1A;&#x5C06;&#x5185;&#x5B58;&#x4E2D;&#x4E0D;&#x5E38;&#x8BBF;&#x95EE;&#x7684;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x5230; swap &#x4E0A;&#xFF0C;&#x5F53;&#x7CFB;&#x7EDF;&#x9700;&#x8981;&#x8BBF;&#x95EE; swap &#x4E0A;&#x5B58;&#x50A8;&#x7684;&#x5185;&#x5BB9;&#x65F6;&#xFF0C;&#x518D;&#x5C06; swap &#x4E0A;&#x7684;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x5230;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x5B83;&#x9700;&#x8981;&#x8BFB;&#x5199;&#x78C1;&#x76D8;&#x6570;&#x636E;&#xFF0C;&#x6240;&#x4EE5;&#x6027;&#x80FD;&#x4E0D;&#x662F;&#x5F88;&#x9AD8;</p>
+<p>&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A;<a href="https://www.jb51.net/article/135410.htm" target="_blank">https://www.jb51.net/article/135410.htm</a></p>
+<h1 id="3&#x3001;&#x78C1;&#x76D8;&#x76D1;&#x63A7;">3&#x3001;&#x78C1;&#x76D8;&#x76D1;&#x63A7;</h1>
+<h2 id="31-df&#x547D;&#x4EE4;">3.1 df&#x547D;&#x4EE4;</h2>
+<p>df&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x67E5;&#x770B;linux&#x670D;&#x52A1;&#x5668;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;&#xFF0C;&#x4FA7;&#x91CD;&#x5728;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7EA7;&#x522B;&#x7684;&#x78C1;&#x76D8;&#x5360;&#x7528;&#x65B9;&#x9762;</p>
+<p>1&#xFF09;&#x547D;&#x4EE4;</p>
+<p>df -h &#x4EE5;&#x6700;&#x4F73;&#x53EF;&#x8BFB;&#x6A21;&#x5F0F;&#x8BFB;&#x53D6;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;</p>
+<p>2&#xFF09;&#x6267;&#x884C;&#x7ED3;&#x679C;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/image-20210330153959687.png" alt="image-20210330153959687"></p>
+<h2 id="32-du&#x547D;&#x4EE4;">3.2 du&#x547D;&#x4EE4;</h2>
+<h5 id="du&#x547D;&#x4EE4;disk-usage&#x7528;&#x6765;&#x5C55;&#x793A;&#x78C1;&#x76D8;&#x4F7F;&#x7528;&#x91CF;&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF0C;du&#x4FA7;&#x91CD;&#x5728;&#x6587;&#x4EF6;&#x5939;&#x548C;&#x6587;&#x4EF6;&#x7684;&#x78C1;&#x76D8;&#x5360;&#x7528;&#x65B9;&#x9762;&#xFF1B;"><code>du</code>&#x547D;&#x4EE4;(disk usage)&#x7528;&#x6765;&#x5C55;&#x793A;&#x78C1;&#x76D8;&#x4F7F;&#x7528;&#x91CF;&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF0C;<code>du</code>&#x4FA7;&#x91CD;&#x5728;&#x6587;&#x4EF6;&#x5939;&#x548C;&#x6587;&#x4EF6;&#x7684;&#x78C1;&#x76D8;&#x5360;&#x7528;&#x65B9;&#x9762;&#xFF1B;</h5>
+<p>1&#xFF09;&#x547D;&#x4EE4;</p>
+<ul>
+<li>du -h&#xFF0C;&#x5C55;&#x793A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x53CA;&#x5B50;&#x76EE;&#x5F55;&#x7684;&#x5360;&#x7528;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;</li>
+<li>du -sh&#xFF0C;&#x5C55;&#x793A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x5360;&#x7528;&#x7684;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;</li>
+<li>du -ah&#xFF0C;&#x5C55;&#x793A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x53CA;&#x5B50;&#x76EE;&#x5F55;&#x4E0B;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x5360;&#x7528;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x7684;&#x5927;&#x5C0F;</li>
+</ul>
+<p>2&#xFF09;&#x6267;&#x884C;&#x7ED3;&#x679C;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/image-20210330155123087.png" alt="image-20210330155123087"></p>
+<p>3&#xFF09;&#x53C2;&#x6570;&#x8BF4;&#x660E;</p>
+<ul>
+<li>&#x5F53;&#x524D;&#x76EE;&#x5F55;test01&#x6240;&#x5360;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;&#x4E3A;8.0k</li>
+<li>&#x5F53;&#x524D;&#x76EE;&#x5F55;test01&#x4E0B;&#x6587;&#x4EF6;1.txt&#x6240;&#x5360;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;&#x4E3A;4.0k</li>
+<li>&#x5F53;&#x524D;&#x76EE;&#x5F55;test01&#x4E0B;&#x5B50;&#x76EE;&#x5F55;test02&#x6240;&#x5360;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;&#x4E3A;4.0k</li>
+<li>&#x5B50;&#x76EE;&#x5F55;&#x6587;&#x4EF6;2.txt&#x6587;&#x4EF6;&#x6240;&#x5360;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;4.0k</li>
+</ul>
+<h2 id="33-iostat&#x547D;&#x4EE4;">3.3 iostat&#x547D;&#x4EE4;</h2>
+<p>iostat&#x7528;&#x4E8E;&#x8F93;&#x51FA;CPU&#x548C;&#x78C1;&#x76D8;I/O&#x76F8;&#x5173;&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF1B;</p>
+<p>1&#xFF09;&#x547D;&#x4EE4;</p>
+<p>iostat&#xFF0C;&#x8F93;&#x51FA;cpu&#x548C;IO&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;</p>
+<p>iostat -c &#xFF0C;&#x8F93;&#x51FA;cpu&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;</p>
+<p>iostat -d &#xFF0C;&#x8F93;&#x51FA;io&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;</p>
+<p>2&#xFF09;&#x6267;&#x884C;&#x7ED3;&#x679C;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/image-20210330161136041.png" alt="image-20210330161136041"></p>
+<p>3&#xFF09;&#x53C2;&#x6570;&#x8BF4;&#x660E;</p>
+<ul>
+<li>%user&#xFF1A;&#x7528;&#x6237;&#x5360;&#x7528;CPU&#x7684;&#x767E;&#x5206;&#x6BD4;</li>
+<li>nice&#xFF1A;&#x7528;&#x4E8E;nice&#x64CD;&#x4F5C;(&#x8C03;&#x6574;&#x4F18;&#x5148;&#x7EA7;)&#x5360;&#x7528;CPU&#x7684;&#x767E;&#x5206;&#x6BD4;</li>
+<li>system&#xFF1A;&#x7CFB;&#x7EDF;&#x8FDB;&#x7A0B;&#x5360;&#x7528;CPU&#x7684;&#x767E;&#x5206;&#x6BD4;</li>
+<li>iowait&#xFF1A;&#x7B49;&#x5F85;IO&#x64CD;&#x4F5C;&#x5360;&#x7528;CPU&#x7684;&#x767E;&#x5206;&#x6BD4;&#xFF0C;iowait&#x503C;&#x8FC7;&#x9AD8;&#xFF0C;&#x8868;&#x793A;&#x7CFB;&#x7EDF;&#x5B58;&#x5728;IO&#x74F6;&#x9888;&#xFF1B;</li>
+<li>steal&#xFF1A;&#x865A;&#x62DF;&#x8FDB;&#x7A0B;&#x5360;&#x7528;CPU&#x7684;&#x767E;&#x5206;&#x6BD4;</li>
+<li>idle&#xFF1A;&#x7A7A;&#x95F2;&#x65F6;&#x95F4;&#x5360;&#x7528;CPU&#x7684;&#x767E;&#x5206;&#x6BD4;&#xFF0C;idle&#x503C;&#x9AD8;&#xFF0C;&#x4F46;&#x7CFB;&#x7EDF;&#x54CD;&#x5E94;&#x6162;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x662F;&#x5185;&#x5B58;&#x5B58;&#x5728;&#x95EE;&#x9898;&#xFF0C;CPU&#x7B49;&#x5F85;&#x5206;&#x914D;&#x5185;&#x5B58;</li>
+<li>tps&#xFF1A;&#x6BCF;&#x79D2;&#x5411;&#x78C1;&#x76D8;&#x8BBE;&#x5907;&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x7684;&#x6B21;&#x6570;&#xFF0C;&#x5305;&#x62EC;&#x8BFB;&#x3001;&#x5199;&#x8BF7;&#x6C42;&#xFF0C;&#x4E3A;rtps&#x4E0E;wtps&#x7684;&#x548C;</li>
+<li>kB_read/s&#xFF1A;&#x6BCF;&#x79D2;&#x4ECE;&#x8BBE;&#x5907;&#x8BFB;&#x53D6;&#x7684;&#x6570;&#x636E;&#x91CF;</li>
+<li>kB_wrtn/s&#xFF1A;&#x6BCF;&#x79D2;&#x5411;&#x8BBE;&#x5907;&#x5199;&#x51FA;&#x7684;&#x6570;&#x636E;&#x91CF;</li>
+</ul>
+<h1 id="4&#x3001;&#x7F51;&#x7EDC;&#x76D1;&#x63A7;">4&#x3001;&#x7F51;&#x7EDC;&#x76D1;&#x63A7;</h1>
+<h2 id="41-netstat&#x547D;&#x4EE4;">4.1 netstat&#x547D;&#x4EE4;</h2>
+<p>netstat&#x7528;&#x4E8E;&#x67E5;&#x770B;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#xFF1B;</p>
+<p>1&#xFF09;&#x547D;&#x4EE4;</p>
+<ul>
+<li><p>netstat -antp &#x8F93;&#x51FA;&#x6240;&#x6709;tcp&#x8FDB;&#x7A0B;&#xFF0C;&#x5C55;&#x793A;pid&#x8FDB;&#x7A0B;&#x53F7;</p>
+<p>-a:&#x67E5;&#x770B;&#x6240;&#x6709;&#x7684;&#x7AEF;&#x53E3;&#x8FDE;&#x63A5;</p>
+<p>-t&#xFF1A;&#x67E5;&#x770B;tcp&#x8FDE;&#x63A5;</p>
+<p>-n&#xFF1A;&#x7981;&#x7528;<strong>&#x53CD;&#x5411;&#x57DF;&#x540D;&#x89E3;&#x6790;</strong>&#x67E5;&#x627E;&#x6BCF;&#x4E2A; IP &#x5730;&#x5740;&#x5BF9;&#x5E94;&#x7684;&#x4E3B;&#x673A;&#x540D;&#xFF0C;&#x52A0;&#x5FEB;&#x67E5;&#x627E;&#x901F;&#x5EA6;</p>
+<p>-p&#xFF1A;&#x663E;&#x793A;&#x7AEF;&#x53E3;&#x8FDE;&#x63A5;&#x7684;pid&#x53F7;&#x548C;&#x8FDB;&#x7A0B;&#x540D;&#x79F0;</p>
+</li>
+<li><p>netstat -antp|grep  3306 &#x67E5;&#x770B;&#x7AEF;&#x53E3;&#x5360;&#x7528;</p>
+</li>
+<li><p>netstat -r  &#x8F93;&#x51FA;&#x8DEF;&#x7531;&#x4FE1;&#x606F;</p>
+</li>
+<li><p>netstat -ie  &#x8F93;&#x51FA;&#x7F51;&#x7EDC;&#x4FE1;&#x606F;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;ifconfig</p>
+</li>
+<li><p>netstat -antp|grep ESTABLISHED  &#x8F93;&#x51FA;&#x6D3B;&#x52A8;&#x7684;&#x8FDB;&#x7A0B;</p>
+</li>
+</ul>
+<p>2&#xFF09;&#x6267;&#x884C;&#x7ED3;&#x679C;</p>
+<p><img src="https://wangzaolin.github.io/SoftwareTest/mybook/img/image-20210330164846533.png" alt="image-20210330164846533"></p>
+<p>3&#xFF09;&#x53C2;&#x6570;&#x8BF4;&#x660E;</p>
+<ul>
+<li>proto&#xFF1A;&#x534F;&#x8BAE;&#x540D;&#x79F0;</li>
+<li>Recv-Q&#xFF1A;&#x63A5;&#x6536;&#x6570;&#x91CF;</li>
+<li>Send-Q&#xFF1A;&#x53D1;&#x9001;&#x6570;&#x91CF;</li>
+<li>Local Address&#xFF1A;&#x6E90;&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;</li>
+<li>Foreign Address&#xFF1A;&#x76EE;&#x6807;&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;</li>
+<li>State&#xFF1A;&#x72B6;&#x6001;&#xFF0C;&#x5305;&#x62EC;LISTEN&#x4FA6;&#x542C;&#x72B6;&#x6001;&#x3001;ESTABLISHED&#x6253;&#x5F00;&#x94FE;&#x63A5;&#x72B6;&#x6001;&#x3001;TIME_WAIT&#x7B49;&#x5F85;&#x72B6;&#x6001;</li>
+<li>Pid/Program name&#xFF1A;&#x8FDB;&#x7A0B;id&#x548C;&#x540D;&#x79F0;</li>
+</ul>
+
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="4.2-Linux常用文本处理.html" class="navigation navigation-prev " aria-label="Previous page: 4.2-Linux常用文本处理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../blank.html" class="navigation navigation-next " aria-label="Next page: 05-数据库">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4.3-Linux常用监控","level":"1.5.3","depth":2,"next":{"title":"05-数据库","level":"1.6","depth":1,"path":"blank.md","ref":"blank.md","articles":[{"title":"5.1-mysql数据库","level":"1.6.1","depth":2,"path":"blank.md","ref":"blank.md","articles":[]},{"title":"5.1.1-mysql数据库下载安装","level":"1.6.2","depth":2,"path":"05-数据库/5.1.1-mysql数据库下载安装.md","ref":"05-数据库/5.1.1-mysql数据库下载安装.md","articles":[]},{"title":"5.1.2-mysql查询语法和执行顺序","level":"1.6.3","depth":2,"path":"05-数据库/5.1.2-mysql查询语法和执行顺序.md","ref":"05-数据库/5.1.2-mysql查询语法和执行顺序.md","articles":[]},{"title":"5.1.3-mysql索引","level":"1.6.4","depth":2,"path":"05-数据库/5.1.3-mysql索引.md","ref":"05-数据库/5.1.3-mysql索引.md","articles":[]},{"title":"5.1.4-mysql执行计划","level":"1.6.5","depth":2,"path":"05-数据库/5.1.4-mysql执行计划.md","ref":"05-数据库/5.1.4-mysql执行计划.md","articles":[]},{"title":"5.1.5-Mysql慢查询","level":"1.6.6","depth":2,"path":"05-数据库/5.1.5-Mysql慢查询.md","ref":"05-数据库/5.1.5-Mysql慢查询.md","articles":[]},{"title":"5.1.6-mysql性能分析工具QueryProfile","level":"1.6.7","depth":2,"path":"05-数据库/5.1.6-mysql性能分析工具QueryProfile.md","ref":"05-数据库/5.1.6-mysql性能分析工具QueryProfile.md","articles":[]},{"title":"5.2-DB2","level":"1.6.8","depth":2,"path":"05-数据库/5.2-DB2数据库.md","ref":"05-数据库/5.2-DB2数据库.md","articles":[]},{"title":"5.2.2-DB2数据库监控","level":"1.6.9","depth":2,"path":"05-数据库/5.2.2-DB2数据库监控.md","ref":"05-数据库/5.2.2-DB2数据库监控.md","articles":[]}]},"previous":{"title":"4.2-Linux常用文本处理","level":"1.5.2","depth":2,"path":"04-Linux/4.2-Linux常用文本处理.md","ref":"04-Linux/4.2-Linux常用文本处理.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","copy-code-button","popup","splitter","chapter-fold","expandable-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"https://www.baidu.com"}},"gitbook":"*"},"file":{"path":"04-Linux/4.3-Linux常用监控.md","mtime":"2021-03-30T09:13:04.372Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-01T01:06:12.000Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
