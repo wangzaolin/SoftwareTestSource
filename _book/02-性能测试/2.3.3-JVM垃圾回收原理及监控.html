@@ -833,6 +833,51 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7" data-path="../blank.html">
+            
+                <a href="../blank.html">
+            
+                    
+                    06-编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../blank.html">
+            
+                <a href="../blank.html">
+            
+                    
+                    6.1-shell编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../06-编程/6.1.1-shell脚本实例.html">
+            
+                <a href="../06-编程/6.1.1-shell脚本实例.html">
+            
+                    
+                    6.1.1-shell脚本实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -886,6 +931,14 @@
 <p>S0&#x533A;&#x57DF;&#xFF1A;&#x7528;&#x6765;&#x5B58;&#x653E;&#x5783;&#x573E;minor GC&#x65F6;&#x4E0D;&#x80FD;&#x88AB;&#x56DE;&#x6536;&#x7684;&#x5BF9;&#x8C61;&#xFF1B;</p>
 <p>S1&#x533A;&#x57DF;&#xFF1A;&#x4E2D;&#x8F6C;&#x7AD9;</p>
 <p>&#x8001;&#x5E74;&#x4EE3;&#x7A7A;&#x95F4;&#xFF1A;&#x7528;&#x4E8E;&#x5B58;&#x653E;s0&#x533A;&#x57DF;&#x7A7A;&#x95F4;&#x4E0D;&#x8DB3;&#x65E0;&#x6CD5;&#x4FDD;&#x5B58;&#x7684;&#x4E0D;&#x80FD;&#x88AB;&#x56DE;&#x6536;&#x7684;&#x5BF9;&#x8C61;&#xFF1B;</p>
+<p>JVM&#x53C2;&#x6570;&#xFF1A;</p>
+<p>-Xms2048m&#xFF0C;&#x521D;&#x59CB;&#x5806;&#x5927;&#x5C0F;&#xFF0C;&#x5EFA;&#x8BAE;&lt;&#x7269;&#x7406;&#x5185;&#x5B58;&#x7684;1/4&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&#x7269;&#x7406;&#x5185;&#x5B58;&#x7684;1/64</p>
+<p>-Xmx2048m&#xFF0C;&#x6700;&#x5927;&#x5806;&#x5927;&#x5C0F;&#xFF0C;&#x5EFA;&#x8BAE;&#x4E0E;-Xms&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&#x7269;&#x7406;&#x5185;&#x5B58;&#x7684;1/4</p>
+<p>-Xmn512m&#xFF0C;&#x65B0;&#x751F;&#x4EE3;&#x5927;&#x5C0F;&#xFF0C;&#x5EFA;&#x8BAE;&#x4E0D;&#x8D85;&#x8FC7;&#x5806;&#x5185;&#x5B58;&#x7684;1/2</p>
+<p>-Xss256k,&#x7EBF;&#x7A0B;&#x5E74;&#x8F7B;&#x4EE3;&#x5806;&#x6808;&#x5927;&#x5C0F;&#xFF0C;&#x5EFA;&#x8BAE;256k</p>
+<p>-XX:PermSize=256m&#xFF0C;&#x6C38;&#x4E45;&#x4EE3;&#x521D;&#x59CB;&#x503C;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&#x7269;&#x7406;&#x5185;&#x5B58;&#x7684;1/64</p>
+<p>-XX:MaxPermSize=256m&#xFF0C;&#x6C38;&#x4E45;&#x4EE3;&#x6700;&#x5927;&#x503C;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&#x7269;&#x7406;&#x5185;&#x5B58;&#x7684;1/4</p>
+<p>-XX:SurvivorRatio=8&#xFF1A;&#x5E74;&#x8F7B;&#x5E26;&#x4E2D;Eden&#x533A;&#x548C;Survivor&#x533A;&#x7684;&#x6BD4;&#x4F8B;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;8:1:1&#xFF0C;&#x5373;Eden&#xFF08;8&#xFF09;&#xFF0C;From Space</p>
 <h1 id="2&#x3001;jvm-gc&#x539F;&#x7406;">2&#x3001;JVM GC&#x539F;&#x7406;</h1>
 <p>&#x7B2C;&#x4E00;&#x6B21;young GC:
 &#x5728;&#x4E0D;&#x65AD;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5F53;Eden&#x533A;&#x57DF;&#x88AB;&#x5360;&#x6EE1;&#xFF0C;&#x6B64;&#x65F6;&#x4F1A;&#x5F00;&#x59CB;&#x505A;Young GC&#x4E5F;&#x53EB;Minor GC&#xFF0C;Young GC&#x8FC7;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;</p>
@@ -973,7 +1026,7 @@ jstat -gcutil pid&#x53F7; &#x91C7;&#x6837;&#x95F4;&#x9694;(ms&#xFF09; &#x91C7;&#
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.3.3-JVM垃圾回收原理及监控","level":"1.3.15","depth":2,"next":{"title":"2.3.4-Redis","level":"1.3.16","depth":2,"path":"02-性能测试/2.3.4-Redis.md","ref":"02-性能测试/2.3.4-Redis.md","articles":[]},"previous":{"title":"2.3.2-常见性能测试问题","level":"1.3.14","depth":2,"path":"02-性能测试/2.3.2-常见性能测试问题.md","ref":"02-性能测试/2.3.2-常见性能测试问题.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","copy-code-button","popup","splitter","chapter-fold","expandable-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"https://www.baidu.com"}},"gitbook":"*"},"file":{"path":"02-性能测试/2.3.3-JVM垃圾回收原理及监控.md","mtime":"2021-03-26T09:26:04.841Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-01T01:06:12.000Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2.3.3-JVM垃圾回收原理及监控","level":"1.3.15","depth":2,"next":{"title":"2.3.4-Redis","level":"1.3.16","depth":2,"path":"02-性能测试/2.3.4-Redis.md","ref":"02-性能测试/2.3.4-Redis.md","articles":[]},"previous":{"title":"2.3.2-常见性能测试问题","level":"1.3.14","depth":2,"path":"02-性能测试/2.3.2-常见性能测试问题.md","ref":"02-性能测试/2.3.2-常见性能测试问题.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","copy-code-button","popup","splitter","chapter-fold","expandable-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"https://www.baidu.com"}},"gitbook":"*"},"file":{"path":"02-性能测试/2.3.3-JVM垃圾回收原理及监控.md","mtime":"2021-04-12T09:21:38.740Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-18T07:22:21.442Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
