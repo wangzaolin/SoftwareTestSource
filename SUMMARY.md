@@ -65,3 +65,4 @@
 - [06-编程](blank.md)
   - [6.1-shell编程](blank.md)
   - [6.1.1-shell脚本实例](06-编程/6.1.1-shell脚本实例.md)
+  - [6.1.2-shell编程](06-编程/6.1.2-shell编程.md)
