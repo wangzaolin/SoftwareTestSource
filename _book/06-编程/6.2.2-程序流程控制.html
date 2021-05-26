@@ -73,6 +73,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="6.2.3-数组.html" />
+    
     
     <link rel="prev" href="6.2.1-Java语言基础.html" />
     
@@ -561,7 +563,46 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.26" data-path="../02-性能测试/2.5-常用默认端口.html">
+        <li class="chapter " data-level="1.3.26" data-path="../02-性能测试/2.4.4-jvm性能调优之jmap分析.html">
+            
+                <a href="../02-性能测试/2.4.4-jvm性能调优之jmap分析.html">
+            
+                    
+                    2.4.4-jvm性能调优之jmap分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.27" data-path="../02-性能测试/2.4.5-MAT内存分析.html">
+            
+                <a href="../02-性能测试/2.4.5-MAT内存分析.html">
+            
+                    
+                    2.4.5-MAT内存分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.28" data-path="../02-性能测试/2.4.6-jvm性能调优之jstack分析.html">
+            
+                <a href="../02-性能测试/2.4.6-jvm性能调优之jstack分析.html">
+            
+                    
+                    2.4.6-jvm性能调优之jmap分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.29" data-path="../02-性能测试/2.5-常用默认端口.html">
             
                 <a href="../02-性能测试/2.5-常用默认端口.html">
             
@@ -923,6 +964,45 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7.7" data-path="6.2.3-数组.html">
+            
+                <a href="6.2.3-数组.html">
+            
+                    
+                    6.2.3-数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="6.2.4-字符串及其操作.html">
+            
+                <a href="6.2.4-字符串及其操作.html">
+            
+                    
+                    6.2.4-字符串及其操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="6.2.5-类和对象.html">
+            
+                <a href="6.2.5-类和对象.html">
+            
+                    
+                    6.2.5-类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1056,6 +1136,72 @@ while (b!=a) {
     System.out.println(&quot;&#x4F60;&#x731C;&#x9519;&#x4E86;&#xFF0C;&#x4F60;&#x731C;&#x7684;&#x6570;&#x5B57;&#x4E3A;&#xFF1A;&quot;+b);
 }
 System.out.println(&quot;&#x4F60;&#x731C;&#x5BF9;&#x4E86;&#xFF0C;&#x731C;&#x6D4B;&#x7684;&#x6B21;&#x6570;&#x4E3A;&#xFF1A;&quot;+count);
+</code></pre><h2 id="22-do-while&#x5FAA;&#x73AF;">2.2 do-while&#x5FAA;&#x73AF;</h2>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<p>do{</p>
+<p>&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#xFF1B;</p>
+<p>}while(&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;);</p>
+<p>&#x5148;&#x6267;&#x884C;do&#x8BED;&#x53E5;&#x4F53;&#xFF0C;&#x7136;&#x540E;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x662F;&#x5426;&#x6EE1;&#x8DB3;&#xFF1B;&#x6EE1;&#x8DB3;&#xFF0C;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x5FAA;&#x73AF;&#x4F53;&#xFF1B;&#x4E0D;&#x6EE1;&#x8DB3;&#xFF0C;&#x7EE7;&#x7EED;&#x5F80;&#x4E0B;&#x6267;&#x884C;&#xFF1B;</p>
+<p>&#x9002;&#x7528;&#x4E8E;&#xFF0C;&#x4E0D;&#x7BA1;&#x6761;&#x4EF6;&#x662F;&#x5426;&#x6EE1;&#x8DB3;&#xFF0C;&#x81F3;&#x5C11;&#x6267;&#x884C;1&#x6B21;&#x7684;&#x573A;&#x666F;&#xFF1B;</p>
+<p>&#x6837;&#x4F8B;&#xFF1A;</p>
+<pre><code>int a=3;
+do{
+    System.out.println(&quot;a=&quot;+a);
+    a++;
+}while(a&lt;=2);
+</code></pre><p>&#x6267;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<p>a=3;</p>
+<h2 id="23-for&#x5FAA;&#x73AF;">2.3 for&#x5FAA;&#x73AF;</h2>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<p>for(&#x521D;&#x59CB;&#x5316;&#x8868;&#x8FBE;&#x5F0F;;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;;&#x53D8;&#x91CF;&#x589E;&#x52A0;&#x8868;&#x8FBE;&#x5F0F;){</p>
+<p>&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#xFF1B;</p>
+<p>}</p>
+<p>&#x5148;&#x521D;&#x59CB;&#x5316;&#x53D8;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x6EE1;&#x8DB3;&#x8981;&#x6C42;&#xFF0C;&#x6267;&#x884C;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#x53D8;&#x91CF;&#x589E;&#x52A0;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x518D;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#xFF0C;&#x4E60;&#x6027;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#xFF1B;&#x4E0D;&#x6EE1;&#x8DB3;&#x8981;&#x6C42;&#xFF0C;&#x9000;&#x51FA;&#x5FAA;&#x73AF;&#xFF1B;</p>
+<p>&#x6837;&#x4F8B;&#xFF1A;</p>
+<pre><code>for(int i=0;i&lt;10;i++){
+    System.out.println(&quot;i=&quot;+i);
+}
+</code></pre><h2 id="24-for-continue&#x548C;for-continue&#x5FAA;&#x73AF;">2.4 for-continue&#x548C;for-continue&#x5FAA;&#x73AF;</h2>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<p>for(&#x521D;&#x59CB;&#x5316;&#x8868;&#x8FBE;&#x5F0F;;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;;&#x53D8;&#x91CF;&#x589E;&#x52A0;&#x8868;&#x8FBE;&#x5F0F;){</p>
+<p>if(&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;){</p>
+<p>&#x200B;    &#x5FAA;&#x73AF;&#x8BED;&#x53E5;1&#xFF1B;</p>
+<p>&#x200B;    continue;</p>
+<p>}</p>
+<p>&#x5FAA;&#x73AF;&#x8BED;&#x53E5;2&#xFF1B;</p>
+<p>}</p>
+<p>&#x5F53;&#x9047;&#x5230;continue&#xFF0C;&#x9000;&#x51FA;&#x672C;&#x6B21;&#x5FAA;&#x73AF;&#xFF0C;&#x7EE7;&#x7EED;&#x4E0B;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;&#xFF1B;&#x7528;&#x4E8E;&#x8FC7;&#x6EE4;&#x5FAA;&#x73AF;&#x4E2D;&#x7684;&#x90E8;&#x5206;&#x7ED3;&#x679C;&#xFF1B;</p>
+<p>&#x5F53;&#x9047;&#x5230;break&#xFF0C;&#x9000;&#x51FA;&#x6574;&#x4E2A;for&#x5FAA;&#x73AF;&#xFF1B;</p>
+<p>&#x6837;&#x4F8B;1&#xFF1A;</p>
+<pre><code>for(int i=1;i&lt;=10;i++){
+    if(i%2==0){
+    System.out.println(&quot;1-10&#x4EE5;&#x5185;&#x5076;&#x6570;&#xFF1A;&quot;+i);
+    continue;
+    }
+    System.out.println(&quot;1-10&#x4EE5;&#x5185;&#x5947;&#x6570;&#xFF1A;&quot;+i);
+}
+</code></pre><p>&#x6267;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>1-10&#x4EE5;&#x5185;&#x5947;&#x6570;&#xFF1A;1
+1-10&#x4EE5;&#x5185;&#x5076;&#x6570;&#xFF1A;2
+1-10&#x4EE5;&#x5185;&#x5947;&#x6570;&#xFF1A;3
+1-10&#x4EE5;&#x5185;&#x5076;&#x6570;&#xFF1A;4
+1-10&#x4EE5;&#x5185;&#x5947;&#x6570;&#xFF1A;5
+1-10&#x4EE5;&#x5185;&#x5076;&#x6570;&#xFF1A;6
+1-10&#x4EE5;&#x5185;&#x5947;&#x6570;&#xFF1A;7
+1-10&#x4EE5;&#x5185;&#x5076;&#x6570;&#xFF1A;8
+1-10&#x4EE5;&#x5185;&#x5947;&#x6570;&#xFF1A;9
+1-10&#x4EE5;&#x5185;&#x5076;&#x6570;&#xFF1A;10
+</code></pre><p>&#x6837;&#x4F8B;2&#xFF1A;</p>
+<pre><code>for(int i=1;i&lt;=10;i++){
+    if(i%2==0){
+        System.out.println(&quot;1-10&#x4EE5;&#x5185;&#x5076;&#x6570;&#xFF1A;&quot;+i);
+        break;
+    }
+    System.out.println(&quot;1-10&#x4EE5;&#x5185;&#x5947;&#x6570;&#xFF1A;&quot;+i);
+}
+</code></pre><p>&#x6267;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>1-10&#x4EE5;&#x5185;&#x5947;&#x6570;&#xFF1A;1
+1-10&#x4EE5;&#x5185;&#x5076;&#x6570;&#xFF1A;2
 </code></pre>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -1084,10 +1230,14 @@ System.out.println(&quot;&#x4F60;&#x731C;&#x5BF9;&#x4E86;&#xFF0C;&#x731C;&#x6D4B
 
             
                 
-                <a href="6.2.1-Java语言基础.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 6.2.1-Java语言基础">
+                <a href="6.2.1-Java语言基础.html" class="navigation navigation-prev " aria-label="Previous page: 6.2.1-Java语言基础">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="6.2.3-数组.html" class="navigation navigation-next " aria-label="Next page: 6.2.3-数组">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -1096,7 +1246,7 @@ System.out.println(&quot;&#x4F60;&#x731C;&#x5BF9;&#x4E86;&#xFF0C;&#x731C;&#x6D4B
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.2.2-程序流程控制","level":"1.7.6","depth":2,"previous":{"title":"6.2.1-Java语言基础","level":"1.7.5","depth":2,"path":"06-编程/6.2.1-Java语言基础.md","ref":"06-编程/6.2.1-Java语言基础.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","copy-code-button","popup","splitter","chapter-fold","expandable-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"https://www.baidu.com"}},"gitbook":"*"},"file":{"path":"06-编程/6.2.2-程序流程控制.md","mtime":"2021-05-11T12:15:33.909Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-12T02:25:49.668Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.2.2-程序流程控制","level":"1.7.6","depth":2,"next":{"title":"6.2.3-数组","level":"1.7.7","depth":2,"path":"06-编程/6.2.3-数组.md","ref":"06-编程/6.2.3-数组.md","articles":[]},"previous":{"title":"6.2.1-Java语言基础","level":"1.7.5","depth":2,"path":"06-编程/6.2.1-Java语言基础.md","ref":"06-编程/6.2.1-Java语言基础.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","copy-code-button","popup","splitter","chapter-fold","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"https://www.baidu.com"}},"gitbook":"*"},"file":{"path":"06-编程/6.2.2-程序流程控制.md","mtime":"2021-05-17T11:16:12.939Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-26T07:49:22.518Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1123,6 +1273,10 @@ System.out.println(&quot;&#x4F60;&#x731C;&#x5BF9;&#x4E86;&#xFF0C;&#x731C;&#x6D4B
     
         
         <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

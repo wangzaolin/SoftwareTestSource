@@ -563,7 +563,46 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.26" data-path="../02-性能测试/2.5-常用默认端口.html">
+        <li class="chapter " data-level="1.3.26" data-path="../02-性能测试/2.4.4-jvm性能调优之jmap分析.html">
+            
+                <a href="../02-性能测试/2.4.4-jvm性能调优之jmap分析.html">
+            
+                    
+                    2.4.4-jvm性能调优之jmap分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.27" data-path="../02-性能测试/2.4.5-MAT内存分析.html">
+            
+                <a href="../02-性能测试/2.4.5-MAT内存分析.html">
+            
+                    
+                    2.4.5-MAT内存分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.28" data-path="../02-性能测试/2.4.6-jvm性能调优之jstack分析.html">
+            
+                <a href="../02-性能测试/2.4.6-jvm性能调优之jstack分析.html">
+            
+                    
+                    2.4.6-jvm性能调优之jmap分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.29" data-path="../02-性能测试/2.5-常用默认端口.html">
             
                 <a href="../02-性能测试/2.5-常用默认端口.html">
             
@@ -918,6 +957,45 @@
             
                     
                     6.2.2-程序流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../06-编程/6.2.3-数组.html">
+            
+                <a href="../06-编程/6.2.3-数组.html">
+            
+                    
+                    6.2.3-数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../06-编程/6.2.4-字符串及其操作.html">
+            
+                <a href="../06-编程/6.2.4-字符串及其操作.html">
+            
+                    
+                    6.2.4-字符串及其操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../06-编程/6.2.5-类和对象.html">
+            
+                <a href="../06-编程/6.2.5-类和对象.html">
+            
+                    
+                    6.2.5-类和对象
             
                 </a>
             
@@ -1678,6 +1756,170 @@ driver.find_element_by_id(&quot;downloadFile&quot;).click()
 sleep(2)
 
 driver.quit()
+</code></pre><h1 id="14&#x3001;webdriver&#x9AD8;&#x7EA7;&#x7279;&#x6027;&#x64CD;&#x4F5C;">14&#x3001;WebDriver&#x9AD8;&#x7EA7;&#x7279;&#x6027;&#x64CD;&#x4F5C;</h1>
+<h2 id="141-cookie&#x64CD;&#x4F5C;">14.1 Cookie&#x64CD;&#x4F5C;</h2>
+<p>cookie&#x64CD;&#x4F5C;&#x5E38;&#x7528;&#x4E8E;&#x7ED5;&#x8FC7;&#x767B;&#x5F55;&#xFF0C;webdriver&#x63D0;&#x4F9B;&#x4E86;&#x8BFB;&#x53D6;&#x3001;&#x6DFB;&#x52A0;&#x548C;&#x5220;&#x9664;cookie&#x7684;&#x64CD;&#x4F5C;&#xFF1B;</p>
+<ul>
+<li>get_cookies():&#x4EE5;&#x5B57;&#x5178;&#x5F62;&#x5F0F;&#x8FD4;&#x56DE;cookie&#x7684;&#x6240;&#x6709;&#x4FE1;&#x606F;&#xFF1B;</li>
+<li>get_cookie(name)&#xFF1A;&#x8FD4;&#x56DE;cookie&#x5B57;&#x5178;&#x4E2D;key&#x503C;&#x4E3A;name&#x7684;&#x503C;&#xFF1B;</li>
+<li>add_cookie(cookie_value)&#xFF1A;&#x6DFB;&#x52A0;cookie&#x503C;&#xFF0C;&#x6C14;&#x8D28;cookie_value&#x4E3A;&#x5B57;&#x5178;&#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF0C;&#x5FC5;&#x987B;&#x5305;&#x542B;name&#x548C;value&#x503C;&#xFF1B;</li>
+<li>delete_cookie(name)&#xFF1A;&#x5220;&#x9664;cookie&#x5B57;&#x5178;&#x4E2D;key&#x4E3A;name&#x7684;&#x503C;&#xFF1B;</li>
+<li>delete_all_cookies()&#xFF1A;&#x5220;&#x9664;&#x6240;&#x6709;cookie&#x503C;&#xFF1B;</li>
+</ul>
+<p>&#x793A;&#x4F8B;&#xFF1A;&#x8BBF;&#x95EE;&#x767E;&#x5EA6;&#x9996;&#x9875;&#xFF0C;&#x624B;&#x52A8;&#x767B;&#x5F55;&#x540E;&#x83B7;&#x53D6;cookie&#x4FE1;&#x606F;&#xFF1B;</p>
+<p>CookieTest.py</p>
+<pre><code>driver = webdriver.Chrome(executable_path=&apos;./driver/chromedriver.exe&apos;)
+driver.maximize_window()
+driver.get(&quot;http://www.baidu.com&quot;)
+#&#x83B7;&#x53D6;cookie&#x5E76;&#x8F93;&#x51FA;
+cookie01 = driver.get_cookies()
+print(cookie01)
+</code></pre><p>&#x6267;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>[{&apos;domain&apos;: &apos;.baidu.com&apos;, &apos;expiry&apos;: 1653196848, &apos;httpOnly&apos;: False, &apos;name&apos;: &apos;BAIDUID_BFESS&apos;, &apos;path&apos;: &apos;/&apos;, &apos;sameSite&apos;: &apos;None&apos;, &apos;secure&apos;: True, &apos;value&apos;: &apos;78762D7B0AFB59934BB1DBE9FAE55CE7:FG=1&apos;}, {&apos;domain&apos;: &apos;.baidu.com&apos;, &apos;expiry&apos;: 1621664448, &apos;httpOnly&apos;: False, &apos;name&apos;: &apos;BA_HECTOR&apos;, &apos;path&apos;: &apos;/&apos;, &apos;secure&apos;: False, &apos;value&apos;: &apos;288g21ak25al2g64t61gah55g0r&apos;}, {&apos;domain&apos;: &apos;.baidu.com&apos;, &apos;httpOnly&apos;: False, &apos;name&apos;: &apos;H_PS_PSSID&apos;, &apos;path&apos;: &apos;/&apos;, &apos;secure&apos;: False, &apos;value&apos;: &apos;33838_33848_33607_33892&apos;}, {&apos;domain&apos;: &apos;.baidu.com&apos;, &apos;expiry&apos;: 1653196845, &apos;httpOnly&apos;: False, &apos;name&apos;: &apos;BAIDUID&apos;, &apos;path&apos;: &apos;/&apos;, &apos;secure&apos;: False, &apos;value&apos;: &apos;78762D7B0AFB59934BB1DBE9FAE55CE7:FG=1&apos;}, {&apos;domain&apos;: &apos;.baidu.com&apos;, &apos;expiry&apos;: 3769144492, &apos;httpOnly&apos;: False, &apos;name&apos;: &apos;BIDUPSID&apos;, &apos;path&apos;: &apos;/&apos;, &apos;secure&apos;: False, &apos;value&apos;: &apos;78762D7B0AFB5993519D9D6B4392195A&apos;}, {&apos;domain&apos;: &apos;.baidu.com&apos;, &apos;expiry&apos;: 3769144492, &apos;httpOnly&apos;: False, &apos;name&apos;: &apos;PSTM&apos;, &apos;path&apos;: &apos;/&apos;, &apos;secure&apos;: False, &apos;value&apos;: &apos;1621660845&apos;}, {&apos;domain&apos;: &apos;www.baidu.com&apos;, &apos;expiry&apos;: 1622524848, &apos;httpOnly&apos;: False, &apos;name&apos;: &apos;BD_UPN&apos;, &apos;path&apos;: &apos;/&apos;, &apos;secure&apos;: False, &apos;value&apos;: &apos;12314353&apos;}, {&apos;domain&apos;: &apos;www.baidu.com&apos;, &apos;httpOnly&apos;: False, &apos;name&apos;: &apos;BD_HOME&apos;, &apos;path&apos;: &apos;/&apos;, &apos;secure&apos;: False, &apos;value&apos;: &apos;1&apos;}]
+</code></pre><h2 id="142-&#x5C4F;&#x5E55;&#x622A;&#x56FE;">14.2 &#x5C4F;&#x5E55;&#x622A;&#x56FE;</h2>
+<p>&#x5C4F;&#x5E55;&#x622A;&#x56FE;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x6848;&#x4F8B;&#x5931;&#x8D25;&#x65F6;&#x81EA;&#x52A8;&#x622A;&#x53D6;&#x5F53;&#x524D;&#x9875;&#x9762;&#xFF0C;&#x4FDD;&#x7559;&#x8BB0;&#x5F55;&#xFF1B;</p>
+<p>WebDriver&#x63D0;&#x4F9B;&#x7684;&#x5C4F;&#x5E55;&#x622A;&#x56FE;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li>save_screeshot(&#x622A;&#x56FE;&#x4FDD;&#x5B58;&#x5730;&#x5740;)&#xFF1A;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x7684;&#x622A;&#x56FE;&#xFF0C;&#x5E76;&#x4EE5;png&#x683C;&#x5F0F;&#x4FDD;&#x5B58;&#xFF1B;</li>
+<li>get_screeshot_as_base64()&#xFF1A;&#x4EE5;base64&#x7F16;&#x7801;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5F62;&#x5F0F;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x7684;&#x5C4F;&#x5E55;&#x622A;&#x56FE;,&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;base64&#x7F16;&#x7801;&#x5B57;&#x7B26;&#x4E32;&#xFF1B;</li>
+<li>get_screeshot_as_file(&#x622A;&#x56FE;&#x4FDD;&#x5B58;&#x5730;&#x5740;)&#xFF1A;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5C4F;&#x5E55;&#x622A;&#x56FE;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x4EFB;&#x4F55;IO error&#xFF0C;&#x8FD4;&#x56DE;false&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;true&#xFF1B;</li>
+<li>get_screeshot_as_png()&#xFF1A;&#x4EE5;&#x4E8C;&#x8FDB;&#x5236;&#x5F62;&#x5F0F;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x7684;&#x5C4F;&#x5E55;&#x622A;&#x56FE;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#xFF1B;</li>
+</ul>
+<p>&#x793A;&#x4F8B;&#xFF1A;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x5B9A;&#x4F4D;&#x4E00;&#x4E2A;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x5F53;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#x622A;&#x56FE;&#x4FDD;&#x5B58;&#xFF1B;</p>
+<p>ScreeshotTest.py</p>
+<pre><code>from selenium import webdriver
+import time
+
+from selenium.common.exceptions import NoSuchElementException
+
+driver = webdriver.Chrome(executable_path=&apos;./driver/chromedriver.exe&apos;)
+driver.maximize_window()
+driver.get(&quot;http://www.baidu.com&quot;)
+
+time.sleep(10)
+#&#x5B9A;&#x4F4D;&#x5143;&#x7D20;id=aaa&#x7684;&#x5143;&#x7D20;&#x5E76;&#x70B9;&#x51FB;&#xFF0C;&#x627E;&#x4E0D;&#x5230;&#x5143;&#x7D20;&#x5219;&#x622A;&#x56FE;&#x4FDD;&#x5B58;
+try:
+    driver.find_element_by_id(&quot;aaa&quot;).click()
+except NoSuchElementException:
+    driver.save_screenshot(&apos;./img/screeshot.png&apos;)
+
+driver.quit()
+</code></pre><h1 id="15&#x3001;&#x65F6;&#x95F4;&#x7B49;&#x5F85;">15&#x3001;&#x65F6;&#x95F4;&#x7B49;&#x5F85;</h1>
+<p>&#x5728;&#x7F51;&#x9875;&#x64CD;&#x4F5C;&#x4E2D;&#xFF0C;&#x7531;&#x4E8E;&#x5E26;&#x5BBD;&#x3001;&#x6D4F;&#x89C8;&#x5668;&#x6E32;&#x67D3;&#x901F;&#x5EA6;&#x3001;&#x673A;&#x5668;&#x6027;&#x80FD;&#x7B49;&#x539F;&#x56E0;&#xFF0C;&#x53EF;&#x80FD;&#x9020;&#x6210;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x7F13;&#x6162;&#xFF0C;&#x67D0;&#x4E9B;&#x5143;&#x7D20;&#x8FD8;&#x6CA1;&#x6709;&#x5B8C;&#x5168;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x5C31;&#x8FDB;&#x884C;&#x4E0B;&#x4E00;&#x6B65;&#x64CD;&#x4F5C;&#xFF0C;&#x5BFC;&#x81F4;&#x7A0B;&#x5E8F;&#x627E;&#x4E0D;&#x5230;&#x5143;&#x7D20;&#xFF0C;&#x64CD;&#x4F5C;&#x5931;&#x8D25;&#xFF1B;&#x6B64;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x7B49;&#x5F85;&#x65F6;&#x95F4;&#xFF0C;&#x7B49;&#x5F85;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#xFF1B;&#x5E38;&#x7528;&#x7684;&#x65F6;&#x95F4;&#x7B49;&#x5F85;&#x6709;&#x4E09;&#x79CD;&#xFF1A;</p>
+<ul>
+<li>&#x5F3A;&#x5236;&#x7B49;&#x5F85;</li>
+<li>&#x9690;&#x5F0F;&#x7B49;&#x5F85;</li>
+<li>&#x663E;&#x793A;&#x7B49;&#x5F85;</li>
+</ul>
+<h2 id="151-&#x5F3A;&#x5236;&#x7B49;&#x5F85;">15.1 &#x5F3A;&#x5236;&#x7B49;&#x5F85;</h2>
+<p>&#x5F3A;&#x5236;&#x7B49;&#x5F85;&#x662F;&#x901A;&#x8FC7;time.sleep&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x5F3A;&#x5236;&#x7B49;&#x5F85;&#x56FA;&#x5B9A;&#x65F6;&#x95F4;&#xFF0C;&#x9ED8;&#x8BA4;&#x5355;&#x4F4D;&#x662F;&#x79D2;&#xFF1B;&#x4E0D;&#x667A;&#x80FD;&#xFF1B;</p>
+<pre><code>import time
+time.sleep(5)
+</code></pre><h2 id="152-&#x9690;&#x5F0F;&#x7B49;&#x5F85;">15.2 &#x9690;&#x5F0F;&#x7B49;&#x5F85;</h2>
+<p>&#x9690;&#x5F0F;&#x7B49;&#x5F85;&#x662F;&#x7531;webdriver&#x63D0;&#x4F9B;&#x7684;&#x9488;&#x5BF9;&#x6240;&#x6709;&#x5143;&#x7D20;&#x7684;&#x667A;&#x80FD;&#x7B49;&#x5F85;&#x65F6;&#x95F4;&#xFF1B;&#x4F7F;&#x7528;implicitly_wait()&#x5B9E;&#x73B0;&#xFF0C;&#x5728;&#x7B49;&#x5F85;&#x65F6;&#x95F4;&#x5185;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#xFF0C;&#x5B9A;&#x4F4D;&#x5230;&#x5143;&#x7D20;&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x4E0B;&#x4E00;&#x6B65;&#x64CD;&#x4F5C;&#xFF0C;&#x4E0D;&#x4F1A;&#x7EE7;&#x7EED;&#x7B49;&#x5F85;&#xFF0C;&#x8D85;&#x8FC7;&#x7B49;&#x5F85;&#x65F6;&#x95F4;&#x672A;&#x5B9A;&#x4F4D;&#x5230;&#x5143;&#x7D20;&#x5219;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x672A;&#x5B9A;&#x4F4D;&#x5230;&#x5143;&#x7D20;&#xFF1B;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x53EA;&#x9700;&#x5728;&#x7B49;&#x5F85;&#x5757;&#x4E2D;&#x8BBE;&#x7F6E;&#x4E00;&#x6B21;&#xFF0C;webdriver&#x5728;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x4F7F;&#x7528;&#x8BE5;&#x7B49;&#x5F85;&#x8BBE;&#x7F6E;&#xFF0C;&#x5BF9;&#x6240;&#x6709;&#x5143;&#x7D20;&#x90FD;&#x751F;&#x6548;&#xFF1B;</p>
+<p>&#x793A;&#x4F8B;&#xFF1A;&#x8BBE;&#x7F6E;driver&#x9690;&#x5F0F;&#x7B49;&#x5F85;10&#x79D2;</p>
+<pre><code>driver.implicitly_wait(10)
+driver.find_element_by_id(&apos;id&apos;).click()
+</code></pre><h2 id="153-&#x663E;&#x793A;&#x7B49;&#x5F85;">15.3 &#x663E;&#x793A;&#x7B49;&#x5F85;</h2>
+<p>&#x663E;&#x793A;&#x7B49;&#x5F85;&#x662F;&#x7531;webdriver&#x5143;&#x7D20;&#x63D0;&#x4F9B;&#x7684;&#x9488;&#x5BF9;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;&#x7684;&#x667A;&#x80FD;&#x7B49;&#x5F85;&#x65F6;&#x95F4;&#xFF1B;&#x4F7F;&#x7528;WebDriverWait()&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#xFF0C;&#x548C;until()&#x6216;until_not()&#x65B9;&#x6CD5;&#x914D;&#x5408;&#x4F7F;&#x7528;&#xFF1B;&#x5728;&#x7B49;&#x5F85;&#x65F6;&#x95F4;&#x5185;&#xFF0C;&#x6BCF;&#x9694;&#x56FA;&#x5B9A;&#x7684;&#x95F4;&#x9694;&#x65F6;&#x95F4;&#x5224;&#x5B9A;&#x5143;&#x7D20;&#x7684;&#x6761;&#x4EF6;&#x662F;&#x5426;&#x6EE1;&#x8DB3;&#x6216;&#x4E0D;&#x6EE1;&#x8DB3;&#xFF0C;&#x6EE1;&#x8DB3;/&#x4E0D;&#x6EE1;&#x8DB3;&#x5219;&#x8FDB;&#x884C;&#x4E0B;&#x4E00;&#x6B65;&#x64CD;&#x4F5C;&#xFF1B;&#x8D85;&#x8FC7;&#x7B49;&#x5F85;&#x65F6;&#x95F4;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF1B;</p>
+<ul>
+<li>until&#x6216;until_not&#x4E2D;&#x7684;&#x5224;&#x65AD;&#x901A;&#x8FC7;expected_conditions&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#xFF0C;&#x5E38;&#x89C1;&#x7684;expected_conditions&#x7C7B;&#x4E2D;&#x7684;&#x5224;&#x65AD;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</li>
+<li>title_is&#xFF1A;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x9875;&#x9762;&#x7684;title&#x662F;&#x5426;&#x7B26;&#x5408;&#x9884;&#x671F;&#x7ED3;&#x679C;</li>
+<li>title_contains&#xFF1A;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x9875;&#x9762;title&#x662F;&#x5426;&#x5305;&#x542B;&#x9884;&#x671F;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>presence_of_element_located&#xFF1A;&#x5224;&#x65AD;&#x5143;&#x7D20;&#x662F;&#x5426;&#x88AB;&#x52A0;&#x8F7D;&#xFF0C;&#x5143;&#x7D20;&#x4E0D;&#x4E00;&#x5B9A;&#x53EF;&#x89C1;</li>
+<li>visibility_of_element_located&#xFF1A;&#x5224;&#x65AD;&#x5143;&#x7D20;&#x662F;&#x5426;&#x53EF;&#x89C1;</li>
+<li>text_to_be_present_in_element&#xFF1A;&#x5224;&#x5B9A;&#x5143;&#x7D20;&#x7684;text&#x6587;&#x672C;&#x662F;&#x5426;&#x5305;&#x542B;&#x9884;&#x671F;&#x7684;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>text_to_be_present_in_element_value&#xFF1A;&#x5224;&#x5B9A;&#x5143;&#x7D20;&#x7684;value&#x5C5E;&#x6027;&#x503C;&#x662F;&#x5426;&#x5305;&#x542B;&#x9884;&#x671F;&#x7684;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>element_to_be_clickable&#xFF1A;&#x5224;&#x65AD;&#x5143;&#x7D20;&#x662F;&#x5426;&#x53EF;&#x88AB;&#x70B9;&#x51FB;</li>
+<li>element_to_be_selected&#xFF1A;&#x5224;&#x65AD;&#x5143;&#x7D20;&#x662F;&#x5426;&#x53EF;&#x88AB;&#x9009;&#x4E2D;</li>
+</ul>
+<p>&#x793A;&#x4F8B;&#xFF1A;&#x6253;&#x5F00;&#x767E;&#x5EA6;&#xFF0C;&#x4F7F;&#x7528;&#x663E;&#x793A;&#x7B49;&#x5F85;10&#x79D2;&#xFF0C;&#x95F4;&#x9694;&#x5224;&#x65AD;&#x65F6;&#x95F4;&#x4E3A;1&#x79D2;&#xFF0C;&#x7B49;&#x5F85;&#x5143;&#x7D20;&#x6587;&#x672C;&#x6846;&#x51FA;&#x73B0;&#x540E;&#xFF0C;&#x8F93;&#x5165;&#x81EA;&#x52A8;&#x5316;&#x6D4B;&#x8BD5;&#x5E76;&#x622A;&#x56FE;&#x4FDD;&#x5B58;</p>
+<p>WaitTest.py</p>
+<pre><code>from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
+
+driver = webdriver.Chrome(executable_path=&apos;./driver/chromedriver.exe&apos;)
+driver.maximize_window()
+
+driver.get(&quot;http://www.baidu.com&quot;)
+
+#&#x663E;&#x793A;&#x7B49;&#x5F85;10&#x79D2;&#xFF0C;&#x6BCF;&#x9694;1&#x79D2;&#x5C1D;&#x8BD5;&#x4E00;&#x6B21;&#xFF0C;&#x76F4;&#x5230;&#x6587;&#x672C;&#x6846;&#x5143;&#x7D20;&#x51FA;&#x73B0;
+WebDriverWait(driver,10,1).until(expected_conditions.presence_of_element_located((By.ID,&apos;kw1&apos;)))
+
+driver.find_element_by_id(&quot;kw&quot;).send_keys(&quot;&#x81EA;&#x52A8;&#x5316;&#x6D4B;&#x8BD5;&quot;)
+
+driver.save_screenshot(&apos;./img/screeshot3.png&apos;)
+
+driver.quit()
+</code></pre><h1 id="16&#x3001;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;">16&#x3001;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;</h1>
+<h2 id="161-&#x83B7;&#x53D6;&#x73AF;&#x5883;&#x4FE1;&#x606F;">16.1 &#x83B7;&#x53D6;&#x73AF;&#x5883;&#x4FE1;&#x606F;</h2>
+<p>driver.capabilities[&apos;browserName&apos;]</p>
+<ul>
+<li>browserName&#xFF1A;&#x6D4F;&#x89C8;&#x5668;&#x540D;&#x79F0;</li>
+<li>browserVersion&#xFF1A;&#x6D4F;&#x89C8;&#x5668;&#x7248;&#x672C;</li>
+<li>platformName&#xFF1A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x540D;&#x79F0;</li>
+<li>proxy&#xFF1A;&#x4EE3;&#x7406;&#x4FE1;&#x606F;</li>
+<li>timeouts&#xFF1A;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</li>
+</ul>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>from selenium import webdriver
+
+driver = webdriver.Chrome(executable_path=&apos;./driver/chromedriver.exe&apos;)
+
+browserVersion = driver.capabilities[&apos;browserVersion&apos;]
+browserName = driver.capabilities[&apos;browserName&apos;]
+platformName = driver.capabilities[&apos;platformName&apos;]
+proxy = driver.capabilities[&apos;proxy&apos;]
+timeout = driver.capabilities[&apos;timeouts&apos;]
+
+print(browserVersion)
+print(browserName)
+print(platformName)
+print(proxy)
+print(timeout)
+
+driver.quit()
+</code></pre><p>&#x6267;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>90.0.4430.212
+chrome
+windows
+{}
+{&apos;implicit&apos;: 0, &apos;pageLoad&apos;: 300000, &apos;script&apos;: 30000}
+</code></pre><h2 id="162-&#x914D;&#x7F6E;chrome&#x6D4F;&#x89C8;&#x5668;">16.2 &#x914D;&#x7F6E;chrome&#x6D4F;&#x89C8;&#x5668;</h2>
+<p>1&#xFF09;&#x5C4F;&#x853D;&#x6D4F;&#x89C8;&#x5668;&#x5BF9;selenium&#x7684;&#x68C0;&#x6D4B;</p>
+<p>&#x4F7F;&#x7528;selenium&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F1A;&#x663E;&#x793A;&#xFF1A;Chrome&#x6B63;&#x53D7;&#x5230;&#x81EA;&#x52A8;&#x6D4B;&#x8BD5;&#x8F6F;&#x4EF6;&#x63A7;&#x5236;&#xFF1B;&#x5C4F;&#x853D;&#x6D4F;&#x89C8;&#x5668;&#x68C0;&#x6D4B;&#x64CD;&#x4F5C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>from selenium import webdriver
+import time
+
+#&#x6D4F;&#x89C8;&#x5668;&#x914D;&#x7F6E;-&#x5C4F;&#x853D;&#x6D4F;&#x89C8;&#x5668;&#x68C0;&#x6D4B;&#x81EA;&#x52A8;&#x5316;&#x6D4B;&#x8BD5;&#x8F6F;&#x4EF6;
+options = webdriver.ChromeOptions()
+options.add_experimental_option(&apos;excludeSwitches&apos;,[&apos;enable-automation&apos;])
+driver = webdriver.Chrome(options=options,executable_path=&apos;./driver/chromedriver.exe&apos;)
+driver.maximize_window()
+
+driver.get(&quot;http://www.baidu.com&quot;)
+time.sleep(5)
+
+driver.quit()
+</code></pre><p>2&#xFF09;&#x7981;&#x6B62;&#x56FE;&#x7247;&#x548C;&#x89C6;&#x9891;&#x52A0;&#x8F7D;</p>
+<pre><code>#&#x6D4F;&#x89C8;&#x5668;&#x914D;&#x7F6E;
+options = webdriver.ChromeOptions()
+#&#x7981;&#x6B62;&#x56FE;&#x7247;&#x548C;&#x89C6;&#x9891;&#x52A0;&#x8F7D;
+prefs = {&quot;profile.managed_default_content_settings.images&quot;:2}
+options.add_experimental_option(&apos;prefs&apos;,prefs)
+
+driver = webdriver.Chrome(options=options,executable_path=&apos;./driver/chromedriver.exe&apos;)
+</code></pre><p>3&#xFF09;&#x8BBE;&#x7F6E;&#x7F16;&#x7801;</p>
+<p>&#x793A;&#x4F8B;&#xFF1A;&#x8BBE;&#x7F6E;&#x7F16;&#x7801;&#x4E3A;UTF-8</p>
+<pre><code>options.add_argument(&apos;lang=zh_CN.UTF-8&apos;)
+</code></pre><p>4&#xFF09;&#x8BBE;&#x7F6E;&#x4EE3;&#x7406;</p>
+<pre><code>options.add_argument(&quot;--proxy-server=http://localhost:8888&quot;)
+</code></pre><h2 id="163-ssl&#x8BC1;&#x4E66;&#x9519;&#x8BEF;&#x5904;&#x7406;">16.3 SSL&#x8BC1;&#x4E66;&#x9519;&#x8BEF;&#x5904;&#x7406;</h2>
+<p>&#x5F53;&#x8BBF;&#x95EE;https&#x9875;&#x9762;&#x65F6;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x63D0;&#x793A;ssl&#x8BC1;&#x4E66;&#x9519;&#x8BEF;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E0D;&#x4FE1;&#x4EFB;&#x7684;&#x8BC1;&#x4E66;&#x9700;&#x8981;&#x5BF9;&#x6D4F;&#x89C8;&#x5668;&#x8BC1;&#x4E66;&#x8FDB;&#x884C;&#x4FE1;&#x4EFB;&#x540E;&#xFF0C;&#x624D;&#x80FD;&#x8FDB;&#x884C;&#x4E0B;&#x4E00;&#x6B65;&#x64CD;&#x4F5C;&#xFF1B;&#x914D;&#x7F6E;&#x4FE1;&#x4EFB;SSL&#x8BC1;&#x4E66;&#x64CD;&#x4F5C;&#x5982;&#x4E0B;;</p>
+<p>1&#xFF09;chrome&#x6D4F;&#x89C8;&#x5668;</p>
+<pre><code>options.add_argument(&apos;--ignore-certificate-errors&apos;)
 </code></pre>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -1722,7 +1964,7 @@ driver.quit()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.1.2-Selenium WebDriver","level":"1.4.3","depth":2,"next":{"title":"04-Linux","level":"1.5","depth":1,"path":"04-Linux.md","ref":"04-Linux.md","articles":[{"title":"4.1-Vi文本处理","level":"1.5.1","depth":2,"path":"04-Linux/4.1-Vi文本处理.md","ref":"04-Linux/4.1-Vi文本处理.md","articles":[]},{"title":"4.2-Linux常用文本处理","level":"1.5.2","depth":2,"path":"04-Linux/4.2-Linux常用文本处理.md","ref":"04-Linux/4.2-Linux常用文本处理.md","articles":[]},{"title":"4.3-Linux常用监控","level":"1.5.3","depth":2,"path":"04-Linux/4.3-Linux常用监控.md","ref":"04-Linux/4.3-Linux常用监控.md","articles":[]}]},"previous":{"title":"3.1.1-环境搭建","level":"1.4.2","depth":2,"path":"03-自动化测试/3.1.1-环境搭建（Web自动化）.md","ref":"03-自动化测试/3.1.1-环境搭建（Web自动化）.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","copy-code-button","popup","splitter","chapter-fold","expandable-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"https://www.baidu.com"}},"gitbook":"*"},"file":{"path":"03-自动化测试/3.1.2-Selenium WebDriver.md","mtime":"2021-04-18T07:04:21.522Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-12T02:25:49.668Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.1.2-Selenium WebDriver","level":"1.4.3","depth":2,"next":{"title":"04-Linux","level":"1.5","depth":1,"path":"04-Linux.md","ref":"04-Linux.md","articles":[{"title":"4.1-Vi文本处理","level":"1.5.1","depth":2,"path":"04-Linux/4.1-Vi文本处理.md","ref":"04-Linux/4.1-Vi文本处理.md","articles":[]},{"title":"4.2-Linux常用文本处理","level":"1.5.2","depth":2,"path":"04-Linux/4.2-Linux常用文本处理.md","ref":"04-Linux/4.2-Linux常用文本处理.md","articles":[]},{"title":"4.3-Linux常用监控","level":"1.5.3","depth":2,"path":"04-Linux/4.3-Linux常用监控.md","ref":"04-Linux/4.3-Linux常用监控.md","articles":[]}]},"previous":{"title":"3.1.1-环境搭建","level":"1.4.2","depth":2,"path":"03-自动化测试/3.1.1-环境搭建（Web自动化）.md","ref":"03-自动化测试/3.1.1-环境搭建（Web自动化）.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","copy-code-button","popup","splitter","chapter-fold","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Home":"https://www.baidu.com"}},"gitbook":"*"},"file":{"path":"03-自动化测试/3.1.2-Selenium WebDriver.md","mtime":"2021-05-22T07:56:56.223Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-26T07:49:22.518Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1749,6 +1991,10 @@ driver.quit()
     
         
         <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
